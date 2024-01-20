@@ -1,9 +1,13 @@
+/* eslint-env node */
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ["./index.html", "/src/**/*.{jsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["inter", "serif"],
+      },
+    },
   },
   plugins: [],
-}
-
+};
