@@ -6,15 +6,9 @@ export default [
     link: "https://github.com/lawrenceli7/portfolio",
   },
   {
-    title: "Travel Planner",
-    imgURL: "./assets/travel-planner.png",
-    stack: ["Vite", "ReactJS", "Tailwind CSS", "TypeScript", "Go", "Redis"],
-    link: "https://github.com/lawrenceli7/travel-planner",
-  },
-  {
     title: "LC3-Processor",
     imgURL: "./assets/logisim.png",
-    stack: ["Logisim", "Assembly"],
+    stack: ["Logisim"],
     link: "https://github.com/lawrenceli7/lc3-processor",
   },
   {
