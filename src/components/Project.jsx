@@ -2,7 +2,12 @@ import React from "react";
 
 function Project({ title, imgURL, stack, link }) {
   return (
-    <div className="border-2 border-blue-300 rounded-2xl overflow-hidden">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border-2 border-blue-300 rounded-2xl overflow-hidden"
+    >
       <img
         src={imgURL}
         alt="portfolio"
@@ -20,7 +25,7 @@ function Project({ title, imgURL, stack, link }) {
           ))}
         </p>
       </div>
-    </div>
+    </a>
   );
 }
 
