@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 function Intro() {
   return (
@@ -7,7 +8,21 @@ function Intro() {
         Hi! I'm Lawrence Li
       </h1>
       <p className="text-base md:text-2xl mb-3 font-medium">
-        I'm an inspiring Software Engineer & Web Developer
+        <TypeAnimation
+          sequence={[
+            // Same substring at the start will only be typed out once, initially
+            "I'm a Coder",
+            2000,
+            "I'm an inspiring Software Engineer",
+            2000,
+            "I'm also an inspiring Web Developer",
+            2000,
+          ]}
+          wrapper="div"
+          speed={50}
+          style={{ fontSize: "2em", display: "inline-block" }}
+          repeat={Infinity}
+        />
       </p>
     </div>
   );
