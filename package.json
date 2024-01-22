@@ -1,7 +1,7 @@
 {
-  "homepage": "http:/lawrenceli7.github.io/portfolio",
+  "homepage": "http:/lawrenceli7.github.io",
   "name": "portfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
