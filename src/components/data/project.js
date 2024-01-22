@@ -1,7 +1,7 @@
 export default [
   {
     title: "Personal Website",
-    imgURL: " ",
+    imgURL: "./assets/portfolio.png",
     stack: ["Vite", "ReactJS", "Tailwind CSS", "HTML", "JavaScript"],
     link: "https://github.com/lawrenceli7/portfolio",
   },
