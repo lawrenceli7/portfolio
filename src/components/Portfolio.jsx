@@ -5,7 +5,7 @@ import project from "./data/project";
 function Portfolio() {
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center mb-2 text-stone-900">
+      <h1 className="text-4xl font-bold text-left mb-4 text-stone-900 text-decoration-line: underline">
         Projects
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center">

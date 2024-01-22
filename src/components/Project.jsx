@@ -6,7 +6,7 @@ function Project({ title, imgURL, stack, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-blue-300 rounded-2xl overflow-hidden"
+      className="border-2 border-blue-300 rounded-2xl overflow-hidden hover:scale-105 transition-all"
     >
       <img
         src={imgURL}

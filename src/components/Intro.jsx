@@ -13,9 +13,9 @@ function Intro() {
             // Same substring at the start will only be typed out once, initially
             "I'm a Coder",
             2000,
-            "I'm an inspiring Software Engineer",
+            "I'm a Software Engineer",
             2000,
-            "I'm also an inspiring Web Developer",
+            "I'm also a Web Developer",
             2000,
           ]}
           wrapper="div"

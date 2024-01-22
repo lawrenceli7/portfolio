@@ -23,4 +23,19 @@ export default [
     stack: ["Java"],
     link: "https://github.com/lawrenceli7/blackjack",
   },
+  {
+    title: "Travel Planner",
+    imgURL: "./assets/travel-planner.png",
+    stack: [
+      "Vite",
+      "ReactJS",
+      "Tailwind CSS",
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "Go",
+      "Redis",
+    ],
+    link: "https://github.com/lawrenceli7/travel-planner",
+  },
 ];
