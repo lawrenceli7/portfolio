@@ -1,12 +1,19 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function Project({ title, imgURL, stack, link }) {
+  Project.propTypes = {
+    title: PropTypes.string.isRequired,
+    imgURL: PropTypes.string.isRequired,
+    stack: PropTypes.array.isRequired,
+    link: PropTypes.string.isRequired,
+  };
+
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-blue-300 rounded-2xl overflow-hidden hover:scale-105 transition-all"
+      className="border-2 border-[#006666] rounded-2xl overflow-hidden hover:scale-105 transition-all"
     >
       <img
         src={imgURL}
@@ -18,8 +25,11 @@ function Project({ title, imgURL, stack, link }) {
           {title}
         </h3>
         <p className="flex flex-wrap gap-2 flex-row items-center text-xs md:text-sm justify-start">
-          {stack.map((item) => (
-            <span className="inline-block px-2 py-1 font-semibold border-2 border-stone-500 rounded-md">
+          {stack.map((item, index) => (
+            <span
+              key={index}
+              className="inline-block px-2 py-1 font-semibold border-2 border-stone-500 rounded-md"
+            >
               {item}
             </span>
           ))}

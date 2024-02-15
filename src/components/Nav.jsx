@@ -1,7 +1,9 @@
-import React from "react";
-
 function Nav() {
-  return <div>Nav</div>;
+  return (
+    <>
+      <div>Home About Projects Contact</div>
+    </>
+  );
 }
 
 export default Nav;

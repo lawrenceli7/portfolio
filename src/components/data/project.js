@@ -38,4 +38,10 @@ export default [
     ],
     link: "https://github.com/lawrenceli7/travel-planner",
   },
+  {
+    title: "Place Holder",
+    imgURL: "./assets/placeholder.png",
+    stack: ["Place Holder", "Place Holder", "Place Holder"],
+    link: "placeholder",
+  },
 ];
