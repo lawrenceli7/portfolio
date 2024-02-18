@@ -3,8 +3,8 @@ import project from "./data/ProjectData.jsx";
 
 function Portfolio() {
   return (
-    <div className="min-h-screen" id="projects">
-      <h1 className="text-center mb-4 hover:underline animate-text">
+    <div className="h-screen" id="projects">
+      <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 animate-text">
         <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent">
           Projects
         </span>

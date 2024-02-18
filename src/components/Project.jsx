@@ -13,7 +13,7 @@ function Project({ title, imgURL, stack, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-gray-400 rounded-2xl overflow-hidden hover:scale-105 transition-all"
+      className="border-2 border-gray-400 rounded-2xl overflow-hidden hover:scale-105 transition-all shadow-lg shadow-teal-500"
     >
       <img
         src={imgURL}
@@ -28,7 +28,7 @@ function Project({ title, imgURL, stack, link }) {
           {stack.map((item, index) => (
             <span
               key={index}
-              className="inline-block px-2 py-1 font-semibold border-2 border-gray-100 rounded-md"
+              className="inline-block px-2 py-1 font-semibold border-2 border-gray-100 rounded-xl"
             >
               {item}
             </span>
