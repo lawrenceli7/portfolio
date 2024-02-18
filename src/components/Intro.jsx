@@ -3,11 +3,17 @@ import { TypeAnimation } from "react-type-animation";
 function Intro() {
   return (
     <>
-      <div className="flex items-center justify-center flex-col text-center pt-20 pb-6 min-h-screen">
+      <div
+        className="flex items-center justify-center flex-col text-center pt-20 pb-6 h-screen"
+        id="main"
+      >
         <h1 className="text-4xl md:text-7xl mb-1 md:mb-3 font-bold">
-          Hi! I&apos;m <span className="text-[#66b2b2]">Lawrence Li</span>
+          Hi! I&apos;m{" "}
+          <span className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent">
+            Lawrence Li
+          </span>
         </h1>
-        <p className="text-base md:text-2xl mb-3 font-medium text-[#006666]">
+        <p className="text-base md:text-2xl mb-3 font-medium text-teal-200">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially

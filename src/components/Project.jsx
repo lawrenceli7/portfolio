@@ -13,7 +13,7 @@ function Project({ title, imgURL, stack, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-[#006666] rounded-2xl overflow-hidden hover:scale-105 transition-all"
+      className="border-2 border-gray-400 rounded-2xl overflow-hidden hover:scale-105 transition-all"
     >
       <img
         src={imgURL}
@@ -21,14 +21,14 @@ function Project({ title, imgURL, stack, link }) {
         className="w-full h-36 md:h-48 object-cover cursor-pointer"
       />
       <div className="w-full p-4">
-        <h3 className="text lg md:text-xl mb-2 md:mb-3 font-semibold">
+        <h3 className="text lg md:text-xl mb-2 md:mb-3 font-semibold text-teal-200">
           {title}
         </h3>
         <p className="flex flex-wrap gap-2 flex-row items-center text-xs md:text-sm justify-start">
           {stack.map((item, index) => (
             <span
               key={index}
-              className="inline-block px-2 py-1 font-semibold border-2 border-stone-500 rounded-md"
+              className="inline-block px-2 py-1 font-semibold border-2 border-gray-100 rounded-md"
             >
               {item}
             </span>

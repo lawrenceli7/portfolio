@@ -1,11 +1,13 @@
 import Project from "./Project";
-import project from "./data/project";
+import project from "./data/ProjectData.jsx";
 
 function Portfolio() {
   return (
-    <div className="min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-4 text-stone-900 text-decoration-line: underline hover:text-[#66b2b2]">
-        Projects
+    <div className="min-h-screen" id="projects">
+      <h1 className="text-center mb-4 hover:underline animate-text">
+        <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent">
+          Projects
+        </span>
       </h1>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
