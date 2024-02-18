@@ -1,3 +1,4 @@
+import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { TypeAnimation } from "react-type-animation";
 
 function Intro() {
@@ -30,6 +31,26 @@ function Intro() {
             repeat={Infinity}
           />
         </p>
+        <div className="flex justify-between pt-6 max-w-[200px] w-full">
+          <a
+            className="cursor-pointer hover:animate-bounce"
+            href="https://www.linkedin.com/in/lawrenceli7/"
+          >
+            <GrLinkedin size={30} />
+          </a>
+          <a
+            className="cursor-pointer hover:animate-bounce"
+            href="https://www.github.com/lawrenceli7/"
+          >
+            <GrGithub size={30} />
+          </a>
+          <a
+            className="cursor-pointer hover:animate-bounce"
+            href="mailto: lawrenceli3202@gmail.com"
+          >
+            <GrMail size={30} />
+          </a>
+        </div>
       </div>
     </>
   );

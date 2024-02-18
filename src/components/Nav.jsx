@@ -18,7 +18,7 @@ function Nav() {
       <div className="font-roboto">
         <VscMenu
           onClick={handleNav}
-          className="absolute top-4 left-4 z-[99] md:hidden text-2xl hover:animate-bounce"
+          className="absolute top-4 left-4 z-[99] md:hidden text-2xl hover:animate-pulse"
         />
         {nav ? (
           <div className="fixed w-full h-screen bg-[#f8f8fa]/90 flex flex-col justify-center items-center z-20">
