@@ -17,9 +17,6 @@ function Home() {
         <p className="text-base md:text-2xl mb-3 font-medium text-teal-200">
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "I'm a Coder",
-              2000,
               "I'm a Software Engineer",
               2000,
               "I'm also a Web Developer",
@@ -34,19 +31,19 @@ function Home() {
         <div className="flex flex-col gap-10">
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-[#0077b5]"
+              className="cursor-pointer hover:animate-bounce hover:text-blue"
               href="https://www.linkedin.com/in/lawrenceli7/"
             >
               <GrLinkedin size={30} />
             </a>
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-[#2dba4e]"
+              className="cursor-pointer hover:animate-bounce hover:text-green"
               href="https://www.github.com/lawrenceli7/"
             >
               <GrGithub size={30} />
             </a>
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-[#c71610]"
+              className="cursor-pointer hover:animate-bounce hover:text-red"
               href="mailto: lawrenceli3202@gmail.com"
             >
               <GrMail size={30} />
@@ -54,7 +51,7 @@ function Home() {
           </div>
           <div>
             <a
-              className="transition duration-300 ease-in-out rounded-2xl border-2 border-black p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-black"
+              className="transition duration-300 ease-in-out rounded-2xl border-2 border-gray-500 bg-white p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-gray-500 hover:shadow-2xl  hover:shadow-teal-100"
               download="resume-template.pdf"
               href="./assets/resume-template.pdf"
             >

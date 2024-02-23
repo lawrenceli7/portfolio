@@ -1,31 +1,43 @@
+import BattleNetworkGameImg from "../assets/battle-network-game.png";
+import BlackjackImg from "../assets/blackjack.png";
+import LogisimImg from "../assets/logisim.png";
+import PortfolioImg from "../assets/portfolio.png";
+import TravelPlannerImg from "../assets/travel-planner.png";
+
 export default [
   {
+    title: "In Progress",
+    imgURL: "./assets/placeholder.png",
+    stack: ["Place Holder", "Place Holder", "Place Holder"],
+    link: "placeholder",
+  },
+  {
     title: "Personal Website",
-    imgURL: "./assets/portfolio.png",
+    imgURL: PortfolioImg,
     stack: ["Vite", "ReactJS", "Tailwind CSS", "HTML", "JavaScript"],
     link: "https://github.com/lawrenceli7/portfolio",
   },
   {
     title: "LC3-Processor",
-    imgURL: "./assets/logisim.png",
+    imgURL: LogisimImg,
     stack: ["Logisim"],
     link: "https://github.com/lawrenceli7/lc3-processor",
   },
   {
     title: "Battle Network Game",
-    imgURL: "./assets/battle-network-game.png",
+    imgURL: BattleNetworkGameImg,
     stack: ["JavaFX", "Java", "CSS"],
     link: "https://github.com/lawrenceli7/battle-network-game",
   },
   {
     title: "Blackjack",
-    imgURL: "./assets/blackjack.png",
+    imgURL: BlackjackImg,
     stack: ["Java"],
     link: "https://github.com/lawrenceli7/blackjack",
   },
   {
     title: "Travel Planner",
-    imgURL: "./assets/travel-planner.png",
+    imgURL: TravelPlannerImg,
     stack: [
       "Vite",
       "ReactJS",
@@ -37,11 +49,5 @@ export default [
       "Redis",
     ],
     link: "https://github.com/lawrenceli7/travel-planner",
-  },
-  {
-    title: "Place Holder",
-    imgURL: "./assets/placeholder.png",
-    stack: ["Place Holder", "Place Holder", "Place Holder"],
-    link: "placeholder",
   },
 ];

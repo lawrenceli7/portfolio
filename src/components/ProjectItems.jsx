@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-function Project({ title, imgURL, stack, link }) {
-  Project.propTypes = {
+function ProjectItems({ title, imgURL, stack, link }) {
+  ProjectItems.propTypes = {
     title: PropTypes.string.isRequired,
     imgURL: PropTypes.string.isRequired,
     stack: PropTypes.array.isRequired,
@@ -13,15 +13,15 @@ function Project({ title, imgURL, stack, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-gray-400 rounded-2xl overflow-hidden hover:scale-105 transition-all shadow-lg shadow-teal-500"
+      className="border-2 border-gray-400 rounded-2xl overflow-hidden shadow-lg shadow-teal-200"
     >
       <img
         src={imgURL}
-        alt="portfolio"
+        alt="Place Holder"
         className="w-full h-36 md:h-48 object-cover cursor-pointer"
       />
       <div className="w-full p-4">
-        <h3 className="text lg md:text-xl mb-2 md:mb-3 font-semibold text-teal-200">
+        <h3 className="text lg md:text-xl mb-2 md:mb-3 font-semibold text-gray-500">
           {title}
         </h3>
         <p className="flex flex-wrap gap-2 flex-row items-center text-xs md:text-sm justify-start">
@@ -39,4 +39,4 @@ function Project({ title, imgURL, stack, link }) {
   );
 }
 
-export default Project;
+export default ProjectItems;
