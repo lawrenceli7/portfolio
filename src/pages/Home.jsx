@@ -53,7 +53,7 @@ function Home() {
             <a
               className="transition duration-300 ease-in-out rounded-2xl border-2 border-gray-500 bg-white p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-gray-500 hover:shadow-2xl  hover:shadow-teal-100"
               download="resume-template.pdf"
-              href="./src/assets/resume-template.pdf"
+              href="./resume-template.pdf"
             >
               Download Resume
             </a>
