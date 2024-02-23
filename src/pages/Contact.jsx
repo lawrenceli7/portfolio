@@ -1,9 +1,17 @@
 function Contact() {
+
+  const clearMessage = () => {
+    document.querySelector('input[name="name"]').value = '';
+    document.querySelector('input[name="email"]').value = '';
+    document.querySelector('textarea[name="subject"]').value = '';
+    document.querySelector('textarea[name="message"]').value = '';
+  };
+
   return (
     <div className="flex flex-col mx-auto h-screen justify-center" id="contact">
       <div className="flex justify-center items-center">
         <form
-          action=""
+          action="https://getform.io/f/negAvlbw"
           method="POST"
           className="flex flex-col w-full md:w-6/12"
         >
@@ -15,14 +23,14 @@ function Contact() {
           <input
             type="text"
             name="name"
-            placeholder="First and Last Name:"
+            placeholder="Full Name:"
             className="p-2 border-2 rounded-2xl focus:outline-none bg-white"
             required
           />
           <input
             type="text"
             name="email"
-            placeholder="Email:"
+            placeholder="Email Address:"
             className="my-2 p-2 border-2 rounded-2xl focus:outline-none bg-white"
             required
           />
@@ -37,14 +45,17 @@ function Contact() {
             name="message"
             placeholder="Enter your message:"
             rows="15"
-            className="p-2 mb-4 border-2 rounded-2xl focus:outline-none bg-white"
+            className="p-2 mb-2 border-2 rounded-2xl focus:outline-none bg-white"
             required
           />
           <button
-            type="button"
-            className="text-center inline-block px-8 py-3 w-full text-base font-medium rounded-2xl text-white bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 drop-shadow-md"
+            type="submit"
+            className="text-center inline-block px-8 py-3 w-full text-base font-medium rounded-2xl text-white bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 drop-shadow-md mb-2"
           >
             Send Message
+          </button>
+          <button type="reset" onClick={clearMessage} className="text-center inline-block px-8 py-3 w-full text-base font-medium rounded-2xl text-white bg-gradient-to-r from-purple-400 via-purple-300 to-purple-200 drop-shadow-md">
+            Reset
           </button>
         </form>
       </div>
