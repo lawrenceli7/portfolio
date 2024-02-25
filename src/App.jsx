@@ -1,11 +1,10 @@
 import { IoArrowUpCircleOutline } from "react-icons/io5";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Nav from "./components/Nav";
 import Project from "./pages/Project";
-import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <a href="#home" className="hover:text-teal-100" ><IoArrowUpCircleOutline size={40} className="ml-auto"/></a>
       </div>
       <Footer />
-      <Outlet />
     </div>
   );
 }
