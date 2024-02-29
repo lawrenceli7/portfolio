@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {
-  VscAccount,
-  VscArchive,
-  VscHome,
-  VscMail,
+  // VscAccount,
+  // VscArchive,
+  // VscHome,
+  // VscMail,
   VscMenu,
 } from "react-icons/vsc";
 
@@ -34,12 +34,9 @@ function Nav() {
                 <li>
                   <a
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
-                    href="#home" 
+                    href="#home"
                   >
-                    <div className="flex items-center gap-2">
-                    <VscHome />
                     Home
-                    </div>
                   </a>
                 </li>
                 <li>
@@ -47,10 +44,7 @@ function Nav() {
                     className="hover:text-teal-200 hover:underline hover:underline-offset-8 no-underline text-gray-500"
                     href="#about"
                   >
-                    <div className="flex items-center gap-2">
-                      <VscAccount />
-                      About
-                    </div>
+                    About
                   </a>
                 </li>
                 <li>
@@ -58,10 +52,7 @@ function Nav() {
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
                     href="#projects"
                   >
-                    <div className="flex items-center gap-2">
-                      <VscArchive />
-                      Projects
-                    </div>
+                    Projects
                   </a>
                 </li>
                 <li>
@@ -69,10 +60,7 @@ function Nav() {
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
                     href="#contact"
                   >
-                    <div className="flex items-center gap-2">
-                      <VscMail />
-                      Contact
-                    </div>
+                    Contact
                   </a>
                 </li>
               </ul>
