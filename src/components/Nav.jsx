@@ -24,7 +24,7 @@ function Nav() {
   return (
     <>
       <div className="font-roboto bg-white">
-        <div className="left-4 text-xl md:hidden pt-2 pl-2 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent">
+        <div className="left-4 text-xl md:hidden pt-2 pl-2 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100">
           Lawrence Li
         </div>
         <VscMenu
