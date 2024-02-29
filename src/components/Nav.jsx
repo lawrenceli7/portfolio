@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {
-  // VscAccount,
-  // VscArchive,
-  // VscHome,
-  // VscMail,
+  VscAccount,
+  VscArchive,
+  VscHome,
+  VscMail,
   VscMenu,
 } from "react-icons/vsc";
 
@@ -34,9 +34,12 @@ function Nav() {
                 <li>
                   <a
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
-                    href="#home"
+                    href="#home" 
                   >
+                    <div className="flex items-center gap-2">
+                    <VscHome />
                     Home
+                    </div>
                   </a>
                 </li>
                 <li>
@@ -44,7 +47,10 @@ function Nav() {
                     className="hover:text-teal-200 hover:underline hover:underline-offset-8 no-underline text-gray-500"
                     href="#about"
                   >
-                    About
+                    <div className="flex items-center gap-2">
+                      <VscAccount />
+                      About
+                    </div>
                   </a>
                 </li>
                 <li>
@@ -52,7 +58,10 @@ function Nav() {
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
                     href="#projects"
                   >
-                    Projects
+                    <div className="flex items-center gap-2">
+                      <VscArchive />
+                      Projects
+                    </div>
                   </a>
                 </li>
                 <li>
@@ -60,7 +69,10 @@ function Nav() {
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
                     href="#contact"
                   >
-                    Contact
+                    <div className="flex items-center gap-2">
+                      <VscMail />
+                      Contact
+                    </div>
                   </a>
                 </li>
               </ul>
