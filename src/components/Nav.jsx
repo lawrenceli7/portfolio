@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {
-  // VscAccount,
-  // VscArchive,
-  // VscHome,
-  // VscMail,
+  VscAccount,
+  VscArchive,
+  VscHome,
+  VscMail,
   VscMenu,
 } from "react-icons/vsc";
 
@@ -12,6 +12,14 @@ function Nav() {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  function scrollTo(dest) {
+    return () => {
+      const element = document.getElementById(dest);
+      element.scrollIntoView({ behavior: "smooth" });
+      setNav(false);
+    };
+  }
 
   return (
     <>
@@ -32,36 +40,48 @@ function Nav() {
             <div>
               <ul className="gap-8 flex text-2xl">
                 <li>
-                  <a
+                  <button
+                    onClick={scrollTo("home")}
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
-                    href="#home"
                   >
+                    <div className="flex flex-row items-center gap-2">
+                    <VscHome />
                     Home
-                  </a>
+                    </div>
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
+                    onClick={scrollTo("about")}
                     className="hover:text-teal-200 hover:underline hover:underline-offset-8 no-underline text-gray-500"
-                    href="#about"
                   >
+                    <div className="flex flex-row items-center gap-2">
+                    <VscAccount />
                     About
-                  </a>
+                    </div>
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
+                    onClick={scrollTo("project")}
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
-                    href="#projects"
                   >
+                    <div className="flex flex-row items-center gap-2">
+                    <VscArchive />
                     Projects
-                  </a>
+                    </div>
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
+                    onClick={scrollTo("contact")}
                     className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
-                    href="#contact"
                   >
+                    <div className="flex flex-row items-center gap-2">
+                    <VscMail />
                     Contact
-                  </a>
+                    </div>
+                  </button>
                 </li>
               </ul>
             </div>

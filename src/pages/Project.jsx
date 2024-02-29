@@ -1,9 +1,9 @@
-import ProjectItems from "../components/ProjectItems.jsx";
 import Projects from "../components/ProjectData.jsx";
+import ProjectItems from "../components/ProjectItems.jsx";
 
 function Project() {
   return (
-    <div id="projects">
+    <div id="project">
       <h1 className="text-center mb-4 hover:underline hover:underline-offset-8">
         <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent">
           Projects
