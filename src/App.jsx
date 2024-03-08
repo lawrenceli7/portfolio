@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Project from "./pages/Project";
 
 function App() {
-  
+
   return (
     <div className="bg-lightgray text-stone-900 min-h-screen">
       <Nav />

@@ -1,4 +1,5 @@
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
+import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";
 
 function Home() {
@@ -48,6 +49,12 @@ function Home() {
             >
               <GrMail size={30} />
             </a>
+          </div>
+          <div className="flex flex-row gap-2 justify-center">
+            <SlLocationPin size={30} />
+            <span className="text-sm md:text-lg text-gray-500">
+              Boston, MA
+            </span>
           </div>
           <div>
             <a
