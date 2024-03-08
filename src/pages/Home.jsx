@@ -51,8 +51,8 @@ function Home() {
             </a>
           </div>
           <div className="flex flex-row gap-2 justify-center">
-            <SlLocationPin size={30} />
-            <span className="text-sm md:text-lg text-gray-500">
+            <SlLocationPin size={30} className="hover:text-darkred" />
+            <span className="text-xl text-gray-500 hover:underline-offset-8 hover:underline">
               Boston, MA
             </span>
           </div>
