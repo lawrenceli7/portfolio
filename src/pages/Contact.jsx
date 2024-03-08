@@ -44,7 +44,7 @@ function Contact() {
           <textarea
             name="message"
             placeholder="Enter your message:"
-            rows="15"
+            rows="10"
             className="p-2 mb-2 border-2 rounded-2xl focus:outline-none bg-white"
             required
           />

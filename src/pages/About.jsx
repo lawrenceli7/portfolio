@@ -6,9 +6,14 @@ function About() {
     >
       <h1 className="text-center mb-4 hover:underline hover:underline-offset-8">
         <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent">
-          About
+          About Me
         </span>
       </h1>
+      <div className="flex flex-row gap-8 text-m md:text-xl">
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2">Education</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2">Skills</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2">Experience</button>
+      </div>
       <div className="flex flex-col items-center">
         <div className="text-xl text-gray-500 pt-6">
           I am a junior at Boston University studying Computer Science. My main

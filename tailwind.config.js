@@ -1,12 +1,12 @@
 /* global module */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{jsx, js}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        inter: ["inter", "serif"],
-        roboto: ["Roboto", "sans-serif"],
+        inter: ["inter", "sans-serif"],
+        roboto: ["roboto", "sans-serif"],
       },
       colors: {
         teal: {
@@ -35,6 +35,9 @@ module.exports = {
         red: "#c71610",
         lightgray: "#f8f8fa"
       },
+      textUnderlineOffset: {
+        5: '5px',
+      }
     },
   },
   plugins: [],

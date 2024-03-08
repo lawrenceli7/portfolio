@@ -9,6 +9,7 @@ import {
 
 function Nav() {
   const [nav, setNav] = useState(false);
+  // const [activeButton, setActiveButton] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
@@ -21,10 +22,14 @@ function Nav() {
     };
   }
 
+  // const handleButtonClick = (button) => {
+  //   setActiveButton(!activeButton);
+  // };
+
   return (
     <>
-      <div className="font-roboto bg-white">
-        <div className="left-4 text-xl md:hidden pt-2 pl-2 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100">
+      <div className=" bg-white">
+        <div className="left-4 text-xl md:hidden pt-2 pl-2 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100 font-inter">
           Lawrence Li
         </div>
         <VscMenu
@@ -33,16 +38,16 @@ function Nav() {
         />
         {}
         <nav className="md:block hidden bg-white top-0 fixed w-full">
-          <div className="flex justify-between items-center h-10 p-5 shadow-lg shadow-teal-100">
-            <div className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent text-2xl cursor-default">
+          <div className="flex justify-between items-center h-14 p-5 shadow-lg shadow-teal-100">
+            <div className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent text-2xl cursor-default font-roboto">
               Lawrence Li
             </div>
-            <div>
-              <ul className="gap-8 flex text-2xl">
+            <div className="font-inter">
+              <ul className="gap-2 flex text-2xl">
                 <li>
                   <button
                     onClick={scrollTo("home")}
-                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
+                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-5 no-underline hover:bg-[#f1f1f1] hover:rounded-full p-2"
                   >
                     <div className="flex flex-row items-center gap-2">
                     <VscHome />
@@ -53,7 +58,7 @@ function Nav() {
                 <li>
                   <button
                     onClick={scrollTo("about")}
-                    className="hover:text-teal-200 hover:underline hover:underline-offset-8 no-underline text-gray-500"
+                    className="hover:text-teal-200 hover:underline hover:underline-offset-5 no-underline text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full"
                   >
                     <div className="flex flex-row items-center gap-2">
                     <VscAccount />
@@ -64,7 +69,7 @@ function Nav() {
                 <li>
                   <button
                     onClick={scrollTo("project")}
-                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
+                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-5 no-underline p-2 hover:bg-[#f1f1f1] hover:rounded-full"
                   >
                     <div className="flex flex-row items-center gap-2">
                     <VscArchive />
@@ -75,7 +80,7 @@ function Nav() {
                 <li>
                   <button
                     onClick={scrollTo("contact")}
-                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-8 no-underline"
+                    className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-5 no-underline p-2 hover:bg-[#f1f1f1] hover:rounded-full"
                   >
                     <div className="flex flex-row items-center gap-2">
                     <VscMail />

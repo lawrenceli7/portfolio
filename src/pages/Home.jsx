@@ -14,7 +14,7 @@ function Home() {
             Lawrence.
           </span>
         </h1>
-        <p className="text-base md:text-2xl mb-3 font-medium text-teal-200">
+        <span className="text-base md:text-2xl mb-3 font-medium text-teal-200">
           <TypeAnimation
             sequence={[
               "I'm a Software Engineer",
@@ -27,7 +27,7 @@ function Home() {
             style={{ fontSize: "2em", display: "inline-block" }}
             repeat={Infinity}
           />
-        </p>
+        </span>
         <div className="flex flex-col gap-10">
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
             <a
