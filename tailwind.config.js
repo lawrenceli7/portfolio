@@ -38,7 +38,11 @@ module.exports = {
       },
       textUnderlineOffset: {
         5: '5px',
-      }
+      },
+      animation: {
+        swing: 'swing 1s ease 1',
+        text: 'text 5s ease infinite',
+      },
     },
   },
   plugins: [],

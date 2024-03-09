@@ -32,33 +32,33 @@ function Home() {
         <div className="flex flex-col gap-10">
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-blue"
+              className="cursor-pointer hover:animate-pulse hover:text-blue"
               href="https://www.linkedin.com/in/lawrenceli7/"
             >
               <GrLinkedin size={30} />
             </a>
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-green"
+              className="cursor-pointer hover:animate-pulse hover:text-green"
               href="https://www.github.com/lawrenceli7/"
             >
               <GrGithub size={30} />
             </a>
             <a
-              className="cursor-pointer hover:animate-bounce hover:text-red"
+              className="cursor-pointer hover:animate-pulse hover:text-red"
               href="mailto: lawrenceli3202@gmail.com"
             >
               <GrMail size={30} />
             </a>
           </div>
           <div className="flex flex-row gap-2 justify-center">
-            <SlLocationPin size={30} className="hover:text-darkred" />
+            <SlLocationPin size={30} className="hover:text-darkred hover:animate-pulse" />
             <span className="text-xl text-gray-500 hover:underline-offset-8 hover:underline">
               Boston, MA
             </span>
           </div>
           <div>
             <a
-              className="transition duration-300 ease-in-out rounded-2xl border-2 border-gray-500 bg-white p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-gray-500 hover:shadow-2xl  hover:shadow-teal-100"
+              className="transition duration-300 ease-in-out rounded-2xl border-2 border-gray-500 bg-white p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-gray-500 hover:shadow-2xl  hover:shadow-teal-100 hover:animate-pulse"
               download="resume-template.pdf"
               href="./resume-template.pdf"
             >
