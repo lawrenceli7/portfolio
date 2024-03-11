@@ -29,15 +29,67 @@ function Nav() {
   return (
     <>
       <div className=" bg-white">
-        <div className="left-4 text-xl md:hidden pt-2 pl-2 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100 font-roboto">
-          Lawrence Li
+        <div className="">
+          <div className="text-xl md:hidden pt-2 pl-8 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100 font-roboto animate-text">
+            Lawrence Li
+          </div>
         </div>
         <VscMenu
-          onClick={handleNav}
-          className="absolute top-2 right-4 z-[99] md:hidden text-2xl hover:animate-pulse hover:text-teal-200"
+          onClick={() => {
+            handleNav();
+          }}
+          className="absolute top-2 right-8 md:hidden text-2xl hover:animate-pulse hover:text-teal-200"
         />
-        { }
-        <nav className="md:block hidden bg-white top-0 fixed w-full">
+        {nav ? (
+          <div className="fixed w-full h-screen bg-lightgray flex flex-col justify-center items-center z-20 md:hidden gap-8">
+            <a
+              onClick={() => {
+                handleNav();
+                scrollTo("home")();
+              }}
+              className="w-[30%] flex justify-center items-center shadow-lg bg-white shadow-teal-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 underline underline-offset-4 hover:text-teal-200 rounded-3xl font-inter"
+            >
+              <VscHome size={25} />
+              <span className="pl-4">Home</span>
+            </a>
+            <a
+              onClick={() => {
+                handleNav();
+                scrollTo("about")();
+              }}
+              className="w-[30%] flex justify-center items-center shadow-lg bg-white shadow-teal-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 underline underline-offset-4 hover:text-teal-200 rounded-3xl font-inter"
+            >
+              <VscAccount size={25} />
+              <span className="pl-4">About</span>
+            </a>
+            <a
+              onClick={() => {
+                handleNav();
+                scrollTo("project")();
+              }}
+              className="w-[30%] flex justify-center items-center shadow-lg bg-white shadow-teal-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 underline underline-offset-4 hover:text-teal-200 rounded-3xl font-inter"
+            >
+              <VscArchive size={25} />
+              <span className="pl-4 ">Projects</span>
+            </a>
+            <a
+              onClick={() => {
+                handleNav();
+                scrollTo("contact")();
+              }}
+              className="w-[30%] flex justify-center items-center shadow-lg bg-white shadow-teal-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 underline underline-offset-4 hover:text-teal-200 rounded-3xl font-inter"
+            >
+              <VscMail size={25} />
+              <span className="pl-4 ">Contact</span>
+            </a>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 hover:text-[#94908d]">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg> */}
+          </div>
+        ) : (
+          ""
+        )}
+        <nav className="md:block hidden bg-white top-0 w-full fixed">
           <div className="flex justify-between items-center h-14 p-5 shadow-lg shadow-teal-100">
             <div className="flex flex-row items-center gap-4 pl-12">
               <div className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent lg:text-2xl md:text-lg cursor-default font-roboto animate-text">
@@ -103,7 +155,7 @@ function Nav() {
             </div>
           </div>
         </nav>
-      </div>
+      </div >
     </>
   );
 }
