@@ -22,7 +22,7 @@ function About() {
   const skillsInfo = () => {
     const meInfo =
       <div>
-        in development
+        In Development
       </div>;
 
     setDisplayInfo(meInfo);
@@ -31,7 +31,7 @@ function About() {
   const eduacationInfo = () => {
     const meInfo =
       <div>
-        in development
+        In Development
       </div>;
 
     setDisplayInfo(meInfo);
@@ -40,7 +40,7 @@ function About() {
   const experienceInfo = () => {
     const meInfo =
       <div>
-        in development
+        In Development
       </div>;
 
     setDisplayInfo(meInfo);
