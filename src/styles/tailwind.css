@@ -7,17 +7,37 @@
 }
 
 @keyframes swing {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(0deg); }
-  50% { transform: rotate(15deg); }
-  75% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes text {
-  0% { color: #d896ff; }
-  25% { color: #008080; }
-  50% { color: #66b2b2; }
-  75% { color: #008080; }
-  100% { color: #d896ff; }
+  0% {
+    color: #d896ff;
+  }
+  25% {
+    color: #b2d8d8;
+  }
+  50% {
+    color: #66b2b2;
+  }
+  75% {
+    color: #b2d8d8;
+  }
+  100% {
+    color: #d896ff;
+  }
 }

@@ -4,11 +4,11 @@ function BackToTop() {
   function scrollTo(dest) {
     return () => {
       const element = document.getElementById(dest);
-      element.scrollIntoView({ behavior: "smooth" }); 
+      element.scrollIntoView({ behavior: "smooth" });
     };
   }
   return (
-    <button onClick={scrollTo("home")} className="hover:text-teal-100 fixed bottom-8 right-8" ><IoArrowUpCircleOutline size={40} className="" /></button>
+    <button onClick={scrollTo("home")} className="hover:text-teal-100 fixed bottom-8 right-8 dark:hover:text-purple-100 dark:text-white" ><IoArrowUpCircleOutline size={40} className="" /></button>
   );
 }
 

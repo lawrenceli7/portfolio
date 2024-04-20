@@ -1,8 +1,8 @@
-import BattleNetworkGameImg from "../assets/battle-network-game.png";
-import BlackjackImg from "../assets/blackjack.png";
-import LogisimImg from "../assets/logisim.png";
-import PortfolioImg from "../assets/portfolio.png";
-import TravelPlannerImg from "../assets/travel-planner.png";
+import BattleNetworkGameImg from "../assets/project/battle-network-game.png";
+import BlackjackImg from "../assets/project/blackjack.png";
+import LogisimImg from "../assets/project/logisim.png";
+import PortfolioImg from "../assets/project/portfolio.png";
+import TravelPlannerImg from "../assets/project/travel-planner.png";
 
 export default [
   {

@@ -13,10 +13,10 @@ function Contact() {
         <form
           action="https://getform.io/f/negAvlbw"
           method="POST"
-          className="flex flex-col w-full md:w-6/12"
+          className="flex flex-col w-11/12 md:w-6/12"
         >
-          <h1 className="text-center mb-4 hover:underline hover:underline-offset-8">
-            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 dark:hover:text-white">
+            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
               Contact Me
             </span>
           </h1>
