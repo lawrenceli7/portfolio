@@ -1,4 +1,4 @@
-import Projects from "../components/ProjectData.jsx";
+import Projects from "../data/Projects.jsx";
 import ProjectItems from "../components/ProjectItems.jsx";
 
 function Project() {

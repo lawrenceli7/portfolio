@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ExperienceItem from "../components/ExperienceItem";
+import Experience from "../data/Experience";
 
 function About() {
 
@@ -6,7 +8,7 @@ function About() {
 
   const showMeInfo = () => {
     const meInfo =
-      <div className="dark:text-white">
+      <div className="text-gray-500 dark:text-white">
         I am a junior at Boston University studying Computer Science.
         My main interests lie in the field of web development and software engineering,
         with a special focus on front-end development.
@@ -40,7 +42,16 @@ function About() {
   const experienceInfo = () => {
     const meInfo =
       <div className="dark:text-white">
-        In Development
+        {Experience.map((item, index) => (
+          <ExperienceItem
+            key={index}
+            year={item.year}
+            title={item.title}
+            duration={item.duration}
+            location={item.location}
+            details={item.details}
+          />
+        ))}
       </div>;
 
     setDisplayInfo(meInfo);
@@ -57,13 +68,13 @@ function About() {
           About Me
         </span>
       </h1>
-      <div className="flex flex-row gap-2 md:text-xl md:gap-8">
+      <div className="flex flex-row gap-2 md:text-xl md:gap-8 text-base p-2 lg:text-2xl">
         <div>
-          <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={showMeInfo}>Me</button>
+          <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={showMeInfo}>Me</button>
         </div>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={educationInfo}>Education</button>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={skillsInfo}>Skills</button>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={experienceInfo}>Experience</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={educationInfo}>Education</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={skillsInfo}>Skills</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={experienceInfo}>Experience</button>
       </div>
       <div className="flex flex-col items-center">
         <div className="text-xl text-gray-500 pt-6">{displayInfo}</div>

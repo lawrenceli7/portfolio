@@ -11,7 +11,6 @@ import {
 
 function Nav() {
   const [nav, setNav] = useState(false);
-  // const [activeButton, setActiveButton] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
@@ -23,10 +22,6 @@ function Nav() {
       setNav(false);
     };
   }
-
-  // const handleButtonClick = (button) => {
-  //   setActiveButton(!activeButton);
-  // };
 
   const [theme, setTheme] = useState(null);
 
