@@ -1,6 +1,5 @@
-import BackToTop from "./components/BackToTop";
-import Footer from "./components/layout/Footer";
-import Nav from "./components/layout/Nav";
+import Footer from "./layout/Footer";
+import Nav from "./layout/Nav";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -16,7 +15,6 @@ function App() {
         <About />
         <Project />
         <Contact />
-        <BackToTop />
       </div>
       <Footer />
     </div>

@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import EducationItem from "../components/EducationItem";
 import ExperienceItem from "../components/ExperienceItem";
+import Education from "../data/Education";
 import Experience from "../data/Experience";
 
 function About() {
 
   const [displayInfo, setDisplayInfo] = useState('');
+
+  useEffect(() => {
+    showMeInfo();
+  }, []);
 
   const showMeInfo = () => {
     const meInfo =
@@ -33,7 +39,16 @@ function About() {
   const educationInfo = () => {
     const meInfo =
       <div className="dark:text-white">
-        In Development
+        {Education.map((item, index) => (
+          <EducationItem
+            key={index}
+            school={item.school}
+            name={item.name}
+            degree={item.degree}
+            duration={item.duration}
+            coursework={item.coursework}
+          />
+        ))}
       </div>;
 
     setDisplayInfo(meInfo);
@@ -73,8 +88,9 @@ function About() {
           <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={showMeInfo}>Me</button>
         </div>
         <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={educationInfo}>Education</button>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={skillsInfo}>Skills</button>
         <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={experienceInfo}>Experience</button>
+        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={skillsInfo}>Skills</button>
+
       </div>
       <div className="flex flex-col items-center">
         <div className="text-xl text-gray-500 pt-6">{displayInfo}</div>

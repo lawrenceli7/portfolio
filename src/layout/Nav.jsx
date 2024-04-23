@@ -55,7 +55,7 @@ function Nav() {
 
   return (
     <>
-      <div className=" bg-white dark:bg-[#232730]">
+      <div className=" bg-white dark:bg-[#16181d]">
         <div className="text-xl md:hidden pt-2 pl-8 bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent shadow-lg shadow-teal-100 font-roboto animate-text dark:shadow-purple-100">
           Lawrence Li
         </div>
@@ -114,7 +114,7 @@ function Nav() {
         ) : (
           ""
         )}
-        <nav className="md:block hidden bg-white top-0 w-full fixed dark:bg-[#232730]">
+        <nav className="md:block hidden bg-white top-0 w-full fixed dark:bg-[#16181d]">
           <div className="flex justify-between items-center h-14 p-5 shadow-lg shadow-teal-100 dark:shadow-purple-100">
             <div className="flex flex-row items-center gap-4 pl-12">
               <div className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent lg:text-2xl md:text-lg cursor-default font-roboto animate-text">
