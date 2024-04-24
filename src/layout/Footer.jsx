@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="text-center bg-white dark:bg-[#16181d] dark:text-white pt-8">
       <BackToTop />
-      {/* <p className="mb-8">lawrenceli3202@gmail.com</p> */}
+      <p className="mb-8">lawrenceli3202@gmail.com</p>
       <div className="flex gap-4 justify-center mb-8">
         <a
           className="cursor-pointer hover:animate-pulse hover:text-blue dark:text-white dark:hover:text-blue"
