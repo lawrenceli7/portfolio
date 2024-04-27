@@ -9,9 +9,8 @@ function ExperienceItem({ year, title, duration, location, details }) {
         details: PropTypes.string.isRequired,
     };
     return (
-        <ol className="flex flex-col md:flex-row border-l border-gray-100 dark:border-gray-300">
+        <ol className="flex flex-col md:flex-row border-l border-teal-200 dark:border-purple-100">
             <li className="mb-10 ml-4">
-                <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-500 dark:bg-stone-700" />
                 <p className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm">
                     <span className="inline-block px-2 py-1 font-semibold text-white dark:text-gray-500 bg-gray-500 shadow-md shadow-teal-100 border border-teal-200 rounded-lg dark:bg-white dark:shadow-purple-100 dark:border-purple-200">
                         {year}
