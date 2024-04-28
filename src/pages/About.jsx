@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import EducationItem from "../components/EducationItem";
 import ExperienceItem from "../components/ExperienceItem";
+import SkillsItem from "../components/SkillsItem";
 import Education from "../data/Education";
 import Experience from "../data/Experience";
+import Skill from "../data/Skills";
 
 function About() {
 
@@ -30,7 +32,16 @@ function About() {
   const skillsInfo = () => {
     const meInfo =
       <div className="dark:text-white">
-        In Development
+        <p className="text-center">Still in development</p>
+        {Skill.map((item, index) => (
+          <SkillsItem
+            key={index}
+            languages={item.languages}
+            frameworks={item.frameworks}
+            databases={item.databases}
+            tools={item.tools}
+          />
+        ))}
       </div>;
 
     setDisplayInfo(meInfo);
@@ -80,7 +91,7 @@ function About() {
     >
       <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 dark:hover:text-white">
         <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
-          About Me
+          About
         </span>
       </h1>
       <div className="flex flex-row gap-2 md:text-xl md:gap-8 text-base p-2 lg:text-2xl">
