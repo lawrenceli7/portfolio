@@ -1,8 +1,8 @@
 export default [
     {
-        languages: ["Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder"],
-        frameworks: ["Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder"],
-        databases: ["Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder"],
+        languages: ["Java", "Python", "JavaScript", "TypeScript", "HTML", "CSS"],
+        frameworks: ["Next.js", "React.js", "JavaFX", "Tailwind CSS", "Flask", "FastAPI"],
+        databases: ["SQLite", "MongoDB"],
         tools: ["Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder", "Place Holder"],
     },
 ]
