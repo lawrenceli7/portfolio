@@ -32,7 +32,6 @@ function About() {
   const skillsInfo = () => {
     const meInfo =
       <div className="dark:text-white">
-        <p className="text-center">Still in development</p>
         {Skill.map((item, index) => (
           <SkillsItem
             key={index}
