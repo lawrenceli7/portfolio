@@ -1,69 +1,84 @@
-import { Button, Form, Input, Typography } from 'antd';
-
-const { Title } = Typography;
+import { AiOutlineMessage } from "react-icons/ai";
+import { CiMail, CiPaperplane, CiPen, CiUser } from "react-icons/ci";
+import { RxReset } from "react-icons/rx";
 
 function Contact() {
 
-  const [form] = Form.useForm();
-
   const clearMessage = () => {
-    form.resetFields();
+    document.querySelector('input[name="name"]').value = '';
+    document.querySelector('input[name="email"]').value = '';
+    document.querySelector('textarea[name="subject"]').value = '';
+    document.querySelector('textarea[name="message"]').value = '';
   };
 
   return (
     <div className="flex flex-col mx-auto h-screen justify-center" id="contact">
-      <div className="flex justify-center items-center ">
-        <Form
-          form={form}
+      <div className="flex justify-center items-center bg-white rounded-xl pt-10 pb-10 pl-2 pr-2 md:w-1/2 mx-auto w-11/12 shadow-xl border border-black dark:bg-[#16181d] dark:border-white">
+        <form
           action="https://getform.io/f/negAvlbw"
           method="POST"
-          layout="vertical"
-          className="flex flex-col w-full md:w-8/12 p-4 bg-white dark:bg-[#16181d] rounded-xl shadow-lg border border-teal-100 dark:border-purple-100"
+          className="flex flex-col w-full ml-2 mr-2"
         >
-          <Title level={1} className="text-center mb-4 text-white">
-            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent hover:underline hover:underline-offset-8 dark:text-white">
+          <h1 className="text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
+            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
               Contact Me
             </span>
-          </Title>
-          <Form.Item
+          </h1>
+          <div className="flex items-center">
+            <CiUser className="dark:text-white" />
+            <label htmlFor="name" className="p-1 dark:text-white">Full Name:</label>
+          </div>
+          <input
+            type="text"
             name="name"
-            label={<span className="text-gray-800 dark:text-white">Full Name</span>}
-            rules={[{ required: true, message: 'Please enter your full name' }]}
-          >
-            <Input placeholder="Full Name:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
-          </Form.Item>
-          <Form.Item
+            placeholder="Enter full name"
+            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            required
+          />
+          <div className="flex items-center">
+            <CiMail className="dark:text-white" />
+            <label htmlFor="name" className="p-1 dark:text-white">Email:</label>
+          </div>
+          <input
+            type="text"
             name="email"
-            label={<span className="text-gray-800 dark:text-white">Email Address</span>}
-            rules={[{ required: true, message: 'Please enter your email address' }]}
-          >
-            <Input type="email" placeholder="Email Address:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
-          </Form.Item>
-          <Form.Item
+            placeholder="Enter email address"
+            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            required
+          />
+          <div className="flex items-center">
+            <CiPen className="dark:text-white" />
+            <label htmlFor="subject" className="p-1 dark:text-white">Subject:</label>
+          </div>
+          <textarea
             name="subject"
-            label={<span className="text-gray-800 dark:text-white">Subject</span>}
-            rules={[{ required: true, message: 'Please enter a subject' }]}
-          >
-            <Input placeholder="Subject:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
-          </Form.Item>
-          <Form.Item
+            placeholder="Enter subject"
+            rows="1"
+            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            required
+          />
+          <div className="flex items-center">
+            <CiPaperplane className="dark:text-white" />
+            <label htmlFor="message" className="p-1 dark:text-white">Message:</label>
+          </div>
+          <textarea
             name="message"
-            label={<span className="text-gray-800 dark:text-white">Message</span>}
-            rules={[{ required: true, message: 'Please enter your message' }]}
-          >
-            <Input.TextArea rows={6} placeholder="Enter your message:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
-          </Form.Item>
-          <Form.Item>
-            <Button type="submit" htmlType="submit" className="w-full mb-2 bg-teal-400 border-none text-white">
-              Send Message
-            </Button>
-            <Button type="default" onClick={clearMessage} className="w-full bg-purple-400 border-none text-white">
-              Reset
-            </Button>
-          </Form.Item>
-        </Form>
+            placeholder="Enter your message..."
+            rows="6"
+            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-4"
+            required
+          />
+          <button
+            type="submit"
+            className="text-center inline-block px-4 py-1 w-full text-base font-medium rounded-lg text-white bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md mb-2"
+          ><div className="flex items-center justify-center gap-2">Send Message <AiOutlineMessage /></div>
+          </button>
+          <button type="reset" onClick={clearMessage} className="text-center inline-block px-4 py-1 w-full text-base font-medium rounded-lg text-white bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md">
+            <div className="flex items-center justify-center gap-2">Reset <RxReset /></div>
+          </button>
+        </form>
       </div>
-    </div>
+    </div >
   );
 }
 
