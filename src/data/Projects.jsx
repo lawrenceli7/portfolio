@@ -1,16 +1,17 @@
-import BattleNetworkGameImg from "../assets/project/battle-network-game.png";
-import BlackjackImg from "../assets/project/blackjack.png";
-import LogisimImg from "../assets/project/logisim.png";
-import PortfolioImg from "../assets/project/portfolio.png";
-import SpaceNewsImg from "../assets/project/space-news.png";
-import SparkBytesImg from "../assets/project/spark-bytes.png";
-import TravelPlannerImg from "../assets/project/travel-planner.png";
-import WeatherAppImg from "../assets/project/weather-app.png";
+import BattleNetworkGameImg from "../assets/battle-network-game.png";
+import BlackjackImg from "../assets/blackjack.png";
+import JobNowImg from "../assets/job-now.png";
+import LogisimImg from "../assets/logisim.png";
+import PortfolioImg from "../assets/portfolio.png";
+import SpaceNewsImg from "../assets/space-news.png";
+import SparkBytesImg from "../assets/spark-bytes.png";
+import TravelPlannerImg from "../assets/travel-planner.png";
+import WeatherAppImg from "../assets/weather-app.png";
 
 export default [
   {
     title: "JobNow",
-    imgURL: "./assets/placeholder.png",
+    imgURL: JobNowImg,
     stack: ["React.js", "Flask", "MySQL", "JavaScript", "Tailwind CSS", "Python", "Ant Design", "Vite"],
     link: "https://github.com/kevkim12/jobnow",
   },
