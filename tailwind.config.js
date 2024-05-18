@@ -44,6 +44,9 @@ module.exports = {
         swing: 'swing 1s ease 1',
         text: 'text 5s ease infinite',
       },
+      zIndex: {
+        '1000': '1000',
+      }
     },
   },
   plugins: [],

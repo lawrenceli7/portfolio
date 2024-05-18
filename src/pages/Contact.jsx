@@ -1,63 +1,67 @@
+import { Button, Form, Input, Typography } from 'antd';
+
+const { Title } = Typography;
+
 function Contact() {
 
+  const [form] = Form.useForm();
+
   const clearMessage = () => {
-    document.querySelector('input[name="name"]').value = '';
-    document.querySelector('input[name="email"]').value = '';
-    document.querySelector('textarea[name="subject"]').value = '';
-    document.querySelector('textarea[name="message"]').value = '';
+    form.resetFields();
   };
 
   return (
     <div className="flex flex-col mx-auto h-screen justify-center" id="contact">
-      <div className="flex justify-center items-center">
-        <form
+      <div className="flex justify-center items-center ">
+        <Form
+          form={form}
           action="https://getform.io/f/negAvlbw"
           method="POST"
-          className="flex flex-col w-full md:w-8/12"
+          layout="vertical"
+          className="flex flex-col w-full md:w-8/12 p-4 bg-white dark:bg-[#16181d] rounded-xl shadow-lg border border-teal-100 dark:border-purple-100"
         >
-          <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 dark:hover:text-white">
-            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
+          <Title level={1} className="text-center mb-4 text-white">
+            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent hover:underline hover:underline-offset-8 dark:text-white">
               Contact Me
             </span>
-          </h1>
-          <input
-            type="text"
+          </Title>
+          <Form.Item
             name="name"
-            placeholder="Full Name:"
-            className="p-2 border-2 rounded-2xl focus:outline-none bg-white"
-            required
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="Email Address:"
-            className="my-2 p-2 border-2 rounded-2xl focus:outline-none bg-white"
-            required
-          />
-          <textarea
-            name="subject"
-            placeholder="Subject:"
-            rows="1"
-            className="p-2 mb-2 border-2 rounded-2xl focus:outline-none bg-white"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Enter your message:"
-            rows="10"
-            className="p-2 mb-2 border-2 rounded-2xl focus:outline-none bg-white"
-            required
-          />
-          <button
-            type="submit"
-            className="text-center inline-block px-8 py-3 w-full text-base font-medium rounded-2xl text-white bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 drop-shadow-md mb-2"
+            label={<span className="text-gray-800 dark:text-white">Full Name</span>}
+            rules={[{ required: true, message: 'Please enter your full name' }]}
           >
-            Send Message
-          </button>
-          <button type="reset" onClick={clearMessage} className="text-center inline-block px-8 py-3 w-full text-base font-medium rounded-2xl text-white bg-gradient-to-r from-purple-400 via-purple-300 to-purple-200 drop-shadow-md">
-            Reset
-          </button>
-        </form>
+            <Input placeholder="Full Name:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
+          </Form.Item>
+          <Form.Item
+            name="email"
+            label={<span className="text-gray-800 dark:text-white">Email Address</span>}
+            rules={[{ required: true, message: 'Please enter your email address' }]}
+          >
+            <Input type="email" placeholder="Email Address:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
+          </Form.Item>
+          <Form.Item
+            name="subject"
+            label={<span className="text-gray-800 dark:text-white">Subject</span>}
+            rules={[{ required: true, message: 'Please enter a subject' }]}
+          >
+            <Input placeholder="Subject:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
+          </Form.Item>
+          <Form.Item
+            name="message"
+            label={<span className="text-gray-800 dark:text-white">Message</span>}
+            rules={[{ required: true, message: 'Please enter your message' }]}
+          >
+            <Input.TextArea rows={6} placeholder="Enter your message:" className="dark:bg-[#23272f] dark:placeholder-white dark:text-white" />
+          </Form.Item>
+          <Form.Item>
+            <Button type="submit" htmlType="submit" className="w-full mb-2 bg-teal-400 border-none text-white">
+              Send Message
+            </Button>
+            <Button type="default" onClick={clearMessage} className="w-full bg-purple-400 border-none text-white">
+              Reset
+            </Button>
+          </Form.Item>
+        </Form>
       </div>
     </div>
   );
