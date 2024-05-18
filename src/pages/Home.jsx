@@ -9,7 +9,7 @@ function Home() {
         className="flex items-center justify-center flex-col text-center pt-5 pb-6 h-screen"
         id="home"
       >
-        <h1 className="text-4xl md:text-7xl mb-1 md:mb-3 font-bold dark:text-white">
+        <h1 className="lg:text-7xl md:text-4xl text-4xl mb-1 md:mb-3 font-bold dark:text-white">
           Hi, I&apos;m{" "}
           <span className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent dark:text-purple-300">
             Lawrence.
@@ -24,8 +24,8 @@ function Home() {
               2000,
             ]}
             wrapper="div"
-            speed={20}
-            style={{ fontSize: "2em", display: "inline-block" }}
+            speed={5}
+            className="lg:text-4xl font-montserrat md:text-2xl text-2xl inline-block"
             repeat={Infinity}
           />
         </span>
@@ -52,19 +52,10 @@ function Home() {
           </div>
           <div className="flex flex-row gap-2 justify-center">
             <SlLocationPin size={30} className="hover:text-darkred hover:animate-pulse dark:text-white dark:hover:text-darkred" />
-            <span className="text-xl text-gray-500 hover:underline-offset-8 hover:underline dark:text-white">
+            <span className="text-xl text-gray-500 hover:underline-offset-8 hover:underline dark:text-white font-montserrat">
               Boston, MA
             </span>
           </div>
-          {/* <div>
-            <a
-              className="transition duration-300 ease-in-out rounded-2xl border-2 border-gray-500 bg-white p-4 cursor-pointer hover:scale-110 hover:underline-offset-8 hover:underline hover:text-white hover:bg-gray-500 hover:shadow-2xl  hover:shadow-teal-100 hover:animate-pulse"
-              download="resume-template.pdf"
-              href="./resume-template.pdf"
-            >
-              Download Resume
-            </a>
-          </div> */}
         </div>
       </div>
     </>

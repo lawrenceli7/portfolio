@@ -1,11 +1,11 @@
-import Projects from "../data/Projects.jsx";
 import ProjectItems from "../components/ProjectItems.jsx";
+import Projects from "../data/Projects.jsx";
 
 function Project() {
   return (
-    <div id="project">
+    <div id="projects">
       <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 dark:hover:text-white">
-        <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
+        <span className="text-4xl font-bold text-gray-900 dark:text-white">
           Projects
         </span>
       </h1>
@@ -18,6 +18,7 @@ function Project() {
               title={project.title}
               stack={project.stack}
               link={project.link}
+              production={project.production}
             />
           ))}
         </div>

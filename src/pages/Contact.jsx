@@ -19,8 +19,8 @@ function Contact() {
           method="POST"
           className="flex flex-col w-full ml-2 mr-2"
         >
-          <h1 className="text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
-            <span className="text-4xl font-bold bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 bg-clip-text text-transparent dark:text-white">
+          <h1 className="mb-2 text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
+            <span className="text-4xl font-bold text-gray-900 dark:text-white">
               Contact Me
             </span>
           </h1>

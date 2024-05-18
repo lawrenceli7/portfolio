@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         inter: ["inter", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
+        montserrat: ["montserrat", "sans-serif"],
       },
       colors: {
         teal: {
