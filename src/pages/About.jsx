@@ -7,30 +7,30 @@ import Experience from "../data/Experience";
 import Skill from "../data/Skills";
 
 function About() {
-
-  const [displayInfo, setDisplayInfo] = useState('');
+  const [displayInfo, setDisplayInfo] = useState("");
 
   useEffect(() => {
     showMeInfo();
   }, []);
 
   const showMeInfo = () => {
-    const meInfo =
+    const meInfo = (
       <div className="text-gray-500 dark:text-white">
-        I am a junior at Boston University studying Computer Science.
-        My main interests lie in the field of web development and software engineering,
+        I am a junior at Boston University studying Computer Science. My main
+        interests lie in the field of web development and software engineering,
         with a special focus on front-end development.
-        <br /><br />
-        I am currently looking for an internship for the summer of 2024.
+        <br />
+        <br />I am currently looking for an internship for the summer of 2024.
         If you are interested in collaborating or have any projects you think
         would be a good fit, feel free to reach out to me!
-      </div>;
+      </div>
+    );
 
     setDisplayInfo(meInfo);
   };
 
   const skillsInfo = () => {
-    const meInfo =
+    const meInfo = (
       <div className="dark:text-white">
         {Skill.map((item, index) => (
           <SkillsItem
@@ -41,13 +41,14 @@ function About() {
             tools={item.tools}
           />
         ))}
-      </div>;
+      </div>
+    );
 
     setDisplayInfo(meInfo);
   };
 
   const educationInfo = () => {
-    const meInfo =
+    const meInfo = (
       <div className="dark:text-white">
         {Education.map((item, index) => (
           <EducationItem
@@ -59,13 +60,14 @@ function About() {
             coursework={item.coursework}
           />
         ))}
-      </div>;
+      </div>
+    );
 
     setDisplayInfo(meInfo);
   };
 
   const experienceInfo = () => {
-    const meInfo =
+    const meInfo = (
       <div className="dark:text-white">
         {Experience.map((item, index) => (
           <ExperienceItem
@@ -77,33 +79,52 @@ function About() {
             details={item.details}
           />
         ))}
-      </div>;
+      </div>
+    );
 
     setDisplayInfo(meInfo);
   };
 
-
   return (
     <div
       id="about"
-      className="items-center h-screen flex flex-col justify-center mx-auto"
+      className="flex flex-col items-center justify-center h-screen mx-auto"
     >
-      <h1 className="text-center mb-4 hover:underline hover:underline-offset-8 dark:hover:text-white">
+      <h1 className="mb-4 text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
         <span className="text-4xl font-bold text-gray-900 dark:text-white">
           About
         </span>
       </h1>
-      <div className="flex flex-row gap-2 md:text-xl md:gap-8 text-base p-2 lg:text-2xl">
+      <div className="flex flex-row gap-2 p-2 text-base md:text-xl md:gap-8 lg:text-2xl">
         <div>
-          <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={showMeInfo}>Me</button>
+          <button
+            className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+            onClick={showMeInfo}
+          >
+            Me
+          </button>
         </div>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={educationInfo}>Education</button>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={experienceInfo}>Experience</button>
-        <button className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100" onClick={skillsInfo}>Skills</button>
-
+        <button
+          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          onClick={educationInfo}
+        >
+          Education
+        </button>
+        <button
+          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          onClick={experienceInfo}
+        >
+          Experience
+        </button>
+        <button
+          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          onClick={skillsInfo}
+        >
+          Skills
+        </button>
       </div>
       <div className="flex flex-col items-center">
-        <div className="text-xl text-gray-500 pt-6">{displayInfo}</div>
+        <div className="pt-6 text-xl text-gray-500">{displayInfo}</div>
       </div>
     </div>
   );

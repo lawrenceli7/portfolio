@@ -3,16 +3,15 @@ import { CiMail, CiPaperplane, CiPen, CiUser } from "react-icons/ci";
 import { RxReset } from "react-icons/rx";
 
 function Contact() {
-
   const clearMessage = () => {
-    document.querySelector('input[name="name"]').value = '';
-    document.querySelector('input[name="email"]').value = '';
-    document.querySelector('textarea[name="subject"]').value = '';
-    document.querySelector('textarea[name="message"]').value = '';
+    document.querySelector('input[name="name"]').value = "";
+    document.querySelector('input[name="email"]').value = "";
+    document.querySelector('textarea[name="subject"]').value = "";
+    document.querySelector('textarea[name="message"]').value = "";
   };
 
   return (
-    <div className="flex flex-col mx-auto h-screen justify-center" id="contact">
+    <div className="flex flex-col justify-center h-screen mx-auto" id="contact">
       <div className="flex justify-center items-center bg-white rounded-xl pt-10 pb-10 pl-2 pr-2 md:w-1/2 mx-auto w-11/12 shadow-xl border border-black dark:bg-[#16181d] dark:border-white">
         <form
           action="https://getform.io/f/negAvlbw"
@@ -26,7 +25,9 @@ function Contact() {
           </h1>
           <div className="flex items-center">
             <CiUser className="dark:text-white" />
-            <label htmlFor="name" className="p-1 dark:text-white">Full Name:</label>
+            <label htmlFor="name" className="p-1 dark:text-white">
+              Full Name:
+            </label>
           </div>
           <input
             type="text"
@@ -37,7 +38,9 @@ function Contact() {
           />
           <div className="flex items-center">
             <CiMail className="dark:text-white" />
-            <label htmlFor="name" className="p-1 dark:text-white">Email:</label>
+            <label htmlFor="name" className="p-1 dark:text-white">
+              Email:
+            </label>
           </div>
           <input
             type="text"
@@ -48,7 +51,9 @@ function Contact() {
           />
           <div className="flex items-center">
             <CiPen className="dark:text-white" />
-            <label htmlFor="subject" className="p-1 dark:text-white">Subject:</label>
+            <label htmlFor="subject" className="p-1 dark:text-white">
+              Subject:
+            </label>
           </div>
           <textarea
             name="subject"
@@ -59,7 +64,9 @@ function Contact() {
           />
           <div className="flex items-center">
             <CiPaperplane className="dark:text-white" />
-            <label htmlFor="message" className="p-1 dark:text-white">Message:</label>
+            <label htmlFor="message" className="p-1 dark:text-white">
+              Message:
+            </label>
           </div>
           <textarea
             name="message"
@@ -70,15 +77,24 @@ function Contact() {
           />
           <button
             type="submit"
-            className="text-center inline-block px-4 py-1 w-full text-base font-medium rounded-lg text-white bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md mb-2"
-          ><div className="flex items-center justify-center gap-2">Send Message <AiOutlineMessage /></div>
+            className="inline-block w-full px-4 py-1 mb-2 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md"
+          >
+            <div className="flex items-center justify-center gap-2">
+              Send Message <AiOutlineMessage />
+            </div>
           </button>
-          <button type="reset" onClick={clearMessage} className="text-center inline-block px-4 py-1 w-full text-base font-medium rounded-lg text-white bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md">
-            <div className="flex items-center justify-center gap-2">Reset <RxReset /></div>
+          <button
+            type="reset"
+            onClick={clearMessage}
+            className="inline-block w-full px-4 py-1 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md"
+          >
+            <div className="flex items-center justify-center gap-2">
+              Reset <RxReset />
+            </div>
           </button>
         </form>
       </div>
-    </div >
+    </div>
   );
 }
 

@@ -6,11 +6,10 @@ import Home from "./pages/Home";
 import Project from "./pages/Project";
 
 function App() {
-
   return (
     <div className="bg-lightgray text-gray-500 min-h-screen dark:bg-[#23272f]">
       <Nav />
-      <div className="max-w-5xl w-11/12 mx-auto">
+      <div className="w-11/12 max-w-5xl mx-auto">
         <Home />
         <About />
         <Project />

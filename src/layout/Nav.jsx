@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
-import {
-  VscAccount,
-  VscArchive,
-  VscHome,
-  VscMail,
-} from "react-icons/vsc";
+import { VscAccount, VscArchive, VscHome, VscMail } from "react-icons/vsc";
 
 function Nav() {
-
   function scrollTo(dest) {
     return () => {
       const element = document.getElementById(dest);
@@ -19,32 +13,28 @@ function Nav() {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
     } else {
-      setTheme('light');
+      setTheme("light");
     }
   }, []);
 
   const handleThemeSwitch = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [theme]);
 
-  const light = (
-    <IoSunnyOutline />
-  );
+  const light = <IoSunnyOutline />;
 
-  const dark = (
-    <IoMoonOutline />
-  );
+  const dark = <IoMoonOutline />;
 
   return (
     <nav>
@@ -88,21 +78,20 @@ function Nav() {
               onClick={handleThemeSwitch}
               className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-5 no-underline p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700"
             >
-              {theme === 'dark' ? light : dark}
+              {theme === "dark" ? light : dark}
             </button>
           </div>
         </ul>
       </div>
       <div className="md:block hidden bg-white top-0 w-full fixed z-1000 dark:bg-[#16181d]">
-        <div className="flex justify-between items-center h-14 p-5 shadow-lg shadow-teal-100 dark:shadow-purple-100">
+        <div className="flex items-center justify-between p-5 shadow-lg h-14 shadow-teal-100 dark:shadow-purple-100">
           <div className="flex items-center gap-4 lg:pl-12 md:pl-6">
-            <div className="bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text text-transparent lg:text-2xl md:text-lg cursor-default font-roboto animate-text">
+            <div className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-lg font-roboto animate-text">
               Lawrence Li
             </div>
-
           </div>
-          <div className="font-inter lg:pr-12 md:pr-6 flex items-center gap-2">
-            <ul className="lg:gap-1 flex lg:text-2xl md:text-lg">
+          <div className="flex items-center gap-2 font-inter lg:pr-12 md:pr-6">
+            <ul className="flex lg:gap-1 lg:text-2xl md:text-lg">
               <li>
                 <button
                   onClick={scrollTo("home")}
@@ -153,14 +142,14 @@ function Nav() {
                   onClick={handleThemeSwitch}
                   className="hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700"
                 >
-                  {theme === 'dark' ? light : dark}
+                  {theme === "dark" ? light : dark}
                 </button>
               </div>
             </ul>
           </div>
         </div>
-      </div >
-    </nav >
+      </div>
+    </nav>
   );
 }
 

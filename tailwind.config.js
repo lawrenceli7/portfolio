@@ -36,18 +36,18 @@ module.exports = {
         green: "#2dba4e",
         red: "#c71610",
         darkred: "#822f2b",
-        lightgray: "#f8f8fa"
+        lightgray: "#f8f8fa",
       },
       textUnderlineOffset: {
-        5: '5px',
+        5: "5px",
       },
       animation: {
-        swing: 'swing 1s ease 1',
-        text: 'text 5s ease infinite',
+        swing: "swing 1s ease 1",
+        text: "text 5s ease infinite",
       },
       zIndex: {
-        '1000': '1000',
-      }
+        1000: "1000",
+      },
     },
   },
   plugins: [],

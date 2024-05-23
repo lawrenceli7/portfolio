@@ -8,7 +8,12 @@ function BackToTop() {
     };
   }
   return (
-    <button onClick={scrollTo("home")} className="hover:text-teal-100 mb-8 dark:hover:text-purple-100 dark:text-white" ><IoIosArrowDropup size={40} className="" /></button>
+    <button
+      onClick={scrollTo("home")}
+      className="mb-8 hover:text-teal-100 dark:hover:text-purple-100 dark:text-white"
+    >
+      <IoIosArrowDropup size={40} className="" />
+    </button>
   );
 }
 

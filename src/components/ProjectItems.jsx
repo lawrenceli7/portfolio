@@ -16,27 +16,27 @@ function ProjectItems({ title, imgURL, stack, link, production }) {
       href={production}
       target="_blank"
       rel="noopener noreferrer"
-      className="border-2 border-gray-400 rounded-2xl overflow-hidden shadow-lg shadow-teal-200 dark:border-white dark:shadow-purple-200 "
+      className="overflow-hidden border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 "
     >
       <img
         src={imgURL}
         alt="Place Holder"
-        className="w-full h-36 md:h-48 object-cover cursor-pointer hover:animate-pulse"
+        className="object-cover w-full cursor-pointer h-36 md:h-48 hover:animate-pulse"
       />
       <div className="w-full p-4">
         <div className="flex justify-between">
-          <h3 className="text lg md:text-xl mb-2 md:mb-3 font-semibold text-gray-500 dark:text-white">
+          <h3 className="mb-2 font-semibold text-gray-500 text lg md:text-xl md:mb-3 dark:text-white">
             {title}
           </h3>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          ><FaSquareGithub size={25} className="rounded-lg hover:animate-bounce" />
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <FaSquareGithub
+              size={25}
+              className="rounded-lg hover:animate-bounce"
+            />
           </a>
         </div>
         <Divider className="bg-gray-100 dark:bg-white" />
-        <p className="flex flex-wrap gap-2 flex-row items-center text-xs md:text-sm justify-start">
+        <p className="flex flex-row flex-wrap items-center justify-start gap-2 text-xs md:text-sm">
           {stack.map((item, index) => (
             <span
               key={index}

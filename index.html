@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="./ll.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawrence Li</title>
-    <link rel="canonical" href="lawrenceli.dev">
+    <link rel="canonical" href="lawrenceli.dev" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +22,11 @@
               return s.replace(/~and~/g, "&");
             })
             .join("?");
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
       })(window.location);
     </script>
