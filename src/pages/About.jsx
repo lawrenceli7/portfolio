@@ -15,7 +15,7 @@ function About() {
 
   const showMeInfo = () => {
     const meInfo = (
-      <div className="text-gray-500 dark:text-white">
+      <div className="text-base text-gray-500 lg:text-xl md:text-lg dark:text-white">
         I am a junior at Boston University studying Computer Science. My main
         interests lie in the field of web development and software engineering,
         with a special focus on front-end development.
@@ -95,29 +95,29 @@ function About() {
           About
         </span>
       </h1>
-      <div className="flex flex-row gap-2 p-2 text-base md:text-xl md:gap-8 lg:text-2xl">
+      <div className="flex flex-row gap-2 p-1 text-base md:gap-8 lg:text-xl md:text-lg">
         <div>
           <button
-            className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+            className="p-5 bg-white border-2 border-gray-500 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
             onClick={showMeInfo}
           >
             Me
           </button>
         </div>
         <button
-          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          className="p-5 bg-white border-2 border-gray-500 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={educationInfo}
         >
           Education
         </button>
         <button
-          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          className="p-5 bg-white border-2 border-gray-500 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={experienceInfo}
         >
           Experience
         </button>
         <button
-          className="bg-white p-5 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl  hover:shadow-teal-100 border-gray-500 border-2 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-[#23272f] dark:text-white dark:hover:shadow-purple-100"
+          className="p-5 bg-white border-2 border-gray-500 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={skillsInfo}
         >
           Skills

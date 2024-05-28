@@ -38,12 +38,12 @@ function Nav() {
 
   return (
     <nav>
-      <div className="text-xl md:hidden pt-2 pl-8 shadow-lg shadow-teal-100  dark:shadow-purple-100 pb-2 text-white bg-white top-0 w-full fixed z-1000 dark:bg-[#16181d]">
+      <div className="fixed top-0 w-full pt-2 pb-2 pl-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 z-1000 dark:bg-nav">
         <ul className="flex justify-center gap-2">
           <li>
             <button
               onClick={scrollTo("home")}
-              className="font-thin hover:text-teal-200 text-gray-500 hover:bg-[#f1f1f1] hover:rounded-full p-2 dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
             >
               Home
             </button>
@@ -51,7 +51,7 @@ function Nav() {
           <li>
             <button
               onClick={scrollTo("about")}
-              className="font-thin hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
             >
               About
             </button>
@@ -59,7 +59,7 @@ function Nav() {
           <li>
             <button
               onClick={scrollTo("projects")}
-              className="font-thin hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
             >
               Projects
             </button>
@@ -67,7 +67,7 @@ function Nav() {
           <li>
             <button
               onClick={scrollTo("contact")}
-              className="font-thin hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
             >
               Contact
             </button>
@@ -76,26 +76,26 @@ function Nav() {
             <button
               type="button"
               onClick={handleThemeSwitch}
-              className="hover:text-teal-200 text-gray-500 hover:underline hover:underline-offset-5 no-underline p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700"
+              className="p-2 text-gray-500 no-underline hover:text-teal-200 hover:underline hover:underline-offset-5 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
             >
               {theme === "dark" ? light : dark}
             </button>
           </div>
         </ul>
       </div>
-      <div className="md:block hidden bg-white top-0 w-full fixed z-1000 dark:bg-[#16181d]">
-        <div className="flex items-center justify-between p-5 shadow-lg h-14 shadow-teal-100 dark:shadow-purple-100">
-          <div className="flex items-center gap-4 lg:pl-12 md:pl-6">
-            <div className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-lg font-roboto animate-text">
+      <div className="fixed top-0 hidden w-full bg-white md:block z-1000 dark:bg-nav">
+        <div className="flex items-center justify-between shadow-lg h-nav shadow-teal-100 dark:shadow-purple-100">
+          <div className="flex items-center gap-4 lg:pl-28 md:pl-16">
+            <div className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-xl font-roboto animate-text">
               Lawrence Li
             </div>
           </div>
-          <div className="flex items-center gap-2 font-inter lg:pr-12 md:pr-6">
-            <ul className="flex lg:gap-1 lg:text-2xl md:text-lg">
+          <div className="flex items-center gap-2 font-inter lg:pr-28 md:pr-16">
+            <ul className="flex lg:gap-1 lg:text-xl md:text-lg">
               <li>
                 <button
                   onClick={scrollTo("home")}
-                  className="hover:text-teal-200 text-gray-500 hover:bg-[#f1f1f1] hover:rounded-full p-2 dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
                     <VscHome />
@@ -106,7 +106,7 @@ function Nav() {
               <li>
                 <button
                   onClick={scrollTo("about")}
-                  className="hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
                     <VscAccount />
@@ -117,7 +117,7 @@ function Nav() {
               <li>
                 <button
                   onClick={scrollTo("projects")}
-                  className="hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
                     <VscArchive />
@@ -128,7 +128,7 @@ function Nav() {
               <li>
                 <button
                   onClick={scrollTo("contact")}
-                  className="hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700 dark:font-extralight"
+                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
                     <VscMail />
@@ -140,7 +140,7 @@ function Nav() {
                 <button
                   type="button"
                   onClick={handleThemeSwitch}
-                  className="hover:text-teal-200 text-gray-500 p-2 hover:bg-[#f1f1f1] hover:rounded-full dark:hover:text-purple-200 dark:text-[#ebecf0] dark:hover:bg-slate-700"
+                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
                 >
                   {theme === "dark" ? light : dark}
                 </button>

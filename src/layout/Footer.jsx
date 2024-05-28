@@ -3,7 +3,7 @@ import BackToTop from "../components/BackToTop";
 
 function Footer() {
   return (
-    <div className="text-center bg-white dark:bg-[#16181d] dark:text-white pt-8">
+    <div className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
       <BackToTop />
       <p className="mb-8">lawrenceli3202@gmail.com</p>
       <div className="flex justify-center gap-4 mb-8">

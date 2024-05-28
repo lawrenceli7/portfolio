@@ -12,7 +12,7 @@ function Contact() {
 
   return (
     <div className="flex flex-col justify-center h-screen mx-auto" id="contact">
-      <div className="flex justify-center items-center bg-white rounded-xl pt-10 pb-10 pl-2 pr-2 md:w-1/2 mx-auto w-11/12 shadow-xl border border-black dark:bg-[#16181d] dark:border-white">
+      <div className="flex items-center justify-center w-11/12 pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl rounded-xl md:w-1/2 dark:bg-contact dark:border-white">
         <form
           action="https://getform.io/f/negAvlbw"
           method="POST"
@@ -33,7 +33,7 @@ function Contact() {
             type="text"
             name="name"
             placeholder="Enter full name"
-            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
           <div className="flex items-center">
@@ -46,7 +46,7 @@ function Contact() {
             type="text"
             name="email"
             placeholder="Enter email address"
-            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
           <div className="flex items-center">
@@ -59,7 +59,7 @@ function Contact() {
             name="subject"
             placeholder="Enter subject"
             rows="1"
-            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-2"
+            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
           <div className="flex items-center">
@@ -72,7 +72,7 @@ function Contact() {
             name="message"
             placeholder="Enter your message..."
             rows="6"
-            className="text-sm p-2 border rounded-lg focus:outline-none bg-white dark:bg-[#23272f] dark:placeholder-white dark:border-white dark:text-white mb-4"
+            className="p-2 mb-4 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
           <button

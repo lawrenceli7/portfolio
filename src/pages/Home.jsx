@@ -8,13 +8,13 @@ function Home() {
       className="flex flex-col items-center justify-center h-screen pt-5 pb-6 text-center"
       id="home"
     >
-      <h1 className="mb-1 text-4xl font-bold lg:text-7xl md:text-4xl md:mb-3 dark:text-white">
+      <h1 className="mb-1 text-4xl font-bold lg:text-7xl md:text-5xl md:mb-3 dark:text-white">
         Hi, I&apos;m{" "}
         <span className="text-transparent bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text dark:text-purple-300">
           Lawrence.
         </span>
       </h1>
-      <span className="mb-3 text-base font-medium text-teal-200 md:text-2xl dark:text-purple-200">
+      <span className="mb-3 text-base font-medium text-teal-200 dark:text-purple-200">
         <TypeAnimation
           sequence={[
             "I'm a Software Engineer",

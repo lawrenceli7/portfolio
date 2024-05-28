@@ -12,7 +12,7 @@ function BackToTop() {
       onClick={scrollTo("home")}
       className="mb-8 hover:text-teal-100 dark:hover:text-purple-100 dark:text-white"
     >
-      <IoIosArrowDropup size={40} className="" />
+      <IoIosArrowDropup size={40} />
     </button>
   );
 }

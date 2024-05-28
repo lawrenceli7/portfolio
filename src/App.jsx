@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 
 function App() {
   return (
-    <div className="bg-lightgray text-gray-500 min-h-screen dark:bg-[#23272f]">
+    <div className="min-h-screen text-gray-500 bg-lightgray dark:bg-default">
       <Nav />
       <div className="w-11/12 max-w-5xl mx-auto">
         <Home />

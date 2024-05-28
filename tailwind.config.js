@@ -37,6 +37,11 @@ module.exports = {
         red: "#c71610",
         darkred: "#822f2b",
         lightgray: "#f8f8fa",
+        footer: "#16181d",
+        nav: "#16181d",
+        contact: "#16181d",
+        navText: "#f1f1f1",
+        default: "#23272f",
       },
       textUnderlineOffset: {
         5: "5px",
@@ -47,6 +52,9 @@ module.exports = {
       },
       zIndex: {
         1000: "1000",
+      },
+      height: {
+        nav: "70px",
       },
     },
   },
