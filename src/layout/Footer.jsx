@@ -1,11 +1,22 @@
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
+import { MdOutlineAttachEmail } from "react-icons/md";
 import BackToTop from "../components/BackToTop";
 
 function Footer() {
   return (
     <div className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
       <BackToTop />
-      <p className="mb-8">lawrenceli3202@gmail.com</p>
+      <div className="flex flex-col items-center">
+        <div className="flex items-center gap-2 mb-8">
+          <MdOutlineAttachEmail />
+          <p className="underline underline-offset-5">
+            <a href="mailto:lawrenceli3202@gmail.com">
+              lawrenceli3202@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
       <div className="flex justify-center gap-4 mb-8">
         <a
           className="cursor-pointer hover:animate-pulse hover:text-blue dark:text-white dark:hover:text-blue"
@@ -21,7 +32,7 @@ function Footer() {
         </a>
         <a
           className="cursor-pointer hover:animate-pulse hover:text-red dark:text-white dark:hover:text-red"
-          href="mailto: lawrenceli3202@gmail.com"
+          href="mailto:lawrenceli3202@gmail.com"
         >
           <GrMail size={30} />
         </a>
