@@ -1,13 +1,20 @@
+import React from "react";
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiMail, CiPaperplane, CiPen, CiUser } from "react-icons/ci";
 import { RxReset } from "react-icons/rx";
 
-function Contact() {
+const Contact: React.FC = () => {
   const clearMessage = () => {
-    document.querySelector('input[name="name"]').value = "";
-    document.querySelector('input[name="email"]').value = "";
-    document.querySelector('textarea[name="subject"]').value = "";
-    document.querySelector('textarea[name="message"]').value = "";
+    (document.querySelector('input[name="name"]') as HTMLInputElement).value =
+      "";
+    (document.querySelector('input[name="email"]') as HTMLInputElement).value =
+      "";
+    (
+      document.querySelector('textarea[name="subject"]') as HTMLTextAreaElement
+    ).value = "";
+    (
+      document.querySelector('textarea[name="message"]') as HTMLTextAreaElement
+    ).value = "";
   };
 
   return (
@@ -38,12 +45,12 @@ function Contact() {
           />
           <div className="flex items-center">
             <CiMail className="dark:text-white" />
-            <label htmlFor="name" className="p-1 dark:text-white">
+            <label htmlFor="email" className="p-1 dark:text-white">
               Email:
             </label>
           </div>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter email address"
             className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
@@ -58,12 +65,12 @@ function Contact() {
           <textarea
             name="subject"
             placeholder="Enter subject"
-            rows="1"
+            rows={1}
             className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
           <div className="flex items-center">
-            <CiPaperplane className="dark:text-white" />
+            <AiOutlineMessage className="dark:text-white" />
             <label htmlFor="message" className="p-1 dark:text-white">
               Message:
             </label>
@@ -71,7 +78,7 @@ function Contact() {
           <textarea
             name="message"
             placeholder="Enter your message..."
-            rows="6"
+            rows={6}
             className="p-2 mb-4 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white"
             required
           />
@@ -80,11 +87,11 @@ function Contact() {
             className="inline-block w-full px-4 py-1 mb-2 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md"
           >
             <div className="flex items-center justify-center gap-2">
-              Send Message <AiOutlineMessage />
+              Send Message <CiPaperplane />
             </div>
           </button>
           <button
-            type="reset"
+            type="button"
             onClick={clearMessage}
             className="inline-block w-full px-4 py-1 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md"
           >
@@ -96,6 +103,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

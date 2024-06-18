@@ -1,22 +1,28 @@
 import { Divider } from "antd";
-import PropTypes from "prop-types";
+import React from "react";
 import { FaSquareGithub } from "react-icons/fa6";
 
-function ProjectItems({ title, imgURL, stack, link, production }) {
-  ProjectItems.propTypes = {
-    title: PropTypes.string.isRequired,
-    imgURL: PropTypes.string.isRequired,
-    stack: PropTypes.array.isRequired,
-    link: PropTypes.string.isRequired,
-    production: PropTypes.string.isRequired,
-  };
+interface ProjectItemsProps {
+  title: string;
+  imgURL: string;
+  stack: string[];
+  link: string;
+  production: string;
+}
 
+const ProjectItems: React.FC<ProjectItemsProps> = ({
+  title,
+  imgURL,
+  stack,
+  link,
+  production,
+}) => {
   return (
     <a
       href={production}
       target="_blank"
       rel="noopener noreferrer"
-      className="overflow-hidden border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 "
+      className="overflow-hidden border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200"
     >
       <img
         src={imgURL}
@@ -25,7 +31,7 @@ function ProjectItems({ title, imgURL, stack, link, production }) {
       />
       <div className="w-full p-4">
         <div className="flex justify-between">
-          <h3 className="mb-2 font-semibold text-gray-500 text lg md:text-xl md:mb-3 dark:text-white">
+          <h3 className="mb-2 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white">
             {title}
           </h3>
           <a href={link} target="_blank" rel="noopener noreferrer">
@@ -49,6 +55,6 @@ function ProjectItems({ title, imgURL, stack, link, production }) {
       </div>
     </a>
   );
-}
+};
 
 export default ProjectItems;

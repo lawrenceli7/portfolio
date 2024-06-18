@@ -1,0 +1,38 @@
+export default [
+  {
+    languages: [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "SQL",
+      "GraphQL",
+    ],
+    frameworks: [
+      "Next.js",
+      "React.js",
+      "Express.js",
+      "Flask",
+      "FastAPI",
+      "Tailwind CSS",
+      "Vitest",
+      "Jest",
+      "React-Native",
+      "JavaFX",
+    ],
+    databases: ["PostgresSQL", "SQLite", "MongoDB", "Firebase"],
+    tools: [
+      "Apollo",
+      "Prisma",
+      "Git",
+      "Docker",
+      "Node.js",
+      "Webpack",
+      "GitHub",
+      "Logisim",
+      "Vite",
+    ],
+  },
+];

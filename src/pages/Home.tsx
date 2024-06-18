@@ -1,8 +1,9 @@
+import React from "react";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <div
       className="flex flex-col items-center justify-center h-screen pt-5 pb-6 text-center"
@@ -61,6 +62,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

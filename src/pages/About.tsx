@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import EducationItem from "../components/EducationItem";
 import ExperienceItem from "../components/ExperienceItem";
 import SkillsItem from "../components/SkillsItem";
@@ -6,8 +6,8 @@ import Education from "../data/Education";
 import Experience from "../data/Experience";
 import Skill from "../data/Skills";
 
-function About() {
-  const [displayInfo, setDisplayInfo] = useState("");
+const About: React.FC = () => {
+  const [displayInfo, setDisplayInfo] = useState<JSX.Element | null>(null);
 
   useEffect(() => {
     showMeInfo();
@@ -128,6 +128,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;

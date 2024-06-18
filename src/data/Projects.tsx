@@ -8,7 +8,15 @@ import SparkBytesImg from "../assets/spark-bytes.png";
 import TravelPlannerImg from "../assets/travel-planner.png";
 import WeatherAppImg from "../assets/weather-app.png";
 
-export default [
+interface Project {
+  title: string;
+  imgURL: string;
+  stack: string[];
+  link: string;
+  production: string;
+}
+
+const projects: Project[] = [
   {
     title: "JobNow",
     imgURL: JobNowImg,
@@ -91,3 +99,5 @@ export default [
     production: "https://github.com/lawrenceli7/blackjack",
   },
 ];
+
+export default projects;

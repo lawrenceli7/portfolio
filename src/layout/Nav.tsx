@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { VscAccount, VscArchive, VscHome, VscMail } from "react-icons/vsc";
 
-function Nav() {
-  function scrollTo(dest) {
+const Nav: React.FC = () => {
+  const scrollTo = (dest: string) => {
     return () => {
       const element = document.getElementById(dest);
-      element.scrollIntoView({ behavior: "smooth" });
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     };
-  }
+  };
 
-  const [theme, setTheme] = useState(null);
+  const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -33,7 +35,6 @@ function Nav() {
   }, [theme]);
 
   const light = <IoSunnyOutline />;
-
   const dark = <IoMoonOutline />;
 
   return (
@@ -151,6 +152,6 @@ function Nav() {
       </div>
     </nav>
   );
-}
+};
 
 export default Nav;

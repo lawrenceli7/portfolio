@@ -1,7 +1,8 @@
-import ProjectItems from "../components/ProjectItems.jsx";
-import Projects from "../data/Projects.jsx";
+import React from "react";
+import ProjectItems from "../components/ProjectItems";
+import Projects from "../data/Projects";
 
-function Project() {
+const Project: React.FC = () => {
   return (
     <div id="projects">
       <h1 className="mb-4 text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
@@ -25,6 +26,6 @@ function Project() {
       </div>
     </div>
   );
-}
+};
 
 export default Project;

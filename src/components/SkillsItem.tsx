@@ -1,13 +1,18 @@
-import PropTypes from "prop-types";
+import React from "react";
 
-function SkillsItem({ languages, frameworks, databases, tools }) {
-  SkillsItem.propTypes = {
-    languages: PropTypes.string.isRequired,
-    frameworks: PropTypes.string.isRequired,
-    databases: PropTypes.string.isRequired,
-    tools: PropTypes.string.isRequired,
-    coursework: PropTypes.string.isRequired,
-  };
+interface SkillsItemProps {
+  languages: string[];
+  frameworks: string[];
+  databases: string[];
+  tools: string[];
+}
+
+const SkillsItem: React.FC<SkillsItemProps> = ({
+  languages,
+  frameworks,
+  databases,
+  tools,
+}) => {
   return (
     <div>
       <h1 className="mb-1 text-2xl">Languages:</h1>
@@ -56,6 +61,6 @@ function SkillsItem({ languages, frameworks, databases, tools }) {
       </p>
     </div>
   );
-}
+};
 
 export default SkillsItem;

@@ -1,12 +1,16 @@
+import React from "react";
 import { IoIosArrowDropup } from "react-icons/io";
 
-function BackToTop() {
-  function scrollTo(dest) {
+const BackToTop: React.FC = () => {
+  const scrollTo = (dest: string) => {
     return () => {
       const element = document.getElementById(dest);
-      element.scrollIntoView({ behavior: "smooth" });
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     };
-  }
+  };
+
   return (
     <button
       onClick={scrollTo("home")}
@@ -15,6 +19,6 @@ function BackToTop() {
       <IoIosArrowDropup size={40} />
     </button>
   );
-}
+};
 
 export default BackToTop;
