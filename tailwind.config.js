@@ -9,6 +9,7 @@ module.exports = {
         inter: ["inter", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
         montserrat: ["montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         teal: {
@@ -47,7 +48,6 @@ module.exports = {
         5: "5px",
       },
       animation: {
-        swing: "swing 1s ease 1",
         text: "text 5s ease infinite",
       },
       zIndex: {
