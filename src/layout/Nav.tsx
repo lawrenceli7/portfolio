@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { VscAccount, VscArchive, VscHome, VscMail } from "react-icons/vsc";
+import scrollTo from "../utils/scrollTo";
 
 const Nav: React.FC = () => {
-  const scrollTo = (dest: string) => {
-    return () => {
-      const element = document.getElementById(dest);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-  };
-
   const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {

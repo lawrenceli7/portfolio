@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectItems from "../components/ProjectItems";
-import Projects from "../data/Projects";
+import ProjectItems from "../components/Project";
+import Projects from "../data/projects";
 
 const Project: React.FC = () => {
   return (

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import EducationItem from "../components/EducationItem";
-import ExperienceItem from "../components/ExperienceItem";
-import SkillsItem from "../components/SkillsItem";
-import Education from "../data/Education";
-import Experience from "../data/Experience";
-import Skill from "../data/Skills";
+import EducationItem from "../components/Education";
+import ExperienceItem from "../components/Experience";
+import SkillsItem from "../components/Skills";
+import Education from "../data/education";
+import Experience from "../data/experience";
+import Skill from "../data/skills";
 
 const About: React.FC = () => {
   const [displayInfo, setDisplayInfo] = useState<JSX.Element | null>(null);

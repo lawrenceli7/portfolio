@@ -7,7 +7,7 @@ interface SkillsItemProps {
   tools: string[];
 }
 
-const SkillsItem: React.FC<SkillsItemProps> = ({
+const Skills: React.FC<SkillsItemProps> = ({
   languages,
   frameworks,
   databases,
@@ -63,4 +63,4 @@ const SkillsItem: React.FC<SkillsItemProps> = ({
   );
 };
 
-export default SkillsItem;
+export default Skills;

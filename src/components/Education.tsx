@@ -8,7 +8,7 @@ interface EducationItemProps {
   coursework: string;
 }
 
-const EducationItem: React.FC<EducationItemProps> = ({
+const Education: React.FC<EducationItemProps> = ({
   school,
   name,
   degree,
@@ -41,4 +41,4 @@ const EducationItem: React.FC<EducationItemProps> = ({
   );
 };
 
-export default EducationItem;
+export default Education;

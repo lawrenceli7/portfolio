@@ -10,7 +10,7 @@ interface ProjectItemsProps {
   production: string;
 }
 
-const ProjectItems: React.FC<ProjectItemsProps> = ({
+const Project: React.FC<ProjectItemsProps> = ({
   title,
   imgURL,
   stack,
@@ -57,4 +57,4 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
   );
 };
 
-export default ProjectItems;
+export default Project;

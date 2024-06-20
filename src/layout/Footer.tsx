@@ -6,7 +6,9 @@ import BackToTop from "../components/BackToTop";
 const Footer: React.FC = () => {
   return (
     <div className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
-      <BackToTop />
+      <div className="animate-bounce">
+        <BackToTop />
+      </div>
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-2 mb-8">
           <MdOutlineAttachEmail />

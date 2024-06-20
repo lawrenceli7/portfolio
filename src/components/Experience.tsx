@@ -8,7 +8,7 @@ interface ExperienceItemProps {
   details: string;
 }
 
-const ExperienceItem: React.FC<ExperienceItemProps> = ({
+const Experience: React.FC<ExperienceItemProps> = ({
   year,
   title,
   duration,
@@ -41,4 +41,4 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   );
 };
 
-export default ExperienceItem;
+export default Experience;
