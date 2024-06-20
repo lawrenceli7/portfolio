@@ -30,9 +30,9 @@ const Nav: React.FC = () => {
   const dark = <IoMoonOutline />;
 
   return (
-    <nav>
-      <div className="fixed top-0 w-full pt-2 pb-2 pl-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 z-1000 dark:bg-nav">
-        <ul className="flex justify-center gap-2">
+    <nav className="fixed top-0 w-full z-1000">
+      <div className="pt-2 pb-2 pl-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav">
+        <ul className="flex justify-center gap-2 p-0 m-0">
           <li>
             <button
               onClick={scrollTo("home")}
@@ -76,7 +76,7 @@ const Nav: React.FC = () => {
           </div>
         </ul>
       </div>
-      <div className="fixed top-0 hidden w-full bg-white md:block z-1000 dark:bg-nav">
+      <div className="hidden bg-white md:block z-1000 dark:bg-nav">
         <div className="flex items-center justify-between shadow-lg h-nav shadow-teal-100 dark:shadow-purple-100">
           <div className="flex items-center gap-4 lg:pl-28 md:pl-16">
             <div className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-xl font-roboto animate-text">

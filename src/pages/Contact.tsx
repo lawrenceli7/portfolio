@@ -35,11 +35,15 @@ const Contact: React.FC = () => {
           method="POST"
           className="flex flex-col w-full ml-2 mr-2"
         >
-          <h1 className="mb-2 text-center">
-            <span className="text-4xl font-bold text-gray-900 dark:text-white underline-hover">
-              Contact Me
-            </span>
-          </h1>
+          <div className="flex items-center mb-2">
+            <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
+            <h1 className="px-2 text-center">
+              <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white ">
+                Contact Me
+              </span>
+            </h1>
+            <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
+          </div>
           <div className="flex items-center">
             <CiUser className="dark:text-white icon-transition" />
             <label htmlFor="name" className="p-1 dark:text-white">

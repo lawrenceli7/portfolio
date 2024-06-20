@@ -15,7 +15,7 @@ const About: React.FC = () => {
 
   const showMeInfo = () => {
     const meInfo = (
-      <div className="text-base text-gray-500 lg:text-xl md:text-lg dark:text-white">
+      <section className="text-base text-gray-500 lg:text-xl md:text-lg dark:text-white">
         I am a junior at Boston University studying Computer Science. My main
         interests lie in the field of web development and software engineering,
         with a special focus on front-end development.
@@ -23,7 +23,7 @@ const About: React.FC = () => {
         <br />I am currently looking for an internship for the summer of 2024.
         If you are interested in collaborating or have any projects you think
         would be a good fit, feel free to reach out to me!
-      </div>
+      </section>
     );
 
     setDisplayInfo(meInfo);
@@ -31,7 +31,7 @@ const About: React.FC = () => {
 
   const skillsInfo = () => {
     const meInfo = (
-      <div className="dark:text-white">
+      <section className="dark:text-white">
         {Skill.map((item, index) => (
           <SkillsItem
             key={index}
@@ -41,7 +41,7 @@ const About: React.FC = () => {
             tools={item.tools}
           />
         ))}
-      </div>
+      </section>
     );
 
     setDisplayInfo(meInfo);
@@ -49,7 +49,7 @@ const About: React.FC = () => {
 
   const educationInfo = () => {
     const meInfo = (
-      <div className="dark:text-white">
+      <section className="dark:text-white">
         {Education.map((item, index) => (
           <EducationItem
             key={index}
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             coursework={item.coursework}
           />
         ))}
-      </div>
+      </section>
     );
 
     setDisplayInfo(meInfo);
@@ -68,7 +68,7 @@ const About: React.FC = () => {
 
   const experienceInfo = () => {
     const meInfo = (
-      <div className="dark:text-white">
+      <section className="dark:text-white">
         {Experience.map((item, index) => (
           <ExperienceItem
             key={index}
@@ -79,7 +79,7 @@ const About: React.FC = () => {
             details={item.details}
           />
         ))}
-      </div>
+      </section>
     );
 
     setDisplayInfo(meInfo);
@@ -90,8 +90,8 @@ const About: React.FC = () => {
       id="about"
       className="flex flex-col items-center justify-center h-screen mx-auto"
     >
-      <h1 className="mb-4 text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
-        <span className="text-4xl font-bold text-gray-900 dark:text-white">
+      <h1 className="mb-4 text-center dark:hover:text-white">
+        <span className="text-4xl font-bold text-gray-900 underline-hover dark:text-white">
           About
         </span>
       </h1>

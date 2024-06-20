@@ -4,11 +4,13 @@ import Projects from "../data/projects";
 
 const Project: React.FC = () => {
   return (
-    <div id="projects">
-      <h1 className="mb-4 text-center hover:underline hover:underline-offset-8 dark:hover:text-white">
-        <span className="text-4xl font-bold text-gray-900 dark:text-white">
+    <div id="projects" className="py-24">
+      <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
+        <span className="flex flex-grow border-t dark:border-white"></span>
+        <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white ">
           Projects
         </span>
+        <span className="flex flex-grow border-t dark:border-white"></span>
       </h1>
       <div className="flex flex-col items-center justify-center md:flex-row">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 dark:text-white">

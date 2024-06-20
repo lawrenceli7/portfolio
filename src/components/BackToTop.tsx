@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosArrowDropup } from "react-icons/io";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 
 const BackToTop: React.FC = () => {
   const scrollTo = (dest: string) => {
@@ -16,7 +16,7 @@ const BackToTop: React.FC = () => {
       onClick={scrollTo("home")}
       className="mb-8 hover:text-teal-100 dark:hover:text-purple-100 dark:text-white"
     >
-      <IoIosArrowDropup size={40} />
+      <MdOutlineKeyboardDoubleArrowUp size={40} />
     </button>
   );
 };

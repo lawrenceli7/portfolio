@@ -17,12 +17,17 @@ const Project: React.FC<ProjectItemsProps> = ({
   link,
   production,
 }) => {
+  const handleGitHubClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <a
       href={production}
       target="_blank"
       rel="noopener noreferrer"
-      className="overflow-hidden border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200"
+      className="overflow-hidden transition duration-300 ease-in-out transform border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 hover:scale-105"
     >
       <img
         src={imgURL}
@@ -34,12 +39,13 @@ const Project: React.FC<ProjectItemsProps> = ({
           <h3 className="mb-2 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white">
             {title}
           </h3>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <FaSquareGithub
-              size={25}
-              className="rounded-lg hover:animate-bounce"
-            />
-          </a>
+          <button
+            onClick={handleGitHubClick}
+            className="rounded-lg hover:animate-bounce"
+            aria-label="GitHub Link"
+          >
+            <FaSquareGithub size={25} />
+          </button>
         </div>
         <Divider className="bg-gray-100 dark:bg-white" />
         <p className="flex flex-row flex-wrap items-center justify-start gap-2 text-xs md:text-sm">

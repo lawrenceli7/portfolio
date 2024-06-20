@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="flex justify-center gap-4 mb-8">
-        <ul className="flex justify-center w-full pt-10 list-none wrapper h-30 font-poppins">
+        <ul className="flex justify-center w-full pt-5 list-none wrapper h-30 font-poppins">
           <a href="https://www.linkedin.com/in/lawrenceli7/">
             <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-blue dark:hover:text-white">
               <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-blue tooltip-linkedin">
