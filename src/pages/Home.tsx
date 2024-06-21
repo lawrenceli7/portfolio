@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <div className="flex justify-between pt-6 max-w-[200px] w-full">
           <ul className="flex justify-center w-full pt-5 list-none wrapper h-30 font-poppins">
             <a href="https://www.linkedin.com/in/lawrenceli7/">
-              <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-blue dark:hover:text-white">
+              <li className="icon relative rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue hover:text-white bg-white dark:text-black dark:hover:bg-blue dark:hover:text-white">
                 <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-blue tooltip-linkedin">
                   LinkedIn
                 </span>
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
               </li>
             </a>
             <a href="https://www.github.com/lawrenceli7/">
-              <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-green hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-green dark:hover:text-white">
+              <li className="icon relative rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-green hover:text-white bg-white dark:text-black dark:hover:bg-green dark:hover:text-white">
                 <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-green tooltip-github">
                   Github
                 </span>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
               </li>
             </a>
             <a href="mailto:lawrenceli3202@gmail.com">
-              <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-red hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-red dark:hover:text-white">
+              <li className="icon relative rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-red hover:text-white bg-white dark:text-black dark:hover:bg-red dark:hover:text-white">
                 <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-red tooltip-mail">
                   Email
                 </span>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             size={30}
             className="hover:text-darkred hover:animate-pulse dark:text-white dark:hover:text-darkred"
           />
-          <span className="text-xl text-gray-500 hover:underline-offset-8 hover:underline dark:text-white font-montserrat">
+          <span className="text-xl text-gray-500 dark:text-white font-montserrat underline-hover">
             Boston, MA
           </span>
         </div>

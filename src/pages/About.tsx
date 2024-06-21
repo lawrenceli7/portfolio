@@ -86,7 +86,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <div id="about" className="flex flex-col justify-center h-screen mx-auto">
+    <div id="about" className="flex flex-col h-screen py-24 mx-auto">
       <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
         <span className="flex flex-grow border-t dark:border-white"></span>
         <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white">

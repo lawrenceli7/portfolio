@@ -25,7 +25,7 @@ import {
   SiVite,
 } from "react-icons/si";
 
-const stackIcons: { [key: string]: IconType } = {
+const projectIcons: { [key: string]: IconType } = {
   "React.js": SiReact,
   "Next.js": SiNextdotjs,
   JavaScript: SiJavascript,
@@ -51,4 +51,4 @@ const stackIcons: { [key: string]: IconType } = {
   Logisim: IoHardwareChipOutline,
 };
 
-export default stackIcons;
+export default projectIcons;

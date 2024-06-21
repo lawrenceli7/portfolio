@@ -1,7 +1,7 @@
 import { Divider } from "antd";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import stackIcons from "../data/stackIcons";
+import projectIcons from "../data/projectIcons";
 
 interface ProjectItemsProps {
   title: string;
@@ -37,7 +37,7 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
       />
       <div className="w-full p-4">
         <div className="flex justify-between">
-          <h3 className="mb-2 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white">
+          <h3 className="mb-2 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white underline-hover">
             {title}
           </h3>
           <button
@@ -51,11 +51,11 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
         <Divider className="bg-gray-100 dark:bg-white" />
         <p className="flex flex-row flex-wrap items-center justify-start gap-2 text-xs md:text-sm">
           {stack.map((item, index) => {
-            const IconComponent = stackIcons[item];
+            const IconComponent = projectIcons[item];
             return (
               <span
                 key={index}
-                className="inline-flex items-center gap-1 px-2 py-1 font-semibold border-2 border-gray-100 rounded-xl dark:border-white"
+                className="inline-flex items-center gap-1 px-2 py-1 font-semibold transition-all duration-300 ease-in-out border-2 border-gray-100 rounded-xl dark:border-white hover:border-teal-100 dark:hover:border-purple-300 hover:bg-gray-400 dark:hover:bg-white dark:hover:text-gray-500 hover:text-white"
               >
                 <IconComponent size={16} />
                 {item}

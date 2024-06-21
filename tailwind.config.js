@@ -10,6 +10,8 @@ module.exports = {
         roboto: ["roboto", "sans-serif"],
         montserrat: ["montserrat", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        shoulders: ["Big Shoulders Stencil Display", "sans-serif"],
+        dosis: ["Dosis", "sans-serif"],
       },
       colors: {
         teal: {
