@@ -13,7 +13,7 @@ const Project: React.FC = () => {
         <span className="flex flex-grow border-t dark:border-white"></span>
       </h1>
       <div className="flex flex-col items-center justify-center md:flex-row">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 dark:text-white">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 dark:text-white">
           {Projects.map((project, index) => (
             <ProjectItems
               key={index}

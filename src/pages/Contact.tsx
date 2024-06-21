@@ -3,6 +3,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { CiMail, CiPaperplane, CiPen, CiUser } from "react-icons/ci";
 import { RxReset } from "react-icons/rx";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import "../styles/contact.css";
 
 const Contact: React.FC = () => {
   const contactRef = useRef<HTMLDivElement>(null);

@@ -10,7 +10,7 @@ interface ProjectItemsProps {
   production: string;
 }
 
-const Project: React.FC<ProjectItemsProps> = ({
+const ProjectItems: React.FC<ProjectItemsProps> = ({
   title,
   imgURL,
   stack,
@@ -27,7 +27,7 @@ const Project: React.FC<ProjectItemsProps> = ({
       href={production}
       target="_blank"
       rel="noopener noreferrer"
-      className="overflow-hidden transition duration-300 ease-in-out transform border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 hover:scale-105"
+      className="overflow-hidden transition-transform duration-300 ease-in-out transform border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 hover:scale-105 hover:shadow-xl dark:hover:shadow-purple-400 hover:shadow-teal-400"
     >
       <img
         src={imgURL}
@@ -63,4 +63,4 @@ const Project: React.FC<ProjectItemsProps> = ({
   );
 };
 
-export default Project;
+export default ProjectItems;

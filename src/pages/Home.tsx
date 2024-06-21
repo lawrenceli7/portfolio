@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import "../styles/home.css";
+import "../styles/icons.css";
 
 const Home: React.FC = () => {
+  const homeRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIntersectionObserver(homeRef, { threshold: 0.1 });
+
   return (
     <div
-      className="flex flex-col items-center justify-center h-screen text-center"
+      className={`flex flex-col items-center justify-center h-screen text-center ${
+        isVisible ? "fade-in" : "fade-out"
+      }`}
       id="home"
+      ref={homeRef}
     >
       <h1 className="mb-1 text-4xl font-bold lg:text-7xl md:text-5xl md:mb-3 dark:text-white">
         Hi, I&apos;m{" "}
@@ -69,7 +78,7 @@ const Home: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-2">
         <span className="mt-20 text-lg dark:text-white">Scroll</span>
         <MdOutlineKeyboardDoubleArrowDown
           size={30}

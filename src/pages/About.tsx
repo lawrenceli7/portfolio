@@ -86,16 +86,16 @@ const About: React.FC = () => {
   };
 
   return (
-    <div
-      id="about"
-      className="flex flex-col items-center justify-center h-screen mx-auto"
-    >
-      <h1 className="mb-4 text-center dark:hover:text-white">
-        <span className="text-4xl font-bold text-gray-900 underline-hover dark:text-white">
+    <div id="about" className="flex flex-col justify-center h-screen mx-auto">
+      <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
+        <span className="flex flex-grow border-t dark:border-white"></span>
+        <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white">
           About
         </span>
+        <span className="flex flex-grow border-t dark:border-white"></span>
       </h1>
-      <div className="flex flex-row gap-2 p-1 text-base md:gap-8 lg:text-xl md:text-lg">
+
+      <div className="flex justify-center gap-2 p-1 text-base md:gap-8 lg:text-xl md:text-lg">
         <div>
           <button
             className="p-5 bg-white border-2 border-gray-500 rounded-3xl hover:underline hover: underline-offset-8 hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
