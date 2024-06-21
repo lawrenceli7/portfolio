@@ -1,0 +1,9 @@
+.project-fade-in {
+  opacity: 1;
+  transition: opacity 2.2s ease-in;
+}
+
+.project-fade-out {
+  opacity: 0;
+  transition: opacity 2.2s ease-out;
+}

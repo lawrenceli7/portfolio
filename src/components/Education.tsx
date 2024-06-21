@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
+import { IoSchoolSharp } from "react-icons/io5";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import "../styles/education.css";
 
 interface EducationItemProps {
   school: string;
@@ -15,25 +18,39 @@ const Education: React.FC<EducationItemProps> = ({
   duration,
   coursework,
 }) => {
+  const educationRef = useRef<HTMLLIElement>(null);
+  const isVisible = useIntersectionObserver(educationRef, { threshold: 0.1 });
+
   return (
-    <ol className="flex flex-col border-l border-teal-200 md:flex-row dark:border-purple-100">
-      <li className="mb-10 ml-4">
-        <p className="flex flex-row flex-wrap items-center justify-start gap-4 text-xs md:text-sm">
-          <span className="inline-block px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200">
-            {school}
-          </span>
-          <h3 className="text-lg font-semibold text-gray-500 dark:text-white hover:underline hover:underline-offset-8">
-            {name}
-          </h3>
-          <div className="text-lg">|</div>
-          <h3 className="text-lg font-semibold text-gray-500 dark:text-white">
-            {degree}
-          </h3>
-          <div className="my-1 text-sm italic font-normal leading-none text-gray-400 dark:text-gray-100">
+    <ol className="relative border-l border-teal-200 dark:border-purple-100">
+      <li
+        className={`education-item mb-10 ml-6 ${
+          isVisible ? "education-fade-in" : "education-fade-out"
+        }`}
+        ref={educationRef}
+      >
+        <div className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"></div>
+        <div className="flex flex-col gap-1 p-4 bg-white border rounded-lg shadow-md dark:bg-gray-800 md:flex-row md:justify-between md:items-center dark:border-white">
+          <div className="flex flex-col gap-1 md:flex-row md:items-center md:gap-4">
+            <span className="inline-block px-2 py-1 mb-2 font-semibold text-white bg-gray-700 rounded-lg shadow-md dark:text-gray-500 dark:bg-white md:mb-0 dark:shadow-purple-100 shadow-teal-200">
+              <div className="flex items-center gap-2">
+                <IoSchoolSharp />
+                {school}
+              </div>
+            </span>
+            <h3 className="font-semibold text-gray-500 lg:text-lg dark:text-white">
+              {name}
+            </h3>
+            <div className="hidden text-lg md:block">|</div>
+            <h3 className="font-semibold text-gray-500 lg:text-lg dark:text-white">
+              {degree}
+            </h3>
+          </div>
+          <div className="my-1 text-lg italic font-normal leading-none text-gray-400 dark:text-gray-100 md:my-0">
             {duration}
           </div>
-        </p>
-        <p className="my-2 text-base font-normal text-gray-300 dark:text-gray-100">
+        </div>
+        <p className="my-2 text-base font-normal text-gray-700 dark:text-gray-100">
           {coursework}
         </p>
       </li>
