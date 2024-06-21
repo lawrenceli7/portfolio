@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { AiOutlineMessage } from "react-icons/ai";
-import { CiMail, CiPaperplane, CiPen, CiUser } from "react-icons/ci";
+import { CiMail, CiPaperplane, CiPen, CiText, CiUser } from "react-icons/ci";
 import { RxReset } from "react-icons/rx";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import "../styles/contact.css";
@@ -85,7 +84,7 @@ const Contact: React.FC = () => {
             required
           />
           <div className="flex items-center">
-            <AiOutlineMessage className="dark:text-white icon-transition" />
+            <CiText className="dark:text-white icon-transition" />
             <label htmlFor="message" className="p-1 dark:text-white">
               Message:
             </label>

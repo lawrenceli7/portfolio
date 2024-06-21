@@ -1,6 +1,7 @@
 import { Divider } from "antd";
 import React from "react";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import stackIcons from "../data/stackIcons";
 
 interface ProjectItemsProps {
   title: string;
@@ -44,19 +45,23 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
             className="rounded-lg hover:animate-bounce"
             aria-label="GitHub Link"
           >
-            <FaSquareGithub size={25} />
+            <FaGithub size={25} className="mb-2" />
           </button>
         </div>
         <Divider className="bg-gray-100 dark:bg-white" />
         <p className="flex flex-row flex-wrap items-center justify-start gap-2 text-xs md:text-sm">
-          {stack.map((item, index) => (
-            <span
-              key={index}
-              className="inline-block px-2 py-1 font-semibold border-2 border-gray-100 rounded-xl dark:border-white"
-            >
-              {item}
-            </span>
-          ))}
+          {stack.map((item, index) => {
+            const IconComponent = stackIcons[item];
+            return (
+              <span
+                key={index}
+                className="inline-flex items-center gap-1 px-2 py-1 font-semibold border-2 border-gray-100 rounded-xl dark:border-white"
+              >
+                <IconComponent size={16} />
+                {item}
+              </span>
+            );
+          })}
         </p>
       </div>
     </a>

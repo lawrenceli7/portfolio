@@ -7,7 +7,7 @@ const Project: React.FC = () => {
     <div id="projects" className="py-24">
       <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
         <span className="flex flex-grow border-t dark:border-white"></span>
-        <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white ">
+        <span className="mx-2 mb-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white">
           Projects
         </span>
         <span className="flex flex-grow border-t dark:border-white"></span>

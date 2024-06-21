@@ -23,7 +23,7 @@ const projects: Project[] = [
     stack: [
       "React.js",
       "Flask",
-      "MySQL",
+      "SQLite",
       "JavaScript",
       "Tailwind CSS",
       "Python",
