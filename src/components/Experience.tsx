@@ -38,16 +38,16 @@ const Experience: React.FC<ExperienceItemProps> = ({
         }}
       >
         <span className="flex flex-wrap items-center justify-between gap-4 text-xs md:text-sm">
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <span className="flex items-center gap-2 px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200">
               <MdWork />
               {year}
             </span>
-            <h3 className="text-lg font-semibold text-gray-500 dark:text-white hover:underline hover:underline-offset-8">
+            <h3 className="font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-8 md:text-base">
               {title}
             </h3>
-            <div className="text-lg">|</div>
-            <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-500 dark:text-white">
+            <div className="lg:text-lg md:text-base">|</div>
+            <h3 className="flex items-center gap-2 font-semibold text-gray-500 lg:text-lg dark:text-white md:text-base">
               <IoLocationOutline />
               {location}
             </h3>
@@ -57,7 +57,7 @@ const Experience: React.FC<ExperienceItemProps> = ({
             {duration}
           </div>
         </span>
-        <p className="my-2 text-base font-normal text-gray-300 dark:text-gray-100">
+        <p className="my-2 text-sm font-normal text-gray-300 dark:text-gray-100">
           {details}
         </p>
       </motion.li>
