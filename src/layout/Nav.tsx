@@ -3,11 +3,10 @@ import {
   IoFolderOpen,
   IoHome,
   IoMailUnread,
+  IoMan,
   IoMoon,
   IoSunnyOutline,
-  IoMan,
 } from "react-icons/io5";
-import { VscAccount, VscArchive, VscHome, VscMail } from "react-icons/vsc";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import scrollTo from "../utils/scrollTo";
 

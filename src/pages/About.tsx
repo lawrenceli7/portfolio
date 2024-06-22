@@ -94,8 +94,8 @@ const About: React.FC = () => {
       id="about"
       className={`flex flex-col h-screen py-24 mx-auto ${
         isVisible
-          ? "opacity-1 transition-opacity duration-[2000ms] ease-in"
-          : "opacity-0 transition-opacity duration-[2000ms] ease-out"
+          ? "opacity-1 transition-opacity duration-[1200ms] ease-in"
+          : "opacity-0 transition-opacity duration-[1200ms] ease-out"
       }`}
       ref={aboutRef}
     >
