@@ -33,6 +33,8 @@ export default [
       "GitHub",
       "Logisim",
       "Vite",
+      "Ant Design",
+      "Framer Motion",
     ],
   },
 ];

@@ -82,7 +82,14 @@ const projects: Project[] = [
   {
     title: "Personal Website",
     imgURL: PortfolioImg,
-    stack: ["React.js", "JavaScript", "Tailwind CSS", "Vite", "HTML"],
+    stack: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite",
+      "HTML",
+    ],
     link: "https://github.com/lawrenceli7/portfolio",
     production: "https://lawrenceli.dev",
     description: "My personal portfolio website.",

@@ -2,6 +2,7 @@ import { IconType } from "react-icons";
 import { FaJava } from "react-icons/fa";
 import { IoHardwareChipOutline } from "react-icons/io5";
 import {
+  SiAntdesign,
   SiApollographql,
   SiCss3,
   SiDocker,
@@ -29,7 +30,7 @@ import {
   SiVitest,
   SiWebpack,
 } from "react-icons/si";
-import { TbFileTypeSql } from "react-icons/tb";
+import { TbBrandFramerMotion, TbFileTypeSql } from "react-icons/tb";
 
 const skillsIcons: { [key: string]: IconType } = {
   Java: FaJava,
@@ -63,6 +64,8 @@ const skillsIcons: { [key: string]: IconType } = {
   GitHub: SiGithub,
   Logisim: IoHardwareChipOutline,
   Vite: SiVite,
+  "Ant Design": SiAntdesign,
+  "Framer Motion": TbBrandFramerMotion,
 };
 
 export default skillsIcons;

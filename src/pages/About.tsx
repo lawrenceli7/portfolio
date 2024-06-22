@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import EducationItem from "../components/Education";
 import ExperienceItem from "../components/Experience";
@@ -16,7 +17,13 @@ const About: React.FC = () => {
 
   const showMeInfo = () => {
     const meInfo = (
-      <section className="text-base text-gray-500 lg:text-xl md:text-lg dark:text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="text-base text-gray-500 lg:text-xl md:text-lg dark:text-white font-poppins"
+      >
         I am a junior at Boston University studying Computer Science. My main
         interests lie in the field of web development and software engineering,
         with a special focus on front-end development.
@@ -24,7 +31,7 @@ const About: React.FC = () => {
         <br />I am currently looking for an internship for the summer of 2024.
         If you are interested in collaborating or have any projects you think
         would be a good fit, feel free to reach out to me!
-      </section>
+      </motion.section>
     );
 
     setDisplayInfo(meInfo);
@@ -32,7 +39,13 @@ const About: React.FC = () => {
 
   const skillsInfo = () => {
     const meInfo = (
-      <section className="dark:text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="dark:text-white"
+      >
         {Skill.map((item, index) => (
           <SkillsItem
             key={index}
@@ -42,7 +55,7 @@ const About: React.FC = () => {
             tools={item.tools}
           />
         ))}
-      </section>
+      </motion.section>
     );
 
     setDisplayInfo(meInfo);
@@ -50,7 +63,13 @@ const About: React.FC = () => {
 
   const educationInfo = () => {
     const meInfo = (
-      <section className="dark:text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="dark:text-white"
+      >
         {Education.map((item, index) => (
           <EducationItem
             key={index}
@@ -61,7 +80,7 @@ const About: React.FC = () => {
             coursework={item.coursework}
           />
         ))}
-      </section>
+      </motion.section>
     );
 
     setDisplayInfo(meInfo);
@@ -69,7 +88,13 @@ const About: React.FC = () => {
 
   const experienceInfo = () => {
     const meInfo = (
-      <section className="dark:text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="dark:text-white"
+      >
         {Experience.map((item, index) => (
           <ExperienceItem
             key={index}
@@ -80,7 +105,7 @@ const About: React.FC = () => {
             details={item.details}
           />
         ))}
-      </section>
+      </motion.section>
     );
 
     setDisplayInfo(meInfo);
@@ -90,14 +115,13 @@ const About: React.FC = () => {
   const isVisible = useIntersectionObserver(aboutRef, { threshold: 0.1 });
 
   return (
-    <div
+    <motion.div
       id="about"
-      className={`flex flex-col h-screen py-24 mx-auto ${
-        isVisible
-          ? "opacity-1 transition-opacity duration-[1200ms] ease-in"
-          : "opacity-0 transition-opacity duration-[1200ms] ease-out"
-      }`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
       ref={aboutRef}
+      className="flex flex-col h-screen py-24 mx-auto"
     >
       <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
         <span className="flex flex-grow border-t dark:border-white"></span>
@@ -108,37 +132,56 @@ const About: React.FC = () => {
       </h1>
 
       <div className="flex justify-center gap-2 p-1 text-base md:gap-8 lg:text-xl md:text-lg">
-        <div>
-          <button
-            className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
-            onClick={showMeInfo}
-          >
-            Me
-          </button>
-        </div>
-        <button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+        <motion.button
+          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+          onClick={showMeInfo}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Me
+        </motion.button>
+        <motion.button
+          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={educationInfo}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Education
-        </button>
-        <button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+        </motion.button>
+        <motion.button
+          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={experienceInfo}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Experience
-        </button>
-        <button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 hover:animate-pulse dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+        </motion.button>
+        <motion.button
+          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
           onClick={skillsInfo}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Skills
-        </button>
+        </motion.button>
       </div>
       <div className="flex flex-col items-center">
-        <div className="pt-6 text-xl text-gray-500">{displayInfo}</div>
+        <AnimatePresence>
+          {displayInfo && (
+            <motion.div
+              key="info"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              className="pt-6 text-xl text-gray-500"
+            >
+              {displayInfo}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

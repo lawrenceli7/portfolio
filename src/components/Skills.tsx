@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import skillsIcons from "../data/skillsIcons";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
@@ -18,13 +19,17 @@ const Skills: React.FC<SkillsItemProps> = ({
   const renderSkillItem = (item: string, index: number) => {
     const IconComponent = skillsIcons[item];
     return (
-      <span
+      <motion.div
         key={index}
         className="inline-flex flex-col items-center gap-1 px-2 py-1 text-base font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 dark:hover:text-purple-100 hover:text-teal-200"
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
       >
         {IconComponent && <IconComponent size={40} />}
         {item}
-      </span>
+      </motion.div>
     );
   };
 
@@ -32,39 +37,39 @@ const Skills: React.FC<SkillsItemProps> = ({
   const isVisible = useIntersectionObserver(skillsRef, { threshold: 0.1 });
 
   return (
-    <div
+    <motion.div
       className={`gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 transition duration-400 ${
         isVisible
           ? "opacity-1 transition-opacity duration-[1300ms] ease-in"
           : "opacity-0 transition-opacity duration-[1300ms] ease-out"
       }`}
       ref={skillsRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 1.5 }}
     >
-      <section className="w-full">
-        <h1 className="mb-2 text-3xl text-center font-shoulders">Languages</h1>
-        <p className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-black md:text-sm font-dosis">
-          {languages.map(renderSkillItem)}
-        </p>
-      </section>
-      <section className="w-full">
-        <h1 className="mb-2 text-3xl text-center font-shoulders">Frameworks</h1>
-        <p className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:bg-black md:text-sm dark:border-purple-100 font-dosis">
-          {frameworks.map(renderSkillItem)}
-        </p>
-      </section>
-      <section className="w-full">
-        <h1 className="mb-2 text-3xl text-center font-shoulders">Databases</h1>
-        <p className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:bg-black md:text-sm dark:border-purple-100 font-dosis">
-          {databases.map(renderSkillItem)}
-        </p>
-      </section>
-      <section className="w-full">
-        <h1 className="mb-2 text-3xl text-center font-shoulders">Tools</h1>
-        <p className="flex flex-wrap items-center justify-center gap-2 p-2 bg-white border-2 border-teal-200 rounded-lg dark:bg-black md:text-sm dark:border-purple-100 font-dosis">
-          {tools.map(renderSkillItem)}
-        </p>
-      </section>
-    </div>
+      {[
+        { title: "Languages", items: languages },
+        { title: "Frameworks", items: frameworks },
+        { title: "Databases", items: databases },
+        { title: "Tools", items: tools },
+      ].map((section, index) => (
+        <motion.section
+          key={index}
+          className="w-full"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
+          transition={{ delay: index * 0.3 }}
+        >
+          <h1 className="mb-2 text-3xl text-center font-shoulders">
+            {section.title}
+          </h1>
+          <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-black md:text-sm font-dosis">
+            {section.items.map(renderSkillItem)}
+          </span>
+        </motion.section>
+      ))}
+    </motion.div>
   );
 };
 

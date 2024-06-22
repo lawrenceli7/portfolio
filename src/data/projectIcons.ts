@@ -24,6 +24,7 @@ import {
   SiTypescript,
   SiVite,
 } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 const projectIcons: { [key: string]: IconType } = {
   "React.js": SiReact,
@@ -49,6 +50,7 @@ const projectIcons: { [key: string]: IconType } = {
   CSS: SiCss3,
   Assembly: SiAssemblyscript,
   Logisim: IoHardwareChipOutline,
+  "Framer Motion": TbBrandFramerMotion,
 };
 
 export default projectIcons;

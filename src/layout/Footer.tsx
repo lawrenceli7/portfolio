@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           </a>
           <a href="mailto:lawrenceli3202@gmail.com">
             <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-red hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-red dark:hover:text-white">
-              <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-red tooltip-mail">
+              <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-red tooltip-email">
                 Email
               </span>
               <GrMail size={20} className="hover:animate-pulse" />
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </a>
         </ul>
       </div>
-      <p className="text-m">
+      <p className="text-base">
         &copy; {new Date().getFullYear()} Lawrence Li. All Rights Reserved.
       </p>
     </div>
