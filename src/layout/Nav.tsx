@@ -44,11 +44,7 @@ const Nav: React.FC = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 w-full z-1000 ${
-        isVisible
-          ? "opacity-1 transition-opacity duration-1000 ease-in"
-          : "opacity-0 transition-opacity duration-1000 ease-out"
-      }`}
+      className="fixed top-0 w-full z-1000"
       ref={navRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}

@@ -36,11 +36,6 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.3, ease: "easeInOut" }}
-      className={`${
-        isVisible
-          ? "opacity-100 transition-opacity duration-[2200ms] ease-in"
-          : "opacity-0 transition-opacity duration-[2200ms] ease-out"
-      }`}
     >
       <motion.div
         whileHover={{

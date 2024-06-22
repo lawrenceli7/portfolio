@@ -38,11 +38,7 @@ const Skills: React.FC<SkillsItemProps> = ({
 
   return (
     <motion.div
-      className={`gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 transition duration-400 ${
-        isVisible
-          ? "opacity-1 transition-opacity duration-[1300ms] ease-in"
-          : "opacity-0 transition-opacity duration-[1300ms] ease-out"
-      }`}
+      className="gap-4 transition lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 duration-400"
       ref={skillsRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
