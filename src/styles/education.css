@@ -1,9 +1,0 @@
-.education-fade-in {
-  opacity: 1;
-  transition: opacity 2s ease-in;
-}
-
-.education-fade-out {
-  opacity: 0;
-  transition: opacity 2s ease-out;
-}

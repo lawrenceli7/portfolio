@@ -25,7 +25,9 @@ const Contact: React.FC = () => {
     <div
       ref={contactRef}
       className={`flex flex-col justify-center h-screen mx-auto ${
-        isVisible ? "fade-in" : "fade-out"
+        isVisible
+          ? "opacity-100 transition-opacity duration-1000 ease-in"
+          : "opacity-0 transition-opacity duration-1000 ease-out"
       }`}
       id="contact"
     >
@@ -38,7 +40,7 @@ const Contact: React.FC = () => {
           <div className="flex items-center mb-2">
             <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
             <h1 className="px-2 text-center">
-              <span className="mx-2 text-4xl font-bold text-gray-900 underline-hover dark:text-white ">
+              <span className="mx-2 text-4xl font-bold text-gray-900 dark:text-white relative inline-block cursor-pointer after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:duration-300 after:left-0 after:-bottom-[5px] after:hover:w-full">
                 Contact Me
               </span>
             </h1>

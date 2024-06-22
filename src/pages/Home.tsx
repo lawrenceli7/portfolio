@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
+import { IoHandLeftOutline } from "react-icons/io5";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import "../styles/home.css";
 import "../styles/icons.css";
 
 const Home: React.FC = () => {
@@ -14,13 +14,15 @@ const Home: React.FC = () => {
   return (
     <div
       className={`flex flex-col items-center justify-center h-screen text-center ${
-        isVisible ? "fade-in" : "fade-out"
+        isVisible
+          ? "opacity-1 transition-opacity duration-[2200ms] ease-in"
+          : "fade-out opacity-0 transition-opacity duration-[2200ms] ease-out"
       }`}
       id="home"
       ref={homeRef}
     >
-      <h1 className="mb-1 text-4xl font-bold lg:text-7xl md:text-5xl md:mb-3 dark:text-white">
-        Hi, I&apos;m{" "}
+      <h1 className="flex gap-4 mb-1 text-4xl font-bold lg:text-7xl md:text-5xl md:mb-3 dark:text-white">
+        Hi <IoHandLeftOutline />, I&apos;m{" "}
         <span className="text-transparent bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text dark:text-purple-300">
           Lawrence.
         </span>
@@ -73,7 +75,7 @@ const Home: React.FC = () => {
             size={30}
             className="hover:text-darkred hover:animate-pulse dark:text-white dark:hover:text-darkred"
           />
-          <span className="text-xl text-gray-500 dark:text-white font-montserrat underline-hover">
+          <span className="relative inline-block text-xl text-gray-500 cursor-pointer dark:text-white font-montserrat after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:duration-300 after:left-0 after:-bottom-[5px] after:hover:w-full">
             Boston, MA
           </span>
         </div>

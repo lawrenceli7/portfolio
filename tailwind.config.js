@@ -57,6 +57,7 @@ module.exports = {
       },
       height: {
         nav: "70px",
+        2: "2px",
       },
     },
   },

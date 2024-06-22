@@ -1,6 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  IoFolderOpen,
+  IoHome,
+  IoMailUnread,
+  IoMoon,
+  IoSunnyOutline,
+  IoMan,
+} from "react-icons/io5";
 import { VscAccount, VscArchive, VscHome, VscMail } from "react-icons/vsc";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import scrollTo from "../utils/scrollTo";
 
 const Nav: React.FC = () => {
@@ -27,16 +35,28 @@ const Nav: React.FC = () => {
   }, [theme]);
 
   const light = <IoSunnyOutline />;
-  const dark = <IoMoonOutline />;
+  const dark = <IoMoon />;
+
+  const navRef = useRef<HTMLElement>(null);
+  const isVisible = useIntersectionObserver(navRef, {
+    threshold: 0.1,
+  });
 
   return (
-    <nav className="fixed top-0 w-full z-1000">
+    <nav
+      className={`fixed top-0 w-full z-1000 ${
+        isVisible
+          ? "opacity-1 transition-opacity duration-1000 ease-in"
+          : "opacity-0 transition-opacity duration-1000 ease-out"
+      }`}
+      ref={navRef}
+    >
       <div className="pt-2 pb-2 pl-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav">
         <ul className="flex justify-center gap-2 p-0 m-0">
           <li>
             <button
               onClick={scrollTo("home")}
-              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
             >
               Home
             </button>
@@ -44,7 +64,7 @@ const Nav: React.FC = () => {
           <li>
             <button
               onClick={scrollTo("about")}
-              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
             >
               About
             </button>
@@ -52,7 +72,7 @@ const Nav: React.FC = () => {
           <li>
             <button
               onClick={scrollTo("projects")}
-              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
             >
               Projects
             </button>
@@ -60,7 +80,7 @@ const Nav: React.FC = () => {
           <li>
             <button
               onClick={scrollTo("contact")}
-              className="p-2 font-thin text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
+              className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
             >
               Contact
             </button>
@@ -91,7 +111,7 @@ const Nav: React.FC = () => {
                   className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
-                    <VscHome />
+                    <IoHome />
                     Home
                   </div>
                 </button>
@@ -102,7 +122,7 @@ const Nav: React.FC = () => {
                   className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
-                    <VscAccount />
+                    <IoMan />
                     About
                   </div>
                 </button>
@@ -113,7 +133,7 @@ const Nav: React.FC = () => {
                   className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
-                    <VscArchive />
+                    <IoFolderOpen />
                     Projects
                   </div>
                 </button>
@@ -124,7 +144,7 @@ const Nav: React.FC = () => {
                   className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
                 >
                   <div className="flex items-center gap-2">
-                    <VscMail />
+                    <IoMailUnread />
                     Contact
                   </div>
                 </button>

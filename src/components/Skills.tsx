@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import skillsIcons from "../data/skillsIcons";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 interface SkillsItemProps {
   languages: string[];
@@ -27,8 +28,18 @@ const Skills: React.FC<SkillsItemProps> = ({
     );
   };
 
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIntersectionObserver(skillsRef, { threshold: 0.1 });
+
   return (
-    <div className="gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2">
+    <div
+      className={`gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 ${
+        isVisible
+          ? "opacity-1 transition-opacity duration-[1300ms] ease-in"
+          : "opacity-0 transition-opacity duration-[1300ms] ease-out"
+      }`}
+      ref={skillsRef}
+    >
       <section className="w-full">
         <h1 className="mb-2 text-3xl text-center font-shoulders">Languages</h1>
         <p className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-black md:text-sm font-dosis">

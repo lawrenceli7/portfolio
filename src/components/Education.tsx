@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { IoSchoolSharp } from "react-icons/io5";
+import { IoCalendarOutline, IoSchoolSharp } from "react-icons/io5";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import "../styles/education.css";
 
 interface EducationItemProps {
   school: string;
@@ -24,8 +23,10 @@ const Education: React.FC<EducationItemProps> = ({
   return (
     <ol className="relative border-l border-teal-200 dark:border-purple-100">
       <li
-        className={`education-item mb-10 ml-6 ${
-          isVisible ? "education-fade-in" : "education-fade-out"
+        className={`mb-10 ml-6 ${
+          isVisible
+            ? "opacity-100 transition-opacity duration-[1300ms] ease-in"
+            : "opacity-0 transition-opacity duration-[1300ms] ease-out"
         }`}
         ref={educationRef}
       >
@@ -46,7 +47,8 @@ const Education: React.FC<EducationItemProps> = ({
               {degree}
             </h3>
           </div>
-          <div className="my-1 text-lg italic font-normal leading-none text-gray-400 dark:text-gray-100 md:my-0">
+          <div className="flex items-center gap-2 my-1 text-lg italic font-normal leading-none text-gray-400 dark:text-gray-100 md:my-0">
+            <IoCalendarOutline />
             {duration}
           </div>
         </div>

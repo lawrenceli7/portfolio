@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import projectIcons from "../data/projectIcons";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import "../styles/project.css";
 
 interface ProjectItemsProps {
   title: string;
@@ -32,9 +31,13 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
   return (
     <div
       ref={projectRef}
-      className={`${isVisible ? "project-fade-in" : "project-fade-out"}`}
+      className={`${
+        isVisible
+          ? "opacity-100 transition-opacity duration-[2200ms] ease-in"
+          : "opacity-0 transition-opacity duration-[2200ms] ease-out"
+      }`}
     >
-      <div className="overflow-hidden transition-transform duration-300 ease-in-out transform border-2 border-gray-400 shadow-lg  rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 hover:scale-105 hover:shadow-xl dark:hover:shadow-purple-400 hover:shadow-teal-400">
+      <div className="overflow-hidden transition-transform duration-300 ease-in-out transform border-2 border-gray-400 shadow-lg rounded-2xl shadow-teal-200 dark:border-white dark:shadow-purple-200 hover:scale-105 hover:shadow-xl dark:hover:shadow-purple-400 hover:shadow-teal-400">
         <img
           src={imgURL}
           alt="Place Holder"
@@ -42,7 +45,7 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
         />
         <div className="w-full p-4">
           <div className="flex justify-between">
-            <h3 className="mb-4 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white underline-hover">
+            <h3 className="mb-4 text-lg font-semibold text-gray-500 md:text-xl md:mb-3 dark:text-white relative inline-block cursor-pointer after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:left-0 after:-bottom-[5px] after:hover:w-full after:duration-300">
               {title}
             </h3>
             <button
