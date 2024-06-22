@@ -33,7 +33,7 @@ const Skills: React.FC<SkillsItemProps> = ({
 
   return (
     <div
-      className={`gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 ${
+      className={`gap-4 lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 transition duration-400${
         isVisible
           ? "opacity-1 transition-opacity duration-[1300ms] ease-in"
           : "opacity-0 transition-opacity duration-[1300ms] ease-out"

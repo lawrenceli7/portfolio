@@ -29,6 +29,7 @@ import {
   SiVitest,
   SiWebpack,
 } from "react-icons/si";
+import { TbFileTypeSql } from "react-icons/tb";
 
 const skillsIcons: { [key: string]: IconType } = {
   Java: FaJava,
@@ -37,7 +38,7 @@ const skillsIcons: { [key: string]: IconType } = {
   TypeScript: SiTypescript,
   HTML: SiHtml5,
   CSS: SiCss3,
-  SQL: SiPrisma,
+  SQL: TbFileTypeSql,
   GraphQL: SiGraphql,
   "Next.js": SiNextdotjs,
   "React.js": SiReact,
