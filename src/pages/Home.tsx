@@ -126,7 +126,9 @@ const Home: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2, ease: "easeOut" }}
       >
-        <span className="mt-20 text-lg dark:text-white">Scroll</span>
+        <span className="mt-20 text-lg dark:text-white font-montserrat">
+          Scroll
+        </span>
         <MdOutlineKeyboardDoubleArrowDown
           size={30}
           className="mt-2 text-gray-500 animate-bounce dark:text-white"

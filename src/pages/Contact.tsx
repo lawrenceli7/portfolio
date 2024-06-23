@@ -1,41 +1,77 @@
+import emailjs from "@emailjs/browser";
+import { message } from "antd";
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { CiMail, CiPaperplane, CiPen, CiText, CiUser } from "react-icons/ci";
 import { RxReset } from "react-icons/rx";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import "../styles/contact.css";
 
 const Contact: React.FC = () => {
   const contactRef = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(contactRef, { threshold: 0.1 });
 
   const clearMessage = () => {
-    (document.querySelector('input[name="name"]') as HTMLInputElement).value =
-      "";
-    (document.querySelector('input[name="email"]') as HTMLInputElement).value =
-      "";
     (
-      document.querySelector('textarea[name="subject"]') as HTMLTextAreaElement
+      document.querySelector('input[name="user_name"]') as HTMLInputElement
     ).value = "";
     (
-      document.querySelector('textarea[name="message"]') as HTMLTextAreaElement
+      document.querySelector('input[name="user_email"]') as HTMLInputElement
+    ).value = "";
+    (
+      document.querySelector(
+        'textarea[name="user_subject"]'
+      ) as HTMLTextAreaElement
+    ).value = "";
+    (
+      document.querySelector(
+        'textarea[name="user_message"]'
+      ) as HTMLTextAreaElement
     ).value = "";
   };
 
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm("service_uxwqyz9", "template_1vq5zqv", form.current, {
+          publicKey: "DNxwbxbLj-Ucoz7i1",
+        })
+        .then(
+          () => {
+            console.log("Message sent successfully!");
+            message.success("Message sent successfully!");
+            clearMessage();
+          },
+          (error) => {
+            console.log("Message failed!", error.text);
+            message.error("Message failed!");
+          }
+        );
+    }
+  };
+
   return (
-    <div
+    <motion.div
       ref={contactRef}
-      className={`flex flex-col justify-center h-screen mx-auto ${
-        isVisible
-          ? "opacity-100 transition-opacity duration-1000 ease-in"
-          : "opacity-0 transition-opacity duration-1000 ease-out"
-      }`}
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      className="flex flex-col justify-center h-screen mx-auto"
       id="contact"
     >
-      <div className="flex items-center justify-center w-11/12 pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl shadow-teal-100 rounded-xl md:w-1/2 dark:bg-contact dark:border-white dark:shadow-purple-100">
+      <motion.div
+        className="flex items-center justify-center w-11/12 pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl shadow-teal-100 rounded-xl md:w-1/2 dark:bg-contact dark:border-white dark:shadow-purple-100"
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <form
-          action="https://getform.io/f/negAvlbw"
-          method="POST"
+          onSubmit={sendEmail}
           className="flex flex-col w-full ml-2 mr-2"
+          ref={form}
         >
           <div className="flex items-center mb-2">
             <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
@@ -47,77 +83,85 @@ const Contact: React.FC = () => {
             <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
           </div>
           <div className="flex items-center">
-            <CiUser className="dark:text-white icon-transition" />
+            <CiUser className="transition-colors duration-300 dark:text-white hover:text-teal-200 dark:hover:text-purple-100" />
             <label htmlFor="name" className="p-1 dark:text-white">
               Full Name:
             </label>
           </div>
-          <input
+          <motion.input
             type="text"
-            name="name"
+            name="user_name"
             placeholder="Enter full name"
-            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white input-transition"
+            className="p-2 mb-2 text-sm transition-colors duration-300 bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white focus:border-teal-200 dark:focus:border-purple-100 focus:bg-teal-50 dark:focus:bg-gray-500"
             required
+            whileFocus={{ scale: 1.02 }}
           />
           <div className="flex items-center">
-            <CiMail className="dark:text-white icon-transition" />
+            <CiMail className="transition-colors duration-300 dark:text-white hover:text-teal-200 dark:hover:text-purple-100" />
             <label htmlFor="email" className="p-1 dark:text-white">
               Email:
             </label>
           </div>
-          <input
+          <motion.input
             type="email"
-            name="email"
+            name="user_email"
             placeholder="Enter email address"
-            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white input-transition"
+            className="p-2 mb-2 text-sm transition-colors duration-300 bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white focus:border-teal-200 dark:focus:border-purple-100 focus:bg-teal-50 dark:focus:bg-gray-500"
             required
+            whileFocus={{ scale: 1.02 }}
           />
           <div className="flex items-center">
-            <CiPen className="dark:text-white icon-transition" />
+            <CiPen className="transition-colors duration-300 dark:text-white hover:text-teal-200 dark:hover:text-purple-100" />
             <label htmlFor="subject" className="p-1 dark:text-white">
               Subject:
             </label>
           </div>
-          <textarea
-            name="subject"
+          <motion.textarea
+            name="user_subject"
             placeholder="Enter subject"
             rows={1}
-            className="p-2 mb-2 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white input-transition"
+            className="p-2 mb-2 text-sm transition-colors duration-300 bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white focus:border-teal-200 dark:focus:border-purple-100 focus:bg-teal-50 dark:focus:bg-gray-500"
             required
+            whileFocus={{ scale: 1.02 }}
           />
           <div className="flex items-center">
-            <CiText className="dark:text-white icon-transition" />
+            <CiText className="transition-colors duration-300 dark:text-white hover:text-teal-200 dark:hover:text-purple-100" />
             <label htmlFor="message" className="p-1 dark:text-white">
               Message:
             </label>
           </div>
-          <textarea
-            name="message"
+          <motion.textarea
+            name="user_message"
             placeholder="Enter your message..."
             rows={6}
-            className="p-2 mb-4 text-sm bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white input-transition"
+            className="p-2 mb-4 text-sm transition-colors duration-300 bg-white border rounded-lg focus:outline-none dark:bg-default dark:placeholder-white dark:border-white dark:text-white focus:border-teal-200 dark:focus:border-purple-100 focus:bg-teal-50 dark:focus:bg-gray-500"
             required
+            whileFocus={{ scale: 1.02 }}
           />
-          <button
+          <motion.button
             type="submit"
-            className="inline-block w-full px-4 py-1 mb-2 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md button-transition"
+            className="inline-block w-full px-4 py-1 mb-2 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200 drop-shadow-md"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
           >
             <div className="flex items-center justify-center gap-2">
               Send Message <CiPaperplane />
             </div>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             type="button"
             onClick={clearMessage}
-            className="inline-block w-full px-4 py-1 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md button-transition"
+            className="inline-block w-full px-4 py-1 text-base font-medium text-center text-white rounded-lg bg-gradient-to-r from-purple-200 via-purple-300 to-purple-200 drop-shadow-md"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
           >
             <div className="flex items-center justify-center gap-2">
               Reset <RxReset />
             </div>
-          </button>
+          </motion.button>
         </form>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
