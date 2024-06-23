@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { IoMdContact } from "react-icons/io";
 import {
   IoFolderOpen,
@@ -9,30 +9,11 @@ import {
   IoSunnyOutline,
 } from "react-icons/io5";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { useTheme } from "../hooks/useTheme";
 import scrollTo from "../utils/scrollTo";
 
 const Nav: React.FC = () => {
-  const [theme, setTheme] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+  const { theme, handleThemeSwitch } = useTheme();
 
   const light = <IoSunnyOutline />;
   const dark = <IoMoon />;
@@ -127,7 +108,7 @@ const Nav: React.FC = () => {
                 <li key={index}>
                   <motion.button
                     onClick={scrollTo(item.scrollTo)}
-                    className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700 dark:font-extralight"
+                    className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
