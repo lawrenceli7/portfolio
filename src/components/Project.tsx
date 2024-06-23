@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -42,14 +43,11 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
           scale: 1.05,
           boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.2)",
         }}
-        className="overflow-hidden transition-transform duration-300 ease-in-out transform border-2 border-gray-400 shadow-xl rounded-2xl dark:border-white dark:hover:border-purple-100 hover:border-teal-200"
+        className="overflow-hidden transition-transform duration-300 ease-in-out transform border-2 border-gray-400 shadow-2xl rounded-2xl dark:border-white dark:hover:border-purple-100 hover:border-teal-200"
       >
-        <motion.img
-          src={imgURL}
-          alt="Place Holder"
-          className="object-cover w-full cursor-pointer h-36 md:h-48"
-          whileHover={{ scale: 1.1 }}
-        />
+        <motion.div whileHover={{ scale: 1.1 }}>
+          <Image src={imgURL} alt="Project Image" />
+        </motion.div>
         <div className="w-full p-4">
           <div className="flex justify-between">
             <motion.h3

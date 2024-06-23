@@ -5,7 +5,7 @@ export default [
     degree: "BA in Computer Science",
     duration: "Expected May 2025",
     coursework:
-      "Relevant coursework: Web Development, Database Systems, Software Engineering, Algorithms, Data Structure, Theory of Computation, Probability in Computing, Linear Algebra",
+      "Relevant coursework: Full Stack Development, Information Security, Web Development, Database Systems, Software Engineering, Algorithms, Data Structure, Theory of Computation, Probability in Computing, Linear Algebra",
   },
   {
     school: "WIT",

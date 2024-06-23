@@ -87,6 +87,7 @@ const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
+      "Ant Design",
       "Vite",
       "HTML",
     ],

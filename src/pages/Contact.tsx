@@ -62,6 +62,13 @@ const Contact: React.FC = () => {
       className="flex flex-col justify-center h-screen mx-auto"
       id="contact"
     >
+      <h1 className="flex items-center w-11/12 max-w-5xl mx-auto mb-4 text-center dark:hover:text-white">
+        <span className="flex flex-grow border-t dark:border-white"></span>
+        <span className="mx-2 text-4xl font-bold text-gray-900 dark:text-white relative inline-block cursor-pointer after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:duration-300 after:left-0 after:-bottom-[5px] after:hover:w-full">
+          Contact
+        </span>
+        <span className="flex flex-grow border-t dark:border-white"></span>
+      </h1>
       <motion.div
         className="flex items-center justify-center w-11/12 pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl shadow-teal-100 rounded-xl md:w-1/2 dark:bg-contact dark:border-white dark:shadow-purple-100"
         initial={{ scale: 0.9 }}
@@ -73,15 +80,6 @@ const Contact: React.FC = () => {
           className="flex flex-col w-full ml-2 mr-2"
           ref={form}
         >
-          <div className="flex items-center mb-2">
-            <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
-            <h1 className="px-2 text-center">
-              <span className="mx-2 text-4xl font-bold text-gray-900 dark:text-white relative inline-block cursor-pointer after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:duration-300 after:left-0 after:-bottom-[5px] after:hover:w-full">
-                Contact Me
-              </span>
-            </h1>
-            <span className="flex-grow border-t border-gray-400 dark:border-white"></span>
-          </div>
           <div className="flex items-center">
             <CiUser className="transition-colors duration-300 dark:text-white hover:text-teal-200 dark:hover:text-purple-100" />
             <label htmlFor="name" className="p-1 dark:text-white">

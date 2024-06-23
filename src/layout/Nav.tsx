@@ -23,6 +23,22 @@ const Nav: React.FC = () => {
     threshold: 0.1,
   });
 
+  const itemVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: (index: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: index * 0.2, duration: 0.5 },
+    }),
+  };
+
+  const navItems = [
+    { label: "Home", icon: <IoHome />, scrollTo: "home" },
+    { label: "About", icon: <IoMdContact size={24} />, scrollTo: "about" },
+    { label: "Projects", icon: <IoFolderOpen />, scrollTo: "projects" },
+    { label: "Contact", icon: <IoMailUnread />, scrollTo: "contact" },
+  ];
+
   return (
     <motion.nav
       className="fixed top-0 w-full z-1000"
@@ -34,17 +50,11 @@ const Nav: React.FC = () => {
       <div className="pt-2 pb-2 pl-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav">
         <motion.ul
           className="flex justify-center gap-2 p-0 m-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          initial="hidden"
+          animate="visible"
         >
-          {[
-            { label: "Home", scrollTo: "home" },
-            { label: "About", scrollTo: "about" },
-            { label: "Projects", scrollTo: "projects" },
-            { label: "Contact", scrollTo: "contact" },
-          ].map((item, index) => (
-            <li key={index}>
+          {navItems.map((item, index) => (
+            <motion.li key={index} custom={index} variants={itemVariants}>
               <motion.button
                 onClick={scrollTo(item.scrollTo)}
                 className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
@@ -53,9 +63,14 @@ const Nav: React.FC = () => {
               >
                 {item.label}
               </motion.button>
-            </li>
+            </motion.li>
           ))}
-          <div className="flex items-center pr-8">
+          <motion.li
+            key={navItems.length}
+            custom={navItems.length}
+            variants={itemVariants}
+            className="flex items-center gap-2"
+          >
             <motion.button
               type="button"
               onClick={handleThemeSwitch}
@@ -65,7 +80,7 @@ const Nav: React.FC = () => {
             >
               {theme === "dark" ? light : dark}
             </motion.button>
-          </div>
+          </motion.li>
         </motion.ul>
       </div>
       <div className="hidden bg-white md:block z-1000 dark:bg-nav">
@@ -83,29 +98,11 @@ const Nav: React.FC = () => {
           <div className="flex items-center gap-2 font-inter lg:pr-28 md:pr-16">
             <motion.ul
               className="flex lg:gap-1 lg:text-xl md:text-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
+              initial="hidden"
+              animate="visible"
             >
-              {[
-                { label: "Home", icon: <IoHome />, scrollTo: "home" },
-                {
-                  label: "About",
-                  icon: <IoMdContact size={24} />,
-                  scrollTo: "about",
-                },
-                {
-                  label: "Projects",
-                  icon: <IoFolderOpen />,
-                  scrollTo: "projects",
-                },
-                {
-                  label: "Contact",
-                  icon: <IoMailUnread />,
-                  scrollTo: "contact",
-                },
-              ].map((item, index) => (
-                <li key={index}>
+              {navItems.map((item, index) => (
+                <motion.li key={index} custom={index} variants={itemVariants}>
                   <motion.button
                     onClick={scrollTo(item.scrollTo)}
                     className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
@@ -117,19 +114,24 @@ const Nav: React.FC = () => {
                       {item.label}
                     </div>
                   </motion.button>
-                </li>
+                </motion.li>
               ))}
-              <div className="flex items-center gap-2">
+              <motion.li
+                key={navItems.length}
+                custom={navItems.length}
+                variants={itemVariants}
+                className="flex items-center gap-2"
+              >
                 <motion.button
                   type="button"
                   onClick={handleThemeSwitch}
-                  className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
+                  className="flex p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   {theme === "dark" ? light : dark}
                 </motion.button>
-              </div>
+              </motion.li>
             </motion.ul>
           </div>
         </div>

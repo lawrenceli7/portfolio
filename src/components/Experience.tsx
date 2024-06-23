@@ -43,11 +43,11 @@ const Experience: React.FC<ExperienceItemProps> = ({
               <MdWork />
               {year}
             </span>
-            <h3 className="font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-8 md:text-base">
+            <h3 className="text-sm font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-8 md:text-base">
               {title}
             </h3>
             <div className="lg:text-lg md:text-base">|</div>
-            <h3 className="flex items-center gap-2 font-semibold text-gray-500 lg:text-lg dark:text-white md:text-base">
+            <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-500 lg:text-lg dark:text-white md:text-base">
               <IoLocationOutline />
               {location}
             </h3>
