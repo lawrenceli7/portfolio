@@ -11,6 +11,7 @@ import scrollTo from "../utils/scrollTo";
 
 const About: React.FC = () => {
   const [displayInfo, setDisplayInfo] = useState<JSX.Element | null>(null);
+  const [activeButton, setActiveButton] = useState<string>("Me");
 
   useEffect(() => {
     showMeInfo();
@@ -100,6 +101,7 @@ const About: React.FC = () => {
       </motion.section>
     );
     setDisplayInfo(meInfo);
+    setActiveButton("Me");
   };
 
   const skillsInfo = () => {
@@ -124,6 +126,7 @@ const About: React.FC = () => {
     );
 
     setDisplayInfo(meInfo);
+    setActiveButton("Skills");
   };
 
   const educationInfo = () => {
@@ -149,6 +152,7 @@ const About: React.FC = () => {
     );
 
     setDisplayInfo(meInfo);
+    setActiveButton("Education");
   };
 
   const experienceInfo = () => {
@@ -174,10 +178,14 @@ const About: React.FC = () => {
     );
 
     setDisplayInfo(meInfo);
+    setActiveButton("Experience");
   };
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(aboutRef, { threshold: 0.1 });
+
+  const buttonBaseClasses =
+    "p-5 transition-all duration-500 ease-in-out bg-white border-2 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100";
 
   return (
     <motion.div
@@ -198,7 +206,11 @@ const About: React.FC = () => {
 
       <div className="flex justify-center gap-2 p-1 text-base md:gap-8 lg:text-xl md:text-lg">
         <motion.button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+          className={`${buttonBaseClasses} ${
+            activeButton === "Me"
+              ? "border-teal-200 dark:border-purple-100"
+              : "border-gray-300"
+          }`}
           onClick={showMeInfo}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -206,7 +218,11 @@ const About: React.FC = () => {
           Me
         </motion.button>
         <motion.button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+          className={`${buttonBaseClasses} ${
+            activeButton === "Education"
+              ? "border-teal-200 dark:border-purple-100"
+              : "border-gray-300"
+          }`}
           onClick={educationInfo}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -214,7 +230,11 @@ const About: React.FC = () => {
           Education
         </motion.button>
         <motion.button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+          className={`${buttonBaseClasses} ${
+            activeButton === "Experience"
+              ? "border-teal-200 dark:border-purple-100"
+              : "border-gray-300"
+          }`}
           onClick={experienceInfo}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -222,7 +242,11 @@ const About: React.FC = () => {
           Experience
         </motion.button>
         <motion.button
-          className="p-5 transition-all duration-500 ease-in-out bg-white border-2 border-gray-500 rounded-3xl hover:bg-gray-500 hover:text-white hover:shadow-2xl hover:shadow-teal-100 dark:border-white dark:hover:bg-slate-700 dark:bg-default dark:text-white dark:hover:shadow-purple-100"
+          className={`${buttonBaseClasses} ${
+            activeButton === "Skills"
+              ? "border-teal-200 dark:border-purple-100"
+              : "border-gray-300"
+          }`}
           onClick={skillsInfo}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

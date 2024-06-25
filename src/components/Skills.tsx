@@ -57,7 +57,7 @@ const Skills: React.FC<SkillsItemProps> = ({
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
           transition={{ delay: index * 0.3 }}
         >
-          <h1 className="mb-2 text-3xl text-center font-shoulders">
+          <h1 className="mb-2 text-3xl text-center font-roboto">
             {section.title}
           </h1>
           <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-black md:text-sm font-dosis">

@@ -35,7 +35,7 @@ const Education: React.FC<EducationItemProps> = ({
           whileHover={{ scale: 1.2 }}
         ></motion.div>
         <motion.div
-          className="flex flex-col gap-1 p-4 bg-white border rounded-lg shadow-md dark:bg-gray-800 md:flex-row md:justify-between md:items-center dark:border-white"
+          className="flex flex-col gap-1 p-4 bg-white border rounded-lg shadow-md dark:bg-gray-800 md:flex-row md:justify-between md:items-center dark:border-white dark:hover:border-purple-100 hover:border-teal-200"
           whileHover={{
             scale: 1.02,
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.2)",
