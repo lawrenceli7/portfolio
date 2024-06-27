@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { IoMdContact } from "react-icons/io";
 import {
   IoFolderOpen,
@@ -14,7 +14,6 @@ import scrollTo from "../utils/scrollTo";
 
 const Nav: React.FC = () => {
   const { theme, handleThemeSwitch } = useTheme();
-  const [activeButton, setActiveButton] = useState("Home");
 
   const light = <IoSunnyOutline />;
   const dark = <IoMoon />;
@@ -40,25 +39,6 @@ const Nav: React.FC = () => {
     { label: "Contact", icon: <IoMailUnread />, scrollTo: "contact" },
   ];
 
-  const handleNavItemClick = (item) => {
-    setActiveButton(item.label);
-    scrollTo(item.scrollTo)();
-  };
-
-  const getButtonClasses = (itemLabel) => {
-    const isActive = activeButton === itemLabel;
-    const baseClasses =
-      "p-2 dark:text-white rounded-full transition-all duration-500 ease-in-out";
-    const activeClasses = isActive
-      ? "dark:bg-slate-700 dark:text-purple-100 bg-navText text-teal-200"
-      : "border-2 border-transparent";
-
-    const hoverClasses =
-      "hover:text-teal-200 hover:bg-navText dark:hover:text-purple-200 dark:hover:bg-slate-700";
-
-    return `${baseClasses} ${activeClasses} ${hoverClasses}`;
-  };
-
   return (
     <motion.nav
       className="fixed top-0 w-full z-1000"
@@ -67,17 +47,17 @@ const Nav: React.FC = () => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="pt-2 pb-2 pl-8 text-xl text-black bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav dark:text-white">
+      <div className="pt-2 pb-2 pl-8 pr-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav">
         <motion.ul
-          className="flex justify-center gap-2"
+          className="flex justify-center gap-2 p-0 m-0"
           initial="hidden"
           animate="visible"
         >
           {navItems.map((item, index) => (
             <motion.li key={index} custom={index} variants={itemVariants}>
               <motion.button
-                onClick={() => handleNavItemClick(item)}
-                className={getButtonClasses(item.label)}
+                onClick={scrollTo(item.scrollTo)}
+                className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -124,8 +104,8 @@ const Nav: React.FC = () => {
               {navItems.map((item, index) => (
                 <motion.li key={index} custom={index} variants={itemVariants}>
                   <motion.button
-                    onClick={() => handleNavItemClick(item)}
-                    className={getButtonClasses(item.label)}
+                    onClick={scrollTo(item.scrollTo)}
+                    className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
