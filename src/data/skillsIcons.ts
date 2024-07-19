@@ -17,10 +17,12 @@ import {
   SiJavascript,
   SiJest,
   SiMongodb,
+  SiMongoose,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
+  SiPug,
   SiPython,
   SiReact,
   SiSqlite,
@@ -66,6 +68,8 @@ const skillsIcons: { [key: string]: IconType } = {
   Vite: SiVite,
   "Ant Design": SiAntdesign,
   "Framer Motion": TbBrandFramerMotion,
+  Pug: SiPug,
+  Mongoose: SiMongoose,
 };
 
 export default skillsIcons;

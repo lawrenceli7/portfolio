@@ -60,7 +60,7 @@ const Skills: React.FC<SkillsItemProps> = ({
           <h1 className="mb-2 text-3xl text-center font-roboto">
             {section.title}
           </h1>
-          <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-black md:text-sm font-dosis">
+          <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-gray-500 md:text-sm font-dosis">
             {section.items.map(renderSkillItem)}
           </span>
         </motion.section>

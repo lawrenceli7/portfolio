@@ -35,6 +35,8 @@ export default [
       "Vite",
       "Ant Design",
       "Framer Motion",
+      "Pug",
+      "Mongoose",
     ],
   },
 ];

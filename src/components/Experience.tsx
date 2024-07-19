@@ -28,7 +28,7 @@ const Experience: React.FC<ExperienceItemProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.3, ease: "easeInOut" }}
-      className={`flex flex-col border-l border-teal-200 md:flex-row dark:border-purple-100`}
+      className={`border-l border-teal-200 md:flex-row dark:border-purple-100 relative`}
     >
       <motion.li
         className="p-3 mb-10 ml-4 border border-gray-800 rounded-lg hover:border-teal-200 dark:border-white dark:hover:border-purple-100"
@@ -37,6 +37,10 @@ const Experience: React.FC<ExperienceItemProps> = ({
           boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
         }}
       >
+        <motion.div
+          className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"
+          whileHover={{ scale: 1.2 }}
+        ></motion.div>
         <span className="flex flex-wrap items-center justify-between gap-4 text-xs md:text-sm">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2 px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200">
