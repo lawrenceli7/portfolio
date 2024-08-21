@@ -4,15 +4,22 @@ import { FaJava } from "react-icons/fa";
 import { IoHardwareChipOutline } from "react-icons/io5";
 import {
   SiAntdesign,
+  SiApollographql,
   SiAssemblyscript,
+  SiChakraui,
   SiCss3,
   SiExpress,
+  SiFirebase,
   SiFlask,
   SiGo,
+  SiGraphql,
   SiHtml5,
   SiJavascript,
   SiJsonwebtokens,
+  SiMongodb,
+  SiMongoose,
   SiNextdotjs,
+  SiNodedotjs,
   SiPostgresql,
   SiPrisma,
   SiPython,
@@ -23,6 +30,7 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVite,
+  SiVitest,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
@@ -51,6 +59,14 @@ const projectIcons: { [key: string]: IconType } = {
   Assembly: SiAssemblyscript,
   Logisim: IoHardwareChipOutline,
   "Framer Motion": TbBrandFramerMotion,
+  GraphQL: SiGraphql,
+  MongoDB: SiMongodb,
+  "Node.js": SiNodedotjs,
+  Mongoose: SiMongoose,
+  Firebase: SiFirebase,
+  "Chakra UI": SiChakraui,
+  Vitest: SiVitest,
+  Apollo: SiApollographql,
 };
 
 export default projectIcons;

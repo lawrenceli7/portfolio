@@ -4,6 +4,7 @@ import { IoHardwareChipOutline } from "react-icons/io5";
 import {
   SiAntdesign,
   SiApollographql,
+  SiChakraui,
   SiCss3,
   SiDocker,
   SiExpress,
@@ -22,7 +23,6 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
-  SiPug,
   SiPython,
   SiReact,
   SiSqlite,
@@ -51,9 +51,8 @@ const skillsIcons: { [key: string]: IconType } = {
   "Tailwind CSS": SiTailwindcss,
   Vitest: SiVitest,
   Jest: SiJest,
-  "React-Native": SiReact,
   JavaFX: FaJava,
-  PostgresSQL: SiPostgresql,
+  PostgreSQL: SiPostgresql,
   SQLite: SiSqlite,
   MongoDB: SiMongodb,
   Firebase: SiFirebase,
@@ -68,8 +67,8 @@ const skillsIcons: { [key: string]: IconType } = {
   Vite: SiVite,
   "Ant Design": SiAntdesign,
   "Framer Motion": TbBrandFramerMotion,
-  Pug: SiPug,
   Mongoose: SiMongoose,
+  "Chakra UI": SiChakraui,
 };
 
 export default skillsIcons;

@@ -19,10 +19,9 @@ export default [
       "Tailwind CSS",
       "Vitest",
       "Jest",
-      "React-Native",
       "JavaFX",
     ],
-    databases: ["PostgresSQL", "SQLite", "MongoDB", "Firebase"],
+    databases: ["PostgreSQL", "SQLite", "MongoDB", "Firebase"],
     tools: [
       "Apollo",
       "Prisma",
@@ -35,8 +34,8 @@ export default [
       "Vite",
       "Ant Design",
       "Framer Motion",
-      "Pug",
       "Mongoose",
+      "Chakra UI",
     ],
   },
 ];

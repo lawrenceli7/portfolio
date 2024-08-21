@@ -18,18 +18,18 @@ const Education: React.FC<EducationItemProps> = ({
   duration,
   coursework,
 }) => {
-  const educationRef = useRef<HTMLLIElement>(null);
+  const educationRef = useRef<HTMLOListElement>(null);
   const isVisible = useIntersectionObserver(educationRef, { threshold: 0.1 });
 
   return (
-    <motion.ol className="relative border-l border-teal-200 dark:border-purple-100">
-      <motion.li
-        ref={educationRef}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 1.3, ease: "easeInOut" }}
-        className={`mb-10 ml-6`}
-      >
+    <motion.ol
+      className="relative border-l border-teal-200 dark:border-purple-100"
+      ref={educationRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 1.3, ease: "easeInOut" }}
+    >
+      <motion.li className={`mb-10 ml-6`}>
         <motion.div
           className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"
           whileHover={{ scale: 1.2 }}

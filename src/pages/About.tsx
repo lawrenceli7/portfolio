@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { IoIosMail } from "react-icons/io";
 import EducationItem from "../components/Education";
 import ExperienceItem from "../components/Experience";
 import SkillsItem from "../components/Skills";
@@ -95,7 +96,10 @@ const About: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get in Touch
+            <div className="flex items-center">
+              <h1>Get in Touch</h1>
+              <IoIosMail className="ml-1 text-2xl" />
+            </div>
           </motion.button>
         </div>
       </motion.section>
