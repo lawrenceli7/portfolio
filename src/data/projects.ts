@@ -32,10 +32,13 @@ const projects: Project[] = [
       "Tailwind CSS",
       "Vite",
       "Mongoose",
+      "Ant Design",
+      "Passport.js",
     ],
     link: "https://github.com/lawrenceli7/trackify",
-    production: "https://github.com/lawrenceli7/trackify",
-    description: "In development.",
+    production: "https://trackify-k7u8.onrender.com/",
+    description:
+      "A finance expense tracking application to manage various expenses.",
   },
   {
     title: "ChatSphere",

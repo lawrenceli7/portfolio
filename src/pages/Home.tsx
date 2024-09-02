@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
-import { IoHandLeftOutline } from "react-icons/io5";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";

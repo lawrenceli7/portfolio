@@ -20,6 +20,7 @@ import {
   SiMongoose,
   SiNextdotjs,
   SiNodedotjs,
+  SiPassport,
   SiPostgresql,
   SiPrisma,
   SiPython,
@@ -67,6 +68,7 @@ const projectIcons: { [key: string]: IconType } = {
   "Chakra UI": SiChakraui,
   Vitest: SiVitest,
   Apollo: SiApollographql,
+  "Passport.js": SiPassport,
 };
 
 export default projectIcons;

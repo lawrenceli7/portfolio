@@ -30,13 +30,7 @@ const Experience: React.FC<ExperienceItemProps> = ({
       transition={{ duration: 1.3, ease: "easeInOut" }}
       className={`border-l border-teal-200 md:flex-row dark:border-purple-100 relative`}
     >
-      <motion.li
-        className="p-3 mb-10 ml-4 border border-gray-800 rounded-lg hover:border-teal-200 dark:border-white dark:hover:border-purple-100"
-        // whileHover={{
-        //   scale: 1.01,
-        //   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-        // }}
-      >
+      <motion.li className="p-3 mb-10 ml-4 border border-gray-800 rounded-lg hover:border-teal-200 dark:border-white dark:hover:border-purple-100">
         <motion.div
           className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"
           whileHover={{ scale: 1.2 }}
