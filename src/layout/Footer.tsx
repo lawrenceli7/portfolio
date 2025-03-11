@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </a>
         </ul>
       </div>
-      <p className="text-base">
+      <p className="text-base pb-1">
         &copy; {new Date().getFullYear()} Lawrence Li. All Rights Reserved.
       </p>
     </div>

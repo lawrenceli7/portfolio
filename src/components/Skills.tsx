@@ -21,7 +21,7 @@ const Skills: React.FC<SkillsItemProps> = ({
     return (
       <motion.div
         key={index}
-        className="inline-flex flex-col items-center gap-1 px-2 py-1 text-base font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 dark:hover:text-purple-100 hover:text-teal-200"
+        className="lg:inline-flex lg:flex-col lg:items-center gap-1 lg:px-2 lg:py-1 lg:text-base font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 dark:hover:text-purple-100 hover:text-teal-200 text-xs px-1 py-0.5"
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ const Skills: React.FC<SkillsItemProps> = ({
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
           transition={{ delay: index * 0.3 }}
         >
-          <h1 className="mb-2 text-3xl text-center font-roboto">
+          <h1 className="mb-2 lg:text-3xl text-center font-roboto sm:text-xl">
             {section.title}
           </h1>
           <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-gray-500 md:text-sm font-dosis">

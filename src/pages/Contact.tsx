@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
         <span className="flex flex-grow border-t dark:border-white"></span>
       </h1>
       <motion.div
-        className="flex items-center justify-center w-11/12 pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl shadow-teal-100 rounded-xl md:w-1/2 dark:bg-contact dark:border-white dark:shadow-purple-100"
+        className="flex items-center justify-center w-11/12 max-w-5xl pt-10 pb-10 pl-2 pr-2 mx-auto bg-white border border-black shadow-xl shadow-teal-100 rounded-xl md:w-1/2 dark:bg-contact dark:border-white dark:shadow-purple-100"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
