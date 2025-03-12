@@ -38,7 +38,7 @@ const Skills: React.FC<SkillsItemProps> = ({
 
   return (
     <motion.div
-      className="gap-4 transition lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 duration-400"
+      className="lg:gap-4 transition lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 duration-400 gap-2"
       ref={skillsRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
@@ -57,10 +57,10 @@ const Skills: React.FC<SkillsItemProps> = ({
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
           transition={{ delay: index * 0.3 }}
         >
-          <h1 className="mb-2 lg:text-3xl text-center font-roboto sm:text-xl">
+          <h1 className="lg:mb-2 lg:text-3xl text-center font-roboto text-base mb-1 md:text-2xl">
             {section.title}
           </h1>
-          <span className="flex flex-wrap items-center justify-center gap-2 p-2 mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-gray-500 md:text-sm font-dosis">
+          <span className="flex flex-wrap items-center justify-center lg:gap-2 lg:p-2 lg:mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-gray-500 md:text-xl font-dosis p-1 gap-1 mb-2 md:p-2 md:mb-1 md:gap-2">
             {section.items.map(renderSkillItem)}
           </span>
         </motion.section>
