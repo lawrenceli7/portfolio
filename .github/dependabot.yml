@@ -10,5 +10,8 @@ updates:
     schedule:
       interval: "daily"
     groups:
-      security-updates:
-        applies-to: "security-updates"
+      security-updates-group:
+        patterns:
+          - "*"
+        update-types:
+          - "security"
