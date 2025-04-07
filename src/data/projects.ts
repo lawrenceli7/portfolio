@@ -18,28 +18,28 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Trackify",
-    imgURL: TrackifyImg,
-    stack: [
-      "GraphQL",
-      "React.js",
-      "JavaScript",
-      "MongoDB",
-      "Express.js",
-      "Node.js",
-      "Apollo",
-      "Tailwind CSS",
-      "Vite",
-      "Mongoose",
-      "Ant Design",
-      "Passport.js",
-    ],
-    link: "https://github.com/lawrenceli7/trackify",
-    production: "https://trackify-k7u8.onrender.com/",
-    description:
-      "A finance expense tracking application to manage various expenses.",
-  },
+  // {
+  //   title: "Trackify",
+  //   imgURL: TrackifyImg,
+  //   stack: [
+  //     "GraphQL",
+  //     "React.js",
+  //     "JavaScript",
+  //     "MongoDB",
+  //     "Express.js",
+  //     "Node.js",
+  //     "Apollo",
+  //     "Tailwind CSS",
+  //     "Vite",
+  //     "Mongoose",
+  //     "Ant Design",
+  //     "Passport.js",
+  //   ],
+  //   link: "https://github.com/lawrenceli7/trackify",
+  //   production: "https://trackify-k7u8.onrender.com/",
+  //   description:
+  //     "A finance expense tracking application to manage various expenses.",
+  // },
   {
     title: "ChatSphere",
     imgURL: ChatSphereImg,
@@ -57,25 +57,25 @@ const projects: Project[] = [
     link: "https://github.com/lawrenceli7/chat-sphere",
     production: "https://chat-sphere-xky9.onrender.com/",
     description:
-      "A messaging application where users can message other users in real time.",
+      "Am AI messaging application where users can message other users in real time with chatbot assistance.",
   },
-  {
-    title: "ThreadTalk",
-    imgURL: ThreadTalkImg,
-    stack: [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Firebase",
-      "Vitest",
-      "Tailwind CSS",
-      "Chakra UI",
-    ],
-    link: "https://github.com/lawrenceli7/thread-talk",
-    production: "https://thread-talk-tau.vercel.app/",
-    description:
-      "A social media website where users can post, like, and comment on threads.",
-  },
+  // {
+  //   title: "ThreadTalk",
+  //   imgURL: ThreadTalkImg,
+  //   stack: [
+  //     "Next.js",
+  //     "React.js",
+  //     "TypeScript",
+  //     "Firebase",
+  //     "Vitest",
+  //     "Tailwind CSS",
+  //     "Chakra UI",
+  //   ],
+  //   link: "https://github.com/lawrenceli7/thread-talk",
+  //   production: "https://thread-talk-tau.vercel.app/",
+  //   description:
+  //     "A social media website where users can post, like, and comment on threads.",
+  // },
   {
     title: "JobNow",
     imgURL: JobNowImg,
@@ -110,14 +110,14 @@ const projects: Project[] = [
     production: "https://lawrenceli.dev",
     description: "My personal portfolio website.",
   },
-  {
-    title: "Weather App",
-    imgURL: WeatherAppImg,
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Ant Design"],
-    link: "https://github.com/lawrenceli7/weather-app",
-    production: "https://weather-app-chi-swart.vercel.app/",
-    description: "An app that displays the weather in a city of your choice.",
-  },
+  // {
+  //   title: "Weather App",
+  //   imgURL: WeatherAppImg,
+  //   stack: ["Next.js", "TypeScript", "Tailwind CSS", "Ant Design"],
+  //   link: "https://github.com/lawrenceli7/weather-app",
+  //   production: "https://weather-app-chi-swart.vercel.app/",
+  //   description: "An app that displays the weather in a city of your choice.",
+  // },
   {
     title: "LC3-Processor",
     imgURL: LogisimImg,
@@ -136,15 +136,15 @@ const projects: Project[] = [
     description:
       "A turn-based game inspired by MegaMan Battle Network and Fire Emblem. The game features a grid-based map where the player can move their character and attack enemies.",
   },
-  {
-    title: "Blackjack",
-    imgURL: BlackjackImg,
-    stack: ["Java"],
-    link: "https://github.com/lawrenceli7/blackjack",
-    production: "https://github.com/lawrenceli7/blackjack",
-    description:
-      "A simple blackjack game within the console. The game follows the traditional rules of blackjack.",
-  },
+  // {
+  //   title: "Blackjack",
+  //   imgURL: BlackjackImg,
+  //   stack: ["Java"],
+  //   link: "https://github.com/lawrenceli7/blackjack",
+  //   production: "https://github.com/lawrenceli7/blackjack",
+  //   description:
+  //     "A simple blackjack game within the console. The game follows the traditional rules of blackjack.",
+  // },
 ];
 
 export default projects;

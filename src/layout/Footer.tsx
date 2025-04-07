@@ -6,7 +6,7 @@ import "../styles/icons.css";
 
 const Footer: React.FC = () => {
   return (
-    <div className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
+    <footer className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
       <div className="animate-bounce">
         <BackToTop />
       </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
       <p className="text-base pb-1">
         &copy; {new Date().getFullYear()} Lawrence Li. All Rights Reserved.
       </p>
-    </div>
+    </footer>
   );
 };
 

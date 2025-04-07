@@ -9,7 +9,7 @@ interface ExperienceItemProps {
   title: string;
   duration: string;
   location: string;
-  details: string;
+  company: string;
 }
 
 const Experience: React.FC<ExperienceItemProps> = ({
@@ -17,7 +17,7 @@ const Experience: React.FC<ExperienceItemProps> = ({
   title,
   duration,
   location,
-  details,
+  company,
 }) => {
   const experienceRef = useRef<HTMLOListElement>(null);
   const isVisible = useIntersectionObserver(experienceRef, { threshold: 0.1 });
@@ -35,29 +35,21 @@ const Experience: React.FC<ExperienceItemProps> = ({
           className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"
           whileHover={{ scale: 1.2 }}
         ></motion.div>
-        <span className="flex flex-wrap items-center justify-between gap-4 text-xs md:text-sm">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-2 px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200">
-              <MdWork />
-              {year}
-            </span>
-            <h3 className="text-sm font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-8 md:text-base">
-              {title}
-            </h3>
-            <div className="lg:text-lg md:text-base">|</div>
-            <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-500 lg:text-lg dark:text-white md:text-base">
-              <IoLocationOutline />
-              {location}
-            </h3>
-          </div>
-          <div className="flex items-center gap-2 my-1 text-sm italic font-normal leading-none text-gray-400 dark:text-white">
-            <IoCalendarOutline />
-            {duration}
-          </div>
+        <span className="flex items-center gap-2 px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200 mb-2">
+          <MdWork />
+          {title}
         </span>
-        <p className="my-2 text-sm font-normal text-gray-300 dark:text-gray-100">
-          {details}
-        </p>
+        <h3 className="text-sm font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-4 md:text-base">
+          {company}
+        </h3>
+        <div className="flex items-center gap-2 my-1 text-sm italic font-normal leading-none text-gray-400 dark:text-gray-100 mb-2">
+          <IoCalendarOutline className="text-lg" />
+          {duration}
+        </div>
+        <div className="flex items-center gap-2 my-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-100">
+          <IoLocationOutline className="text-lg" />
+          {location}
+        </div>
       </motion.li>
     </motion.ol>
   );

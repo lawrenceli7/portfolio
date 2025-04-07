@@ -4,7 +4,7 @@ import Projects from "../data/projects";
 
 const Project: React.FC = () => {
   return (
-    <div id="projects" className="py-24">
+    <div id="projects" className="py-24 min-h-screen">
       <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
         <span className="flex flex-grow border-t dark:border-white"></span>
         <span className="mx-2 mb-2 text-4xl font-bold text-gray-900 dark:text-white relative inline-block cursor-pointer after:absolute after:w-0 after:h-2 after:block after:bg-current after:transition-all after:duration-300 after:left-0 after:-bottom-[5px] after:hover:w-full">

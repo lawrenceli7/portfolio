@@ -175,7 +175,7 @@ const About: React.FC = () => {
             title={item.title}
             duration={item.duration}
             location={item.location}
-            details={item.details}
+            company={item.company}
           />
         ))}
       </motion.section>
@@ -198,7 +198,7 @@ const About: React.FC = () => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
       ref={aboutRef}
-      className="flex flex-col h-screen py-24 mx-auto"
+      className="flex flex-col min-h-screen py-24 mx-auto"
     >
       <h1 className="flex items-center mb-4 text-center dark:hover:text-white">
         <span className="flex flex-grow border-t dark:border-white"></span>

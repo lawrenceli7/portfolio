@@ -65,7 +65,10 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
                 aria-label="Live Link"
                 whileHover={{ scale: 1.2, rotate: 15 }}
               >
-                <VscLiveShare size={25} className="mb-4 hover:text-[#865fc5]" />
+                <VscLiveShare
+                  size={25}
+                  className="mb-4 dark:hover:text-[#865fc5] hover:text-teal-200"
+                />
               </motion.button>
               <motion.button
                 onClick={handleGitHubClick}

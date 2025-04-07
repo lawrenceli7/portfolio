@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <motion.div
-      className={`flex flex-col items-center justify-center h-screen text-center`}
+      className={`flex flex-col items-center justify-center min-h-screen text-center`}
       id="home"
       ref={homeRef}
       initial={{ opacity: 0 }}

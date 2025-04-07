@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
-      className="flex flex-col justify-center h-screen mx-auto"
+      className="flex flex-col justify-center min-h-screen mx-auto"
       id="contact"
     >
       <h1 className="flex items-center w-11/12 max-w-5xl mx-auto mb-4 text-center dark:hover:text-white">
