@@ -1,17 +1,17 @@
 export default [
   {
     year: "2025",
-    title: "Software Engineer Intern",
+    title: "Software Engineer",
     location: "Remote",
-    duration: "September - Present",
-    company: "Sky Travel",
+    duration: "Sep 2024 - Present",
+    company: "Sky Travel ~ Internship",
   },
   {
     year: "2024",
-    title: "Software Engineer Intern",
-    location: "Boston, MA",
-    duration: "January - May",
-    company: "BU Spark!",
+    title: "Software Engineer",
+    location: "Boston, Massachusetts, United States ~ On-site",
+    duration: "Jan 2024 - May 2024 ~ 5 months",
+    company: "BU Spark! ~ Internship",
   },
   // {
   //   year: "2022",

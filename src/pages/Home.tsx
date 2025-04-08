@@ -5,7 +5,6 @@ import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 import { TypeAnimation } from "react-type-animation";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import "../styles/icons.css";
 
 const Home: React.FC = () => {
   const homeRef = useRef<HTMLDivElement>(null);

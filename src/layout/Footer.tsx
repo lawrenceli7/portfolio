@@ -2,7 +2,6 @@ import React from "react";
 import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import BackToTop from "../components/BackToTop";
-import "../styles/icons.css";
 
 const Footer: React.FC = () => {
   return (
