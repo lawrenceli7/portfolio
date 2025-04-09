@@ -36,7 +36,7 @@ const projects: Project[] = [
     link: "https://github.com/lawrenceli7/chat-sphere",
     production: "https://chat-sphere-xky9.onrender.com/",
     description:
-      "Am AI messaging application where users can message other users in real time with chatbot assistance.",
+      "An AI messaging application where users can message other users in real time with chatbot assistance.",
   },
   {
     title: "JobNow",
