@@ -20,6 +20,7 @@ import {
   SiMongoose,
   SiNextdotjs,
   SiNodedotjs,
+  SiOpenapiinitiative,
   SiPassport,
   SiPostgresql,
   SiPrisma,
@@ -69,6 +70,7 @@ const projectIcons: { [key: string]: IconType } = {
   Vitest: SiVitest,
   Apollo: SiApollographql,
   "Passport.js": SiPassport,
+  OpenAPI: SiOpenapiinitiative,
 };
 
 export default projectIcons;

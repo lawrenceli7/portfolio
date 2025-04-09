@@ -84,7 +84,7 @@ const Nav: React.FC = () => {
         </motion.ul>
       </div>
       <div className="hidden bg-white md:block z-1000 dark:bg-nav">
-        <div className="flex items-center justify-between shadow-lg h-nav shadow-teal-100 dark:shadow-purple-100">
+        <div className="flex items-center justify-between shadow-lg h-nav">
           <div className="flex items-center gap-4 lg:pl-28 md:pl-16">
             <motion.div
               className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-xl font-roboto animate-text"
