@@ -3,7 +3,7 @@ export default [
     year: "2025",
     title: "Software Engineer",
     location: "Remote",
-    duration: "Sep 2024 - Present",
+    duration: "Sep 2024 - May 2025 ~ 9 months",
     company: "Sky Travel ~ Internship",
   },
   {
