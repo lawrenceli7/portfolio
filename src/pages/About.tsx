@@ -81,8 +81,8 @@ const About: React.FC = () => {
           ,
         </h2>
         <p className="mb-4">
-          I'm Lawrence, a senior at Boston University studying Computer Science.
-          My main interests lie in the field of web development and software
+          I'm Lawrence, a Computer Science graduate from Boston University. My
+          main interests lie in the field of web development and software
           engineering, with a special focus on front-end development.
         </p>
         <p className="mb-4">

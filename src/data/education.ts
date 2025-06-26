@@ -3,7 +3,7 @@ export default [
     school: "BU",
     name: "Boston University",
     degree: "BA in Computer Science",
-    duration: "Expected May 2025",
+    duration: "September 2022 - May 2025",
     coursework:
       "Relevant coursework: Full Stack Development, Information Security, Web Development, Database Systems, Software Engineering, Algorithms, Data Structure, Theory of Computation, Probability in Computing, Linear Algebra",
   },
