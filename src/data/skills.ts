@@ -18,8 +18,16 @@ export default [
       "Tailwind CSS",
       "Vitest",
       "JavaFX",
+      "Oracle",
     ],
-    databases: ["PostgreSQL", "SQLite", "MongoDB", "Firebase", "Redis"],
+    databases: [
+      "Springboot",
+      "PostgreSQL",
+      "SQLite",
+      "MongoDB",
+      "Firebase",
+      "Redis",
+    ],
     tools: [
       "Prisma",
       "Git",

@@ -20,7 +20,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "ChatSphere",
+    title: "AI-powered Messager",
     imgURL: ChatSphereImg,
     stack: [
       "React.js",
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "An AI messaging application where users can message other users in real time with chatbot assistance.",
   },
   {
-    title: "JobNow",
+    title: "Job Search Finder",
     imgURL: JobNowImg,
     stack: [
       "React.js",

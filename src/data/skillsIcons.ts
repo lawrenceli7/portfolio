@@ -19,11 +19,13 @@ import {
   SiMongoose,
   SiNextdotjs,
   SiNodedotjs,
+  SiOracle,
   SiPostgresql,
   SiPostman,
   SiPrisma,
   SiPython,
   SiReact,
+  SiSpringboot,
   SiSqlite,
   SiTailwindcss,
   SiTypescript,
@@ -68,6 +70,8 @@ const skillsIcons: { [key: string]: IconType } = {
   Postman: SiPostman,
   Jira: SiJira,
   Eclipse: SiEclipseide,
+  Springboot: SiSpringboot,
+  Oracle: SiOracle,
 };
 
 export default skillsIcons;

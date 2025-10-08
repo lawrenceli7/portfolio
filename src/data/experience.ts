@@ -2,7 +2,7 @@ export default [
   {
     year: "2025",
     title: "Software Engineer",
-    location: "Remote",
+    location: "Boston, Massachusetts, United States ~ On-site",
     duration: "Sep 2024 - May 2025 ~ 9 months",
     company: "Sky Travel ~ Internship",
   },
