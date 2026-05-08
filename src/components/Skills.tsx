@@ -27,7 +27,7 @@ const Skills: React.FC<SkillsItemProps> = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.1 }}
       >
-        {IconComponent && <IconComponent size={40} />}
+        {IconComponent && <IconComponent className="h-7 w-7 md:h-9 md:w-9" />}
         {item}
       </motion.div>
     );
@@ -38,7 +38,7 @@ const Skills: React.FC<SkillsItemProps> = ({
 
   return (
     <motion.div
-      className="grid gap-5 transition duration-400 md:grid-cols-2 lg:grid-cols-4"
+      className="grid w-full gap-5 transition duration-400 md:grid-cols-2 lg:grid-cols-4"
       ref={skillsRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
@@ -60,7 +60,7 @@ const Skills: React.FC<SkillsItemProps> = ({
           <h1 className="mb-3 text-center text-base font-black tracking-tight text-gray-500 md:text-xl dark:text-white">
             {section.title}
           </h1>
-          <span className="flex min-h-40 flex-wrap items-center justify-center gap-2 rounded-[1.5rem] border border-white/70 bg-white/80 p-3 shadow-xl shadow-teal-900/5 backdrop-blur dark:border-white/10 dark:bg-white/[0.06]">
+          <span className="flex flex-wrap items-center justify-center gap-2 rounded-[1.35rem] border border-white/70 bg-white/80 p-3 shadow-xl shadow-teal-900/5 backdrop-blur sm:min-h-40 sm:rounded-[1.5rem] dark:border-white/10 dark:bg-white/[0.06]">
             {section.items.map(renderSkillItem)}
           </span>
         </motion.section>

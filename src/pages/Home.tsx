@@ -36,7 +36,7 @@ const Home: React.FC = () => {
 
   return (
     <motion.section
-      className="relative flex min-h-screen items-center overflow-hidden pt-24 text-gray-900 dark:text-white p-20"
+      className="relative flex min-h-screen items-center overflow-hidden px-4 pb-20 pt-28 text-gray-900 sm:px-6 lg:px-20 dark:text-white"
       id="home"
       ref={homeRef}
       initial={{ opacity: 0 }}
@@ -55,17 +55,17 @@ const Home: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-white/70 px-4 py-2 text-sm font-semibold text-teal-500 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
+          <span className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-teal-200/70 bg-white/70 px-4 py-2 text-xs font-semibold text-teal-500 shadow-sm backdrop-blur sm:text-sm dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
             <span className="h-2 w-2 rounded-full bg-teal-300 shadow-[0_0_16px_rgba(45,212,191,0.9)]" />
             Software Engineer
           </span>
-          <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-tight text-gray-500 md:text-6xl xl:text-7xl dark:text-white">
+          <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-gray-500 sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
             Building polished web experiences with{" "}
             <span className="text-transparent bg-gradient-to-r from-teal-300 via-cyan-300 to-violet-300 bg-clip-text">
               product sense.
             </span>
           </h1>
-          <div className="mt-5 min-h-[2.5rem] text-2xl font-semibold text-gray-300 md:text-3xl dark:text-white/80">
+          <div className="mt-5 min-h-[2rem] text-xl font-semibold text-gray-300 sm:text-2xl md:text-3xl dark:text-white/80">
             <TypeAnimation
               sequence={["Software that feels crisp and useful.", 2000]}
               wrapper="span"
@@ -73,15 +73,15 @@ const Home: React.FC = () => {
               repeat={Infinity}
             />
           </div>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-gray-300 md:text-lg dark:text-white/70">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-gray-300 md:text-lg md:leading-8 dark:text-white/70">
             I&apos;m Lawrence Li, a Boston University Computer Science graduate
             focused on software engineering.
           </p>
 
-          <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <motion.button
               onClick={scrollTo("projects")}
-              className="rounded-full bg-gray-500 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-gray-500/20 transition hover:bg-gray-400 dark:bg-white dark:text-gray-500 dark:hover:bg-teal-50"
+              className="w-full rounded-full bg-gray-500 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-gray-500/20 transition hover:bg-gray-400 sm:w-auto dark:bg-white dark:text-gray-500 dark:hover:bg-teal-50"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
             </motion.button>
             <motion.button
               onClick={scrollTo("contact")}
-              className="rounded-full border border-gray-300/70 bg-white/70 px-6 py-3 text-sm font-bold text-gray-500 backdrop-blur transition hover:border-teal-200 hover:text-teal-500 dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-teal-200"
+              className="w-full rounded-full border border-gray-300/70 bg-white/70 px-6 py-3 text-sm font-bold text-gray-500 backdrop-blur transition hover:border-teal-200 hover:text-teal-500 sm:w-auto dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-teal-200"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="relative mx-auto h-80 w-full max-w-sm md:hidden"
+          className="relative mx-auto h-56 w-full max-w-xs sm:h-72 sm:max-w-sm md:hidden"
           initial={{ scale: 0.92, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
 
       <motion.button
         onClick={scrollTo("about")}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-300 transition hover:text-teal-300 dark:text-white/50"
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-gray-300 transition hover:text-teal-300 sm:flex dark:text-white/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}

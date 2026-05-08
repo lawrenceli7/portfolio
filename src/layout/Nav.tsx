@@ -47,9 +47,9 @@ const Nav: React.FC = () => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="rounded-full border border-white/70 bg-white/80 px-3 py-2 text-sm shadow-xl shadow-teal-900/5 backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-[#151821]/80">
+      <div className="rounded-full border border-white/70 bg-white/80 px-2 py-2 text-xs shadow-xl shadow-teal-900/5 backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-[#151821]/80">
         <motion.ul
-          className="flex items-center justify-center gap-1 p-0 m-0"
+          className="flex items-center justify-between gap-1 p-0 m-0"
           initial="hidden"
           animate="visible"
         >
@@ -57,11 +57,13 @@ const Nav: React.FC = () => {
             <motion.li key={index} custom={index} variants={itemVariants}>
               <motion.button
                 onClick={scrollTo(item.scrollTo)}
-                className="rounded-full px-3 py-2 font-semibold text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white"
+                className="rounded-full px-2 py-2 font-semibold text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 min-[430px]:px-3 dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label={item.label}
               >
-                {item.label}
+                <span className="text-lg min-[430px]:hidden">{item.icon}</span>
+                <span className="hidden min-[430px]:inline">{item.label}</span>
               </motion.button>
             </motion.li>
           ))}
