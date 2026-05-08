@@ -5,15 +5,15 @@ import BackToTop from "../components/BackToTop";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="pt-8 text-center bg-white dark:bg-footer dark:text-white">
+    <footer className="border-t border-gray-200 bg-white/80 pt-8 text-center backdrop-blur dark:border-white/10 dark:bg-[#0f1117] dark:text-white">
       <div className="animate-bounce">
         <BackToTop />
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex items-center gap-2 mb-8">
-          <MdOutlineAttachEmail />
-          <p className="underline underline-offset-5">
-            <a href="mailto:lawrenceli3202@gmail.com">
+        <div className="mb-8 flex items-center gap-2 text-sm font-semibold text-gray-300 dark:text-white/65">
+          <MdOutlineAttachEmail className="text-teal-400" />
+          <p>
+            <a className="transition hover:text-teal-400" href="mailto:lawrenceli3202@gmail.com">
               lawrenceli3202@gmail.com
             </a>
           </p>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
       <div className="flex justify-center gap-4 mb-8">
         <ul className="flex justify-center w-full pt-5 list-none wrapper h-30 font-poppins">
           <a href="https://www.linkedin.com/in/lawrenceli7/">
-            <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-blue hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-blue dark:hover:text-white">
+            <li className="icon relative m-2.5 flex h-12 w-12 cursor-pointer flex-col items-center justify-center rounded-full border border-gray-200 bg-white text-lg text-gray-300 shadow-sm transition-all duration-200 ease-in-out hover:border-blue hover:bg-blue hover:text-white dark:border-white/10 dark:bg-white/[0.06] dark:text-white/70 dark:hover:bg-blue dark:hover:text-white">
               <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-blue tooltip-linkedin">
                 LinkedIn
               </span>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </li>
           </a>
           <a href="https://www.github.com/lawrenceli7/">
-            <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-green hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-green dark:hover:text-white">
+            <li className="icon relative m-2.5 flex h-12 w-12 cursor-pointer flex-col items-center justify-center rounded-full border border-gray-200 bg-white text-lg text-gray-300 shadow-sm transition-all duration-200 ease-in-out hover:border-green hover:bg-green hover:text-white dark:border-white/10 dark:bg-white/[0.06] dark:text-white/70 dark:hover:bg-green dark:hover:text-white">
               <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-green tooltip-github">
                 Github
               </span>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             </li>
           </a>
           <a href="mailto:lawrenceli3202@gmail.com">
-            <li className="icon relative dark:bg-white rounded-full m-2.5 w-12 h-12 text-lg flex justify-center items-center flex-col shadow-lg cursor-pointer transition-all duration-200 ease-in-out hover:bg-red hover:text-white bg-[#eaeaea] dark:text-black dark:hover:bg-red dark:hover:text-white">
+            <li className="icon relative m-2.5 flex h-12 w-12 cursor-pointer flex-col items-center justify-center rounded-full border border-gray-200 bg-white text-lg text-gray-300 shadow-sm transition-all duration-200 ease-in-out hover:border-red hover:bg-red hover:text-white dark:border-white/10 dark:bg-white/[0.06] dark:text-white/70 dark:hover:bg-red dark:hover:text-white">
               <span className="absolute top-0 px-2 py-1 text-sm text-white transition-all duration-300 ease-in-out rounded shadow-lg opacity-0 pointer-events-none bg-red tooltip-email">
                 Email
               </span>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           </a>
         </ul>
       </div>
-      <p className="text-base pb-1">
+      <p className="pb-3 text-sm font-semibold text-gray-300 dark:text-white/45">
         &copy; {new Date().getFullYear()} Lawrence Li. All Rights Reserved.
       </p>
     </footer>

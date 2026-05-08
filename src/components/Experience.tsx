@@ -28,25 +28,25 @@ const Experience: React.FC<ExperienceItemProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.3, ease: "easeInOut" }}
-      className={`border-l border-teal-200 md:flex-row dark:border-purple-100 relative`}
+      className="relative border-l border-teal-200/70 md:flex-row dark:border-white/10"
     >
-      <motion.li className="p-3 mb-10 ml-4 border border-gray-800 rounded-lg hover:border-teal-200 dark:border-white dark:hover:border-purple-100">
+      <motion.li className="mb-10 ml-6 rounded-[1.5rem] border border-white/70 bg-white/85 p-5 shadow-xl shadow-teal-900/5 backdrop-blur hover:border-teal-200 dark:border-white/10 dark:bg-white/[0.06]">
         <motion.div
-          className="absolute w-3 h-3 bg-teal-200 border border-white rounded-full mt-7 -left-1.5 dark:border-gray-900 dark:bg-purple-100"
+          className="absolute z-10 mt-7 h-3 w-3 rounded-full border border-white bg-teal-300 shadow-[0_0_18px_rgba(45,212,191,0.9)] -left-1.5 dark:border-gray-900"
           whileHover={{ scale: 1.2 }}
         ></motion.div>
-        <span className="flex items-center gap-2 px-2 py-1 font-semibold text-white bg-gray-500 border border-teal-200 rounded-lg shadow-md dark:text-gray-500 shadow-teal-100 dark:bg-white dark:shadow-purple-100 dark:border-purple-200 mb-2">
+        <span className="mb-3 inline-flex items-center gap-2 rounded-full bg-gray-500 px-3 py-1.5 text-sm font-bold text-white shadow-md dark:bg-white dark:text-gray-500">
           <MdWork />
           {title}
         </span>
-        <h3 className="text-sm font-semibold text-gray-500 lg:text-lg dark:text-white hover:underline hover:underline-offset-4 md:text-base">
+        <h3 className="text-base font-black text-gray-500 lg:text-lg dark:text-white">
           {company}
         </h3>
-        <div className="flex items-center gap-2 my-1 text-sm italic font-normal leading-none text-gray-400 dark:text-gray-100 mb-2">
+        <div className="mb-2 mt-3 flex items-center gap-2 text-sm font-semibold leading-none text-gray-300 dark:text-white/60">
           <IoCalendarOutline className="text-lg" />
           {duration}
         </div>
-        <div className="flex items-center gap-2 my-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-100">
+        <div className="flex items-center gap-2 text-sm font-semibold leading-none text-gray-300 dark:text-white/60">
           <IoLocationOutline className="text-lg" />
           {location}
         </div>

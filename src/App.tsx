@@ -8,13 +8,11 @@ import Project from "./pages/Project";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen text-gray-500 bg-lightgray dark:bg-default">
+    <div className="min-h-screen overflow-hidden bg-lightgray text-gray-500 antialiased dark:bg-[#0f1117]">
       <Nav />
-      <div className="w-11/12 max-w-5xl mx-auto">
-        <Home />
-        <About />
-        <Project />
-      </div>
+      <Home />
+      <About />
+      <Project />
       <Contact />
       <Footer />
     </div>
