@@ -27,15 +27,15 @@ const About: React.FC = () => {
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
         whileHover={{ y: -4 }}
-        className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 text-base leading-8 text-gray-300 shadow-2xl shadow-teal-900/5 backdrop-blur lg:text-lg md:text-md dark:border-white/10 dark:bg-white/[0.06] dark:text-white/75"
+        className="overflow-hidden rounded-[1.5rem] border border-white/70 bg-white/85 text-base leading-7 text-gray-300 shadow-2xl shadow-teal-900/5 backdrop-blur sm:rounded-[2rem] lg:text-lg lg:leading-8 md:text-md dark:border-white/10 dark:bg-white/[0.06] dark:text-white/75"
       >
-        <div className="grid gap-8 p-6 md:grid-cols-[1.15fr_0.85fr] md:p-8">
+        <div className="grid gap-6 p-4 sm:p-6 md:grid-cols-[1.15fr_0.85fr] md:p-8">
           <div>
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-teal-50/80 px-4 py-2 text-sm font-bold text-teal-500 dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
+            <span className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-teal-200/70 bg-teal-50/80 px-4 py-2 text-xs font-bold text-teal-500 sm:text-sm dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
               <FiCpu />
               Front-end focused, full-stack aware
             </span>
-            <h2 className="mb-5 text-3xl font-black leading-tight text-gray-500 md:text-4xl dark:text-white">
+            <h2 className="mb-5 text-2xl font-black leading-tight text-gray-500 sm:text-3xl md:text-4xl dark:text-white">
               I turn software ideas into interfaces that feel fast, clear, and
               human.
             </h2>
@@ -79,7 +79,7 @@ const About: React.FC = () => {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-[1.5rem] border border-gray-100 bg-white/75 p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.04]"
+                className="rounded-[1.25rem] border border-gray-100 bg-white/75 p-4 shadow-sm sm:rounded-[1.5rem] sm:p-5 dark:border-white/10 dark:bg-white/[0.04]"
               >
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-500 text-white dark:bg-white dark:text-gray-500">
                   {item.icon}
@@ -181,7 +181,7 @@ const About: React.FC = () => {
   const isVisible = useIntersectionObserver(aboutRef, { threshold: 0.1 });
 
   const buttonBaseClasses =
-    "rounded-full border px-5 py-3 text-sm font-bold transition-all duration-300 bg-white/70 backdrop-blur hover:-translate-y-0.5 hover:border-teal-200 hover:text-teal-500 dark:bg-white/[0.06] dark:text-white dark:hover:border-teal-200";
+    "rounded-full border px-3 py-3 text-sm font-bold transition-all duration-300 bg-white/70 backdrop-blur hover:-translate-y-0.5 hover:border-teal-200 hover:text-teal-500 sm:px-5 dark:bg-white/[0.06] dark:text-white dark:hover:border-teal-200";
 
   return (
     <motion.div
@@ -190,14 +190,14 @@ const About: React.FC = () => {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
       ref={aboutRef}
-      className="relative isolate mx-auto flex min-h-screen flex-col justify-center overflow-hidden py-24 p-20"
+      className="relative isolate mx-auto flex min-h-screen flex-col justify-center overflow-hidden px-4 py-20 sm:px-6 lg:px-20 lg:py-24"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_8%_18%,rgba(20,184,166,0.14),transparent_26%),radial-gradient(circle_at_88%_70%,rgba(167,139,250,0.14),transparent_30%)]" />
       <div className="mb-8 text-center">
-        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-white/70 px-4 py-2 text-sm font-bold text-teal-500 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
+        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-white/70 px-4 py-2 text-xs font-bold text-teal-500 shadow-sm backdrop-blur sm:text-sm dark:border-white/10 dark:bg-white/5 dark:text-teal-100">
           Profile
         </span>
-        <h1 className="text-4xl font-black tracking-tight text-gray-500 md:text-5xl dark:text-white">
+        <h1 className="text-3xl font-black tracking-tight text-gray-500 sm:text-4xl md:text-5xl dark:text-white">
           About Lawrence
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-300 dark:text-white/60">
@@ -205,7 +205,7 @@ const About: React.FC = () => {
         </p>
       </div>
 
-      <div className="mx-auto flex flex-wrap justify-center gap-3 rounded-full border border-white/70 bg-white/55 p-2 text-base shadow-xl shadow-teal-900/5 backdrop-blur dark:border-white/10 dark:bg-white/[0.04]">
+      <div className="mx-auto grid w-full grid-cols-2 gap-2 rounded-[1.5rem] border border-white/70 bg-white/55 p-2 text-base shadow-xl shadow-teal-900/5 backdrop-blur sm:flex sm:w-auto sm:flex-wrap sm:justify-center sm:gap-3 sm:rounded-full dark:border-white/10 dark:bg-white/[0.04]">
         <motion.button
           className={`${buttonBaseClasses} ${
             activeButton === "Me"

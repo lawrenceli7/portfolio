@@ -42,7 +42,7 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
           y: -8,
           boxShadow: "0px 24px 60px rgba(15, 23, 42, 0.14)",
         }}
-        className="group h-full overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/85 shadow-2xl shadow-teal-900/5 backdrop-blur transition-transform duration-300 ease-in-out dark:border-white/10 dark:bg-white/[0.06] dark:hover:border-teal-200"
+        className="group h-full overflow-hidden rounded-[1.35rem] border border-white/70 bg-white/85 shadow-2xl shadow-teal-900/5 backdrop-blur transition-transform duration-300 ease-in-out sm:rounded-[1.75rem] dark:border-white/10 dark:bg-white/[0.06] dark:hover:border-teal-200"
       >
         <motion.div
           className="relative aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-white/5"
@@ -55,20 +55,20 @@ const ProjectItems: React.FC<ProjectItemsProps> = ({
           />
           <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-gray-500/55 to-transparent opacity-0 transition group-hover:opacity-100" />
         </motion.div>
-        <div className="flex min-h-72 w-full flex-col p-5">
-          <div className="flex justify-between">
-            <div>
+        <div className="flex w-full flex-col p-4 sm:min-h-72 sm:p-5">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
               <span className="mb-2 inline-flex rounded-full border border-teal-200/70 px-2.5 py-1 text-[0.68rem] font-black uppercase tracking-[0.18em] text-teal-500 dark:border-white/10 dark:text-teal-100">
                 Case Study
               </span>
               <motion.h3
-                className="mb-4 text-lg font-black text-gray-500 md:mb-3 md:text-xl dark:text-white"
+                className="mb-4 text-lg font-black leading-tight text-gray-500 md:mb-3 md:text-xl dark:text-white"
                 whileHover={{ x: 2 }}
               >
                 {title}
               </motion.h3>
             </div>
-            <div className="flex gap-3">
+            <div className="flex shrink-0 gap-2 sm:gap-3">
               <motion.button
                 onClick={() =>
                   window.open(production, "_blank", "noopener,noreferrer")
