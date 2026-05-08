@@ -41,15 +41,15 @@ const Nav: React.FC = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full z-1000"
+      className="fixed left-0 top-0 z-1000 w-full px-3 pt-3 md:px-6"
       ref={navRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="pt-2 pb-2 pl-8 pr-8 text-xl text-white bg-white shadow-lg md:hidden shadow-teal-100 dark:shadow-purple-100 dark:bg-nav">
+      <div className="rounded-full border border-white/70 bg-white/80 px-3 py-2 text-sm shadow-xl shadow-teal-900/5 backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-[#151821]/80">
         <motion.ul
-          className="flex justify-center gap-2 p-0 m-0"
+          className="flex items-center justify-center gap-1 p-0 m-0"
           initial="hidden"
           animate="visible"
         >
@@ -57,7 +57,7 @@ const Nav: React.FC = () => {
             <motion.li key={index} custom={index} variants={itemVariants}>
               <motion.button
                 onClick={scrollTo(item.scrollTo)}
-                className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
+                className="rounded-full px-3 py-2 font-semibold text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -74,7 +74,7 @@ const Nav: React.FC = () => {
             <motion.button
               type="button"
               onClick={handleThemeSwitch}
-              className="p-2 text-gray-500 no-underline hover:text-teal-200 hover:underline hover:underline-offset-5 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
+              className="rounded-full p-2 text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -83,11 +83,11 @@ const Nav: React.FC = () => {
           </motion.li>
         </motion.ul>
       </div>
-      <div className="hidden bg-white md:block z-1000 dark:bg-nav">
-        <div className="flex items-center justify-between shadow-lg h-nav">
-          <div className="flex items-center gap-4 lg:pl-28 md:pl-16">
+      <div className="hidden md:block z-1000">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full border border-white/70 bg-white/80 px-5 shadow-xl shadow-teal-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-[#151821]/80">
+          <div className="flex items-center gap-4">
             <motion.div
-              className="text-transparent cursor-default bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 bg-clip-text lg:text-2xl md:text-xl font-roboto animate-text"
+              className="cursor-default bg-gradient-to-r from-teal-400 via-cyan-300 to-violet-300 bg-clip-text text-xl font-black text-transparent lg:text-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
@@ -95,9 +95,9 @@ const Nav: React.FC = () => {
               Lawrence Li
             </motion.div>
           </div>
-          <div className="flex items-center gap-2 font-inter lg:pr-28 md:pr-16">
+          <div className="flex items-center gap-2 font-inter">
             <motion.ul
-              className="flex lg:gap-1 lg:text-xl md:text-lg"
+              className="flex gap-1 text-sm lg:text-base"
               initial="hidden"
               animate="visible"
             >
@@ -105,7 +105,7 @@ const Nav: React.FC = () => {
                 <motion.li key={index} custom={index} variants={itemVariants}>
                   <motion.button
                     onClick={scrollTo(item.scrollTo)}
-                    className="p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
+                    className="rounded-full px-4 py-2 font-semibold text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -125,7 +125,7 @@ const Nav: React.FC = () => {
                 <motion.button
                   type="button"
                   onClick={handleThemeSwitch}
-                  className="flex p-2 text-gray-500 hover:text-teal-200 hover:bg-navText hover:rounded-full dark:hover:text-purple-200 dark:text-white dark:hover:bg-slate-700"
+                  className="flex rounded-full p-2 text-gray-300 transition hover:bg-teal-50 hover:text-teal-500 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >

@@ -21,7 +21,7 @@ const Skills: React.FC<SkillsItemProps> = ({
     return (
       <motion.div
         key={index}
-        className="lg:inline-flex lg:flex-col lg:items-center gap-1 lg:px-2 lg:py-1 lg:text-base font-semibold transition-transform duration-300 ease-in-out transform hover:scale-110 dark:hover:text-purple-100 hover:text-teal-200 text-xs px-1 py-0.5"
+        className="inline-flex items-center gap-2 rounded-full border border-gray-100 bg-white/70 px-3 py-2 text-xs font-bold text-gray-300 shadow-sm transition hover:border-teal-200 hover:text-teal-500 lg:flex-col lg:text-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-white/70 dark:hover:text-teal-100"
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Skills: React.FC<SkillsItemProps> = ({
 
   return (
     <motion.div
-      className="lg:gap-4 transition lg:flex lg:justify-center md:grid md:grid-cols-2 md:grid-rows-2 duration-400 gap-2"
+      className="grid gap-5 transition duration-400 md:grid-cols-2 lg:grid-cols-4"
       ref={skillsRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
@@ -57,10 +57,10 @@ const Skills: React.FC<SkillsItemProps> = ({
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
           transition={{ delay: index * 0.3 }}
         >
-          <h1 className="lg:mb-2 lg:text-3xl text-center font-roboto text-base mb-1 md:text-2xl">
+          <h1 className="mb-3 text-center text-base font-black tracking-tight text-gray-500 md:text-xl dark:text-white">
             {section.title}
           </h1>
-          <span className="flex flex-wrap items-center justify-center lg:gap-2 lg:p-2 lg:mb-4 bg-white border-2 border-teal-200 rounded-lg dark:border-purple-100 dark:bg-gray-500 md:text-xl font-dosis p-1 gap-1 mb-2 md:p-2 md:mb-1 md:gap-2">
+          <span className="flex min-h-40 flex-wrap items-center justify-center gap-2 rounded-[1.5rem] border border-white/70 bg-white/80 p-3 shadow-xl shadow-teal-900/5 backdrop-blur dark:border-white/10 dark:bg-white/[0.06]">
             {section.items.map(renderSkillItem)}
           </span>
         </motion.section>
