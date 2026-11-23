@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/three": "^0.184.1",
     "antd": "^5.25.1",
     "framer-motion": "^12.23.24",
